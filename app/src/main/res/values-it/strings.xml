@@ -229,8 +229,7 @@
     <string name="description">Descrizione</string>
     <string name="device_info">Informazioni dispositivo</string>
     <string name="bug_report_use_account">Invia tramite account GitHub</string>
-    <string name="bug_report_manual">"Invia manualmente
-"</string>
+    <string name="bug_report_manual">"Invia manualmente"</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="bug_report_no_title">Si prega di inserire un titolo valido</string>

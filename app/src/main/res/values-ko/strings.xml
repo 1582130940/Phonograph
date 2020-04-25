@@ -159,9 +159,7 @@
     <string name="pref_summary_classic_notification">클래식 알림 디자인 사용</string>
     <string name="pref_summary_colored_notification">"\uc54c\ub9bc \ucee8\ud2b8\ub864\uc744 \uc568\ubc94 \uc544\ud2b8\uc758 \uc8fc \uc0c9\uc0c1\uc73c\ub85c \uce60\ud569\ub2c8\ub2e4."</string>
     <string name="pref_summary_gapless_playback">"일부 기기에서 곡 전환 관련 문제가 발생할 수 있습니다."</string>
-    <string name="pref_summary_ignore_media_store_artwork">앨범 아트 이미지의 질이 높아지지만 로딩 시간이
-길어질 수 있습니다. 저화질 앨범 아트를 원하지
- 않으실 경우에만 이 기능을 사용하십시오.</string>
+    <string name="pref_summary_ignore_media_store_artwork">앨범 아트 이미지의 질이 높아지지만 로딩 시간이 길어질 수 있습니다. 저화질 앨범 아트를 원하지 않으실 경우에만 이 기능을 사용하십시오.</string>
     <string name="pref_summary_colored_navigation_bar">하단바가 색깔을 주 색상으로 색칠합니다.</string>
     <string name="pref_summary_colored_app_shortcuts">주 색상으로 앱 바로가기 색칠</string>
     <string name="pref_summary_audio_ducking">알림 소리, 버튼음 등</string>
