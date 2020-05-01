@@ -190,9 +190,6 @@
     <string name="permissions_denied">У доступі відмовлено.</string>
     <string name="permission_external_storage_denied">Дозвіл на доступ до зовнішньої пам\'яті відмовлено.</string>
     <string name="support_development">Підтримати розробника</string>
-    <string name="buy_pro">Придбайте Phonograph Pro</string>
-    <string name="thank_you">Щиро дякую!</string>
-    <string name="restored_previous_purchase_please_restart">Відновлено попередню покупку. Перезапустіть додаток, щоб скористатися всіма функціями.</string>
     <string name="version">Версія</string>
     <string name="author">Автор</string>
     <string name="write_an_email">Написати листа</string>
@@ -205,8 +202,6 @@
     <string name="translate_summary">Допоможіть перекласти Phonograph на свою рідну мову.</string>
     <string name="rate_on_google_play">Оцінити</string>
     <string name="rate_on_google_play_summary">Залиште позитивний відгук у Google Play, якщо вам подобається Phonograph.</string>
-    <string name="donate">Пожертва</string>
-    <string name="donate_summary">Якщо ви вважаєте, що я заслуговую на оплату своєї  праці, ви можете залишити мені декілька доларів тут.</string>
     <string name="aidan_follestad_summary">За рушій тем та усілякі круті штуки.</string>
     <string name="michael_cook_summary">За гарну матеріальну іконку програми.</string>
     <string name="maarten_corpel_summary">За ілюстрацію в Play Store та пусте зображення обкладинки альбому.</string>

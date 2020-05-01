@@ -20,7 +20,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -99,8 +98,7 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
 
         App.setOnProVersionChangedListener(() -> {
             // called if the cached value was outdated (should be a rare event)
-            checkSetUpPro();
-            if (!App.isProVersion() && PreferenceUtil.getInstance(MainActivity.this).getLastMusicChooser() == FOLDERS) {
+            if (PreferenceUtil.getInstance(MainActivity.this).getLastMusicChooser() == FOLDERS) {
                 setMusicChooser(FOLDERS); // shows the purchase activity and switches to LIBRARY
             }
         });
@@ -113,12 +111,6 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
     }
 
     private void setMusicChooser(int key) {
-        if (!App.isProVersion() && key == FOLDERS) {
-            Toast.makeText(this, R.string.folder_view_is_a_pro_feature, Toast.LENGTH_LONG).show();
-            startActivity(new Intent(this, PurchaseActivity.class));
-            key = LIBRARY;
-        }
-
         PreferenceUtil.getInstance(this).setLastMusicChooser(key);
         switch (key) {
             case LIBRARY:
@@ -171,7 +163,6 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
         NavigationViewUtil.setItemIconColors(navigationView, ATHUtil.resolveColor(this, R.attr.iconColor, ThemeStore.textColorSecondary(this)), accentColor);
         NavigationViewUtil.setItemTextColors(navigationView, ThemeStore.textColorPrimary(this), accentColor);
 
-        checkSetUpPro();
         navigationView.setNavigationItemSelectedListener(menuItem -> {
             drawerLayout.closeDrawers();
             switch (menuItem.getItemId()) {
@@ -180,9 +171,6 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
                     break;
                 case R.id.nav_folders:
                     new Handler().postDelayed(() -> setMusicChooser(FOLDERS), 200);
-                    break;
-                case R.id.buy_pro:
-                    new Handler().postDelayed(() -> startActivity(new Intent(MainActivity.this, PurchaseActivity.class)), 200);
                     break;
                 case R.id.action_scan:
                     new Handler().postDelayed(() -> {
@@ -199,10 +187,6 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
             }
             return true;
         });
-    }
-
-    private void checkSetUpPro() {
-        navigationView.getMenu().setGroupVisible(R.id.navigation_drawer_menu_category_buy_pro, !App.isProVersion());
     }
 
     private void setUpDrawerLayout() {
