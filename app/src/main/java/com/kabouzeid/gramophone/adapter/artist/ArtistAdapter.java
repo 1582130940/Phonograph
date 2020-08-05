@@ -1,15 +1,16 @@
 package com.kabouzeid.gramophone.adapter.artist;
 
 import android.graphics.drawable.Drawable;
-import androidx.annotation.LayoutRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.core.util.Pair;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.util.Pair;
 
 import com.bumptech.glide.Glide;
 import com.kabouzeid.appthemehelper.util.ColorUtil;

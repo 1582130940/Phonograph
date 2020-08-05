@@ -1,11 +1,12 @@
 package com.kabouzeid.gramophone.adapter.song;
 
+import android.view.MenuItem;
+import android.view.View;
+
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import android.view.MenuItem;
-import android.view.View;
 
 import com.h6ah4i.android.widget.advrecyclerview.draggable.DraggableItemAdapter;
 import com.h6ah4i.android.widget.advrecyclerview.draggable.DraggableItemViewHolder;
@@ -17,7 +18,6 @@ import com.kabouzeid.gramophone.interfaces.CabHolder;
 import com.kabouzeid.gramophone.model.Song;
 import com.kabouzeid.gramophone.util.ViewUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

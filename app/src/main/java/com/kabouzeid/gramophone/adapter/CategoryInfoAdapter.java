@@ -1,9 +1,6 @@
 package com.kabouzeid.gramophone.adapter;
 
 import android.annotation.SuppressLint;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.ItemTouchHelper;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -12,11 +9,14 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.kabouzeid.gramophone.R;
 import com.kabouzeid.gramophone.model.CategoryInfo;
 import com.kabouzeid.gramophone.util.SwipeAndDragHelper;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryInfoAdapter extends RecyclerView.Adapter<CategoryInfoAdapter.ViewHolder> implements SwipeAndDragHelper.ActionCompletionContract {

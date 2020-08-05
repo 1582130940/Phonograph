@@ -5,6 +5,11 @@ import android.graphics.Canvas;
 import android.media.MediaMetadataRetriever;
 import android.util.Log;
 
+import com.bumptech.glide.Priority;
+import com.bumptech.glide.load.data.DataFetcher;
+import com.kabouzeid.gramophone.glide.audiocover.AudioFileCoverUtils;
+import com.kabouzeid.gramophone.util.ImageUtil;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
@@ -14,12 +19,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.bumptech.glide.Priority;
-import com.bumptech.glide.load.data.DataFetcher;
-import com.kabouzeid.gramophone.glide.audiocover.AudioFileCoverUtils;
-import com.kabouzeid.gramophone.util.ImageUtil;
-import com.kabouzeid.gramophone.util.PreferenceUtil;
 
 /**
  * @author Karim Abou Zeid (kabouzeid)

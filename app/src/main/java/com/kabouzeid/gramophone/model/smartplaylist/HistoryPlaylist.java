@@ -2,15 +2,14 @@ package com.kabouzeid.gramophone.model.smartplaylist;
 
 import android.content.Context;
 import android.os.Parcel;
+
 import androidx.annotation.NonNull;
 
+import com.kabouzeid.gramophone.R;
 import com.kabouzeid.gramophone.loader.TopAndRecentlyPlayedTracksLoader;
 import com.kabouzeid.gramophone.model.Song;
 import com.kabouzeid.gramophone.provider.HistoryStore;
-import com.kabouzeid.gramophone.R;
-import com.kabouzeid.gramophone.util.PreferenceUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -32,7 +31,6 @@ public class HistoryPlaylist extends AbsSmartPlaylist {
     public void clear(@NonNull Context context) {
         HistoryStore.getInstance(context).clear();
     }
-
 
     @Override
     public int describeContents() {

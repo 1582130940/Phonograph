@@ -2,9 +2,10 @@ package com.kabouzeid.gramophone.preferences;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.text.Html;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
-import android.text.Html;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.kabouzeid.gramophone.R;
@@ -12,7 +13,6 @@ import com.kabouzeid.gramophone.dialogs.BlacklistFolderChooserDialog;
 import com.kabouzeid.gramophone.provider.BlacklistStore;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 
 /**

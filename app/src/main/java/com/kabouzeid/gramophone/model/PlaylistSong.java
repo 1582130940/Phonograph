@@ -44,7 +44,6 @@ public class PlaylistSong extends Song {
                 '}';
     }
 
-
     @Override
     public int describeContents() {
         return 0;

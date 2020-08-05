@@ -2,7 +2,6 @@ package com.kabouzeid.gramophone.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import androidx.annotation.NonNull;
 
 /**
  * @author Karim Abou Zeid (kabouzeid)
@@ -47,7 +46,6 @@ public class Playlist implements Parcelable {
                 ", name='" + name + '\'' +
                 '}';
     }
-
 
     @Override
     public int describeContents() {

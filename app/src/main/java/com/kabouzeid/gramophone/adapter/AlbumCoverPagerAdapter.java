@@ -2,13 +2,14 @@ package com.kabouzeid.gramophone.adapter;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.bumptech.glide.Glide;
 import com.kabouzeid.gramophone.R;
@@ -18,7 +19,6 @@ import com.kabouzeid.gramophone.misc.CustomFragmentStatePagerAdapter;
 import com.kabouzeid.gramophone.model.Song;
 import com.kabouzeid.gramophone.util.PreferenceUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;

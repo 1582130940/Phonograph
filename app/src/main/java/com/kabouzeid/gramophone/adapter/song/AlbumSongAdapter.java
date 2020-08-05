@@ -1,16 +1,16 @@
 package com.kabouzeid.gramophone.adapter.song;
 
+import android.view.View;
+
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import android.view.View;
 
 import com.kabouzeid.gramophone.interfaces.CabHolder;
 import com.kabouzeid.gramophone.model.Song;
 import com.kabouzeid.gramophone.util.MusicUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

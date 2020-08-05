@@ -1,12 +1,13 @@
 package com.kabouzeid.gramophone.helper.menu;
 
 import android.content.Intent;
-import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentActivity;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.PopupMenu;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 
 import com.kabouzeid.gramophone.R;
 import com.kabouzeid.gramophone.dialogs.AddToPlaylistDialog;

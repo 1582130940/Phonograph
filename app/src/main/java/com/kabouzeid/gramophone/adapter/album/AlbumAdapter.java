@@ -1,15 +1,16 @@
 package com.kabouzeid.gramophone.adapter.album;
 
 import android.graphics.drawable.Drawable;
-import androidx.annotation.LayoutRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.core.util.Pair;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.util.Pair;
 
 import com.bumptech.glide.Glide;
 import com.kabouzeid.appthemehelper.util.ColorUtil;
@@ -27,7 +28,6 @@ import com.kabouzeid.gramophone.model.Song;
 import com.kabouzeid.gramophone.util.MusicUtil;
 import com.kabouzeid.gramophone.util.NavigationUtil;
 import com.kabouzeid.gramophone.util.PreferenceUtil;
-
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
 
 import java.util.ArrayList;
@@ -86,8 +86,8 @@ public class AlbumAdapter extends AbsMultiSelectAdapter<AlbumAdapter.ViewHolder,
 
     protected String getAlbumText(Album album) {
         return MusicUtil.buildInfoString(
-            album.getArtistName(),
-            MusicUtil.getSongCountString(activity, album.songs.size())
+                album.getArtistName(),
+                MusicUtil.getSongCountString(activity, album.songs.size())
         );
     }
 
