@@ -34,8 +34,8 @@
                 android:clipToPadding="false"
                 android:orientation="vertical"
                 android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="8dp">
+                android:paddingTop="8dp"
+                android:paddingRight="16dp">
 
                 <include
                     layout="@layout/bug_report_card_report"

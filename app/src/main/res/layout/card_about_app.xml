@@ -59,11 +59,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
                 android:orientation="vertical"
-                android:paddingBottom="8dp"
-                android:paddingTop="8dp">
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -104,10 +104,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"
-                android:paddingBottom="8dp"
+                android:layout_marginLeft="32dp"
                 android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:text="@string/changelog"
                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
@@ -135,10 +135,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"
-                android:paddingBottom="8dp"
+                android:layout_marginLeft="32dp"
                 android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:text="@string/intro_label"
                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
@@ -166,10 +166,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"
-                android:paddingBottom="8dp"
+                android:layout_marginLeft="32dp"
                 android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:text="@string/fork_on_github"
                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
@@ -197,10 +197,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="32dp"
                 android:layout_marginStart="32dp"
-                android:paddingBottom="8dp"
+                android:layout_marginLeft="32dp"
                 android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:text="@string/licenses"
                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 

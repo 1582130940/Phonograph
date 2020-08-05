@@ -17,8 +17,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
             android:paddingLeft="16dp"
-            android:paddingRight="16dp"
             android:paddingTop="24dp"
+            android:paddingRight="16dp"
             android:text="@string/device_info"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="?android:textColorSecondary" />

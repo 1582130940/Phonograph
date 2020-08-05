@@ -9,8 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:orientation="vertical">
 
         <FrameLayout
@@ -33,11 +33,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="56dp"
                 android:layout_marginStart="56dp"
+                android:layout_marginLeft="56dp"
                 android:orientation="vertical"
-                android:paddingBottom="8dp"
-                android:paddingTop="8dp">
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -58,16 +58,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingEnd="16dp"
+            android:paddingStart="72dp"
             android:paddingLeft="72dp"
-            android:paddingRight="16dp"
-            android:paddingStart="72dp">
+            android:paddingEnd="16dp"
+            android:paddingRight="16dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="8dp"
                 android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:text="@string/bug_report_issue"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="?android:textColorSecondary" />
@@ -105,8 +105,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="8dp"
                 android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:text="@string/login"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="?android:textColorSecondary" />
@@ -162,11 +162,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="56dp"
                 android:layout_marginStart="56dp"
+                android:layout_marginLeft="56dp"
                 android:orientation="vertical"
-                android:paddingBottom="8dp"
-                android:paddingTop="8dp">
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
