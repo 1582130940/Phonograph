@@ -53,7 +53,6 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/player_media_controller_container"
         android:layout_width="match_parent"
         android:layout_height="@dimen/media_controller_container_height"
         android:layoutDirection="ltr"

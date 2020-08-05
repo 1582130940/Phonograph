@@ -19,7 +19,6 @@
         android:title="@string/action_grid_size">
         <menu>
             <group
-                android:id="@+id/group_grid_size"
                 android:checkableBehavior="single"
                 tools:ignore="HardcodedText">
                 <item
