@@ -21,7 +21,6 @@ import com.kabouzeid.gramophone.App;
 import com.kabouzeid.gramophone.R;
 import com.kabouzeid.gramophone.dialogs.ChangelogDialog;
 import com.kabouzeid.gramophone.ui.activities.base.AbsBaseActivity;
-import com.kabouzeid.gramophone.ui.activities.bugreport.BugReportActivity;
 import com.kabouzeid.gramophone.ui.activities.intro.AppIntroActivity;
 
 import butterknife.BindView;
@@ -33,14 +32,6 @@ import de.psdev.licensesdialog.LicensesDialog;
  */
 @SuppressWarnings("FieldCanBeLocal")
 public class AboutActivity extends AbsBaseActivity implements View.OnClickListener {
-
-    private static String GITHUB = "https://github.com/kabouzeid/Phonograph";
-
-    private static String TWITTER = "https://twitter.com/swiftkarim";
-    private static String WEBSITE = "https://kabouzeid.com/";
-
-    private static String TRANSLATE = "https://phonograph.oneskyapp.com/collaboration/project?id=26521";
-    private static String RATE_ON_GOOGLE_PLAY = "https://play.google.com/store/apps/details?id=com.kabouzeid.gramophone";
 
     private static String AIDAN_FOLLESTAD_GITHUB = "https://github.com/afollestad";
 
@@ -66,20 +57,6 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
     LinearLayout intro;
     @BindView(R.id.licenses)
     LinearLayout licenses;
-    @BindView(R.id.write_an_email)
-    LinearLayout writeAnEmail;
-    @BindView(R.id.follow_on_twitter)
-    LinearLayout followOnTwitter;
-    @BindView(R.id.fork_on_github)
-    LinearLayout forkOnGitHub;
-    @BindView(R.id.visit_website)
-    LinearLayout visitWebsite;
-    @BindView(R.id.report_bugs)
-    LinearLayout reportBugs;
-    @BindView(R.id.translate)
-    LinearLayout translate;
-    @BindView(R.id.rate_on_google_play)
-    LinearLayout rateOnGooglePlay;
     @BindView(R.id.aidan_follestad_git_hub)
     AppCompatButton aidanFollestadGitHub;
     @BindView(R.id.michael_cook_website)
@@ -132,13 +109,6 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
         changelog.setOnClickListener(this);
         intro.setOnClickListener(this);
         licenses.setOnClickListener(this);
-        followOnTwitter.setOnClickListener(this);
-        forkOnGitHub.setOnClickListener(this);
-        visitWebsite.setOnClickListener(this);
-        reportBugs.setOnClickListener(this);
-        writeAnEmail.setOnClickListener(this);
-        translate.setOnClickListener(this);
-        rateOnGooglePlay.setOnClickListener(this);
         aidanFollestadGitHub.setOnClickListener(this);
         michaelCookWebsite.setOnClickListener(this);
         maartenCorpelWebsite.setOnClickListener(this);
@@ -175,24 +145,6 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
             showLicenseDialog();
         } else if (v == intro) {
             startActivity(new Intent(this, AppIntroActivity.class));
-        } else if (v == followOnTwitter) {
-            openUrl(TWITTER);
-        } else if (v == forkOnGitHub) {
-            openUrl(GITHUB);
-        } else if (v == visitWebsite) {
-            openUrl(WEBSITE);
-        } else if (v == reportBugs) {
-            startActivity(new Intent(this, BugReportActivity.class));
-        } else if (v == writeAnEmail) {
-            Intent intent = new Intent(Intent.ACTION_SENDTO);
-            intent.setData(Uri.parse("mailto:contact@kabouzeid.com"));
-            intent.putExtra(Intent.EXTRA_EMAIL, "contact@kabouzeid.com");
-            intent.putExtra(Intent.EXTRA_SUBJECT, "Phonograph");
-            startActivity(Intent.createChooser(intent, "E-Mail"));
-        } else if (v == translate) {
-            openUrl(TRANSLATE);
-        } else if (v == rateOnGooglePlay) {
-            openUrl(RATE_ON_GOOGLE_PLAY);
         } else if (v == aidanFollestadGitHub) {
             openUrl(AIDAN_FOLLESTAD_GITHUB);
         } else if (v == michaelCookWebsite) {
