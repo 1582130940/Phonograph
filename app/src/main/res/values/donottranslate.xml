@@ -12,9 +12,6 @@
 
     <string name="aachen_germany" translatable="false">Aachen, Germany</string>
 
-    <string name="git_hub" translatable="false">GitHub</string>
-    <string name="twitter" translatable="false">Twitter</string>
-
     <string name="card" translatable="false">Card</string>
     <string name="flat" translatable="false">Flat</string>
 

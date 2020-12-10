@@ -26,9 +26,7 @@ import com.bumptech.glide.Glide;
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.kabouzeid.appthemehelper.util.NavigationViewUtil;
-import com.kabouzeid.gramophone.App;
 import com.kabouzeid.gramophone.R;
-import com.kabouzeid.gramophone.dialogs.ChangelogDialog;
 import com.kabouzeid.gramophone.dialogs.ScanMediaFolderChooserDialog;
 import com.kabouzeid.gramophone.glide.SongGlideRequest;
 import com.kabouzeid.gramophone.helper.MusicPlayerRemote;
@@ -92,9 +90,7 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
             restoreCurrentFragment();
         }
 
-        if (!checkShowIntro()) {
-            showChangelog();
-        }
+        if (!checkShowIntro()) showChangelog();
     }
 
     private void setMusicChooser(int key) {
@@ -322,7 +318,6 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
     private boolean checkShowIntro() {
         if (!PreferenceUtil.getInstance(this).introShown()) {
             PreferenceUtil.getInstance(this).setIntroShown();
-            ChangelogDialog.setChangelogRead(this);
             blockRequestPermissions = true;
             new Handler().postDelayed(() -> startActivityForResult(new Intent(MainActivity.this, AppIntroActivity.class), APP_INTRO_REQUEST), 50);
             return true;
@@ -335,7 +330,6 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
             PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
             int currentVersion = pInfo.versionCode;
             if (currentVersion != PreferenceUtil.getInstance(this).getLastChangelogVersion()) {
-                ChangelogDialog.create().show(getSupportFragmentManager(), "CHANGE_LOG_DIALOG");
             }
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();

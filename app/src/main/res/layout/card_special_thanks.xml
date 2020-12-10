@@ -24,11 +24,6 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="?android:textColorSecondary" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?attr/dividerColor" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,27 +52,7 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/aidan_follestad_git_hub"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/git_hub"
-                    android:textColor="#4183c4" />
-            </LinearLayout>
-
         </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?attr/dividerColor" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -107,27 +82,7 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/michael_cook_website"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/website"
-                    android:textColor="#4183c4" />
-            </LinearLayout>
-
         </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?attr/dividerColor" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -157,36 +112,7 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/maarten_corpel_website"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/website"
-                    android:textColor="#4183c4" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/maarten_corpel_twitter"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/twitter"
-                    android:textColor="#00aced" />
-
-            </LinearLayout>
-
         </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?attr/dividerColor" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -216,29 +142,7 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/aleksandar_tesic_twitter"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/twitter"
-                    android:textColor="#00aced" />
-
-            </LinearLayout>
-
-
         </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?attr/dividerColor" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -268,36 +172,7 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/eugene_cheung_website"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/website"
-                    android:textColor="#4183c4" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/eugene_cheung_git_hub"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/git_hub"
-                    android:textColor="#4183c4" />
-
-            </LinearLayout>
-
         </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?attr/dividerColor" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -325,22 +200,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/adrian_summary"
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/adrian_twitter"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/twitter"
-                    android:textColor="#00aced" />
-
             </LinearLayout>
 
         </LinearLayout>
