@@ -157,17 +157,8 @@
     <string name="licenses">"Licenças "</string>
     <string name="permissions_denied">Permissões negadas.</string>
     <string name="permission_external_storage_denied">Permissão para aceder a armazenamento externo negada.</string>
-    <string name="support_development">Apoiar o desenvolvimento</string>
     <string name="version">Versão</string>
     <string name="author">Autor</string>
-    <string name="follow_on_twitter">Seguir no Twitter</string>
-    <string name="visit_website">Visitar sítio na Internet</string>
-    <string name="report_bugs">Reportar erros</string>
-    <string name="report_bugs_summary">Reportar erros ou sugerir novas funcionalidades.</string>
-    <string name="translate">Traduzir</string>
-    <string name="translate_summary">Ajude a traduzir o Phonograph para o seu idioma nativo.</string>
-    <string name="rate_on_google_play">Classifique</string>
-    <string name="rate_on_google_play_summary">Deixe uma avaliação positiva no Google Play, se gosta do Phonograph.</string>
     <string name="aidan_follestad_summary">Pelo motor do tema e algumas outras coisas espetaculares.</string>
     <string name="michael_cook_summary">Para o bonito ícone material da aplicação.</string>
     <string name="maarten_corpel_summary">Por fazer a ilustração na Play Store e pela capa de álbum vazia.</string>

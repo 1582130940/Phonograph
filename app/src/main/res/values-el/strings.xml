@@ -181,17 +181,8 @@
     <string name="licenses">Άδειες</string>
     <string name="permissions_denied">Άρνηση χορήγησης δικαιωμάτων.</string>
     <string name="permission_external_storage_denied">Άρνηση χορήγησης δικαιώματος πρόσβασης σε εξωτερικά μέσα αποθήκευσης.</string>
-    <string name="support_development">Υποστηρίξτε την ανάπτυξη της εφαρμογής</string>
     <string name="version">Έκδοση</string>
     <string name="author">Εκδότης</string>
-    <string name="follow_on_twitter">Ακολουθήστε στο Twitter</string>
-    <string name="visit_website">Επισκεφθείτε την ιστοσελίδα μας</string>
-    <string name="report_bugs">Αναφορά σφαλμάτων</string>
-    <string name="report_bugs_summary">Αναφέρετε σφάλματα ή ζητείστε νέα χαρακτηριστικά.</string>
-    <string name="translate">Μεταφράστε</string>
-    <string name="translate_summary">Βοηθήστε την μετάφραση του Phonograph στη μητρική σας γλώσσα.</string>
-    <string name="rate_on_google_play">Βαθμολογήστε</string>
-    <string name="rate_on_google_play_summary">Αφήστε μια θετική αξιολόγηση  στο Google Play, αν σας αρέσει το Phonograph.</string>
     <string name="aidan_follestad_summary">Για την μηχανή θεμάτων και κάποια άλλα ωραία πράγματα.</string>
     <string name="michael_cook_summary">Για το όμορφο material εικονίδιο της εφαρμογής.</string>
     <string name="maarten_corpel_summary">Για την δημιουργία της εικονογράφησης του Play Store και του άδειου εξώφυλλου του άλμπουμ.</string>
