@@ -13,10 +13,7 @@ static def gitBranch() {
             proc.err.eachLine { line -> println line }
             proc.waitFor()
         }
-    } catch (Exception e) {
-        // Do nothing
-        println e
-    }
+    } catch (Exception ignored) {}
     branch
 }
 
