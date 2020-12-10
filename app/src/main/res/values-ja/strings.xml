@@ -20,7 +20,7 @@
     <string name="action_next">次へ</string>
     <string name="action_add_to_playing_queue">再生キューに追加</string>
     <string name="action_remove_from_playing_queue">再生キューから除去</string>
-    <string name="action_add_to_playlist">プレイリストに追加…</string>
+    <string name="action_add_to_playlist">プレイリストに追加...</string>
     <string name="action_tag_editor">タグの編集</string>
     <string name="action_delete_from_device">端末から削除</string>
     <string name="action_details">詳細情報</string>
@@ -155,7 +155,7 @@
     <string name="no_artists">アーティストなし</string>
     <string name="no_genres">ジャンルなし</string>
     <string name="empty">空</string>
-    <string name="playlist_name_empty">名前を入力…</string>
+    <string name="playlist_name_empty">名前を入力...</string>
     <string name="song">タイトル</string>
     <string name="pref_summary_album_art_on_lockscreen">再生中の曲のアルバムアートをロック画面に表示します。</string>
     <string name="pref_summary_blurred_album_art">ロック画面に表示するアルバムアートをぼかします。サードパーティのアプリやウィジェットで問題が発生する可能性があります。</string>
@@ -170,7 +170,7 @@
     <string name="pref_summary_remember_last_tab">アプリ起動時に最後に開いていたタブを開く</string>
     <string name="pref_summary_remember_shuffle">新しい曲のリストを選択しても、シャッフルモードはオンのままになります。</string>
     <string name="could_not_download_album_cover">"\u6700\u9069\u306a\u30a2\u30eb\u30d0\u30e0\u30a2\u30fc\u30c8\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f"</string>
-    <string name="search_hint">ライブラリ内を検索…</string>
+    <string name="search_hint">ライブラリ内を検索...</string>
     <string name="favorites">お気に入り</string>
     <string name="last_added">最近追加された曲</string>
     <string name="history">最近再生した曲</string>
@@ -202,7 +202,7 @@
     <string name="up_next">次の曲</string>
     <string name="pref_title_now_playing_screen_appearance">外観</string>
     <string name="intro_label">説明</string>
-    <string name="welcome_to_phonograph">"Phonographへようこそ、美しく軽快に動作するAndroid用の音楽プレーヤーです。 "</string>
+    <string name="welcome_to_phonograph">"Phonographへようこそ、美しく軽快に動作するAndroid用の音楽プレーヤーです。"</string>
     <string name="open_playing_queue_instruction">カードをスワイプすると再生中のスクリーンから再生キューのページに移動します。</string>
     <string name="rearrange_playing_queue_instruction">トラック番号をドラッグして再生キューの曲を並び替えることができます。</string>
     <string name="library">ライブラリ</string>
@@ -236,7 +236,7 @@
     <string name="bug_report_no_description">問題の説明を入力してください</string>
     <string name="bug_report_no_username">正しいGitHubユーザーネームを入力してください</string>
     <string name="bug_report_no_password">正しいGitHubパスワードを入力してください</string>
-    <string name="bug_report_uploading">GitHubにレポートをアップロード中…</string>
+    <string name="bug_report_uploading">GitHubにレポートをアップロード中...</string>
     <string name="bug_report_failed">レポートの送信に失敗しました</string>
     <string name="bug_report_failed_wrong_credentials">ユーザーネームまたはパスワードが間違っています</string>
     <string name="bug_report_failed_invalid_token">不正なアクセストークンです。お手数ですがアプリの開発者にお問い合わせください。</string>

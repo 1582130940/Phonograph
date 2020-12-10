@@ -20,7 +20,7 @@
     <string name="action_next">Nächster</string>
     <string name="action_add_to_playing_queue">Zur Warteschlange hinzufügen</string>
     <string name="action_remove_from_playing_queue">Von Warteschlange entfernen</string>
-    <string name="action_add_to_playlist">Zu Wiedergabeliste hinzufügen…</string>
+    <string name="action_add_to_playlist">Zu Wiedergabeliste hinzufügen...</string>
     <string name="action_tag_editor">Tags ändern</string>
     <string name="action_delete_from_device">Von Gerät löschen</string>
     <string name="action_details">Details</string>
@@ -47,7 +47,7 @@
     <string name="track_hint">"Track (2 für Track 2 oder 3004 für CD 3 Track 4)"</string>
     <string name="lyrics">Songtext</string>
     <string name="album_or_artist_empty">Der Titel oder der Interpret ist leer.</string>
-    <string name="saving_changes">Speichere Änderungen…</string>
+    <string name="saving_changes">Speichere Änderungen...</string>
     <string name="label_details">Details</string>
     <string name="label_file_name">Dateiname</string>
     <string name="label_file_path">Dateipfad</string>
@@ -60,7 +60,7 @@
     <string name="action_go_to_album">Gehe zum Album</string>
     <string name="label_playing_queue">Warteschlange</string>
     <string name="no_results">Keine Ergebnisse</string>
-    <string name="updating">Aktualisiere…</string>
+    <string name="updating">Aktualisiere...</string>
     <string name="added_title_to_playing_queue">"1 Titel wurde der Warteschlange hinzugefügt."</string>
     <string name="added_x_titles_to_playing_queue">%1$d Titel wurden der Warteschlange hinzugefügt.</string>
     <string name="action_remove_from_playlist">Aus Wiedergabeliste entfernen</string>
@@ -184,7 +184,7 @@
     <string name="cancel_current_timer">Aktuellen Timer abbrechen</string>
     <string name="sleep_timer_canceled">Der Einschlaf Timer wurde abgebrochen.</string>
     <string name="sleep_timer_set">Der Schlaf Timer geht ab jetzt %d Minuten lang.</string>
-    <string name="action_new_playlist">Neue Wiedergabeliste…</string>
+    <string name="action_new_playlist">Neue Wiedergabeliste...</string>
     <string name="new_playlist_title">Neue Wiedergabeliste</string>
     <string name="colored_footers">Farbige Balken</string>
     <string name="special_thanks_to">Besonderes Dankeschön an</string>
@@ -192,19 +192,8 @@
     <string name="licenses">Lizenzen</string>
     <string name="permissions_denied">Berechtigungen verweigert.</string>
     <string name="permission_external_storage_denied">Die Berechtigung für den Zugriff auf den externen Speicher wurde verweigert.</string>
-    <string name="support_development">Unterstütze die Entwicklung</string>
     <string name="version">Version</string>
     <string name="author">Autor</string>
-    <string name="write_an_email">Eine E-Mail schreiben</string>
-    <string name="follow_on_twitter">Auf Twitter folgen</string>
-    <string name="fork_on_github">Auf GitHub forken</string>
-    <string name="visit_website">Website besuchen</string>
-    <string name="report_bugs">Fehler melden</string>
-    <string name="report_bugs_summary">Melde Fehler oder schlage neue Features vor.</string>
-    <string name="translate">Übersetzen</string>
-    <string name="translate_summary">Helfe dabei, Phonograph in deine Sprache zu übersetzen.</string>
-    <string name="rate_on_google_play">Bewerten</string>
-    <string name="rate_on_google_play_summary">Hinterlasse eine positive Bewertung auf Google Play, falls dir Phonograph gefällt.</string>
     <string name="aidan_follestad_summary">Für die Theme Engine und andere tolle Sachen.</string>
     <string name="michael_cook_summary">Für das schöne Material App Icon.</string>
     <string name="maarten_corpel_summary">Für das Machen der Play Store Illustration und des leeren Album Covers.</string>

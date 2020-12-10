@@ -198,7 +198,7 @@
     <string name="up_next">Lejátszási sor</string>
     <string name="pref_title_now_playing_screen_appearance">Megjelenés</string>
     <string name="intro_label">Bevezető</string>
-    <string name="welcome_to_phonograph">"Üdvözlöm! A Phonograph egy szép és kis méretű zenelejátszó Androidra. "</string>
+    <string name="welcome_to_phonograph">"Üdvözlöm! A Phonograph egy szép és kis méretű zenelejátszó Androidra."</string>
     <string name="open_playing_queue_instruction">Húzza fel a kártyát a most játszott képernyőn, hogy megnyissa a lejátszási sort.</string>
     <string name="rearrange_playing_queue_instruction">A lejátszási sort átrendezheti, ha a dalokat a sorszámuknál megfogva húzni kezdi.</string>
     <string name="library">Könyvtár</string>

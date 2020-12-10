@@ -20,7 +20,7 @@
     <string name="action_next">Next</string>
     <string name="action_add_to_playing_queue">Add to playing queue</string>
     <string name="action_remove_from_playing_queue">Remove from playing queue</string>
-    <string name="action_add_to_playlist">Add to playlist…</string>
+    <string name="action_add_to_playlist">Add to playlist...</string>
     <string name="action_tag_editor">Tag editor</string>
     <string name="action_delete_from_device">Delete from device</string>
     <string name="action_details">Details</string>
@@ -59,7 +59,7 @@
     <string name="action_go_to_album">Go to album</string>
     <string name="label_playing_queue">Playing queue</string>
     <string name="no_results">No results</string>
-    <string name="updating">Updating…</string>
+    <string name="updating">Updating...</string>
     <string name="added_title_to_playing_queue">"Added 1 title to the playing queue."</string>
     <string name="added_x_titles_to_playing_queue">Added %1$d titles to the playing queue.</string>
     <string name="action_remove_from_playlist">Remove from playlist</string>
@@ -70,13 +70,13 @@
     <string name="deleted_x_songs">Deleted %1$d songs.</string>
     <string name="playlist_exists">Playlist %1$s already exists.</string>
     <string name="could_not_create_playlist">Couldn\u2019t create playlist.</string>
-    <string name="delete_playlist_x"><![CDATA[Delete the playlist <b> %1$s </b>?]]></string>
-    <string name="clear_playlist_x"><![CDATA[Clear the playlist <b> %1$s </b>? This can\u2019t be undone!]]></string>
-    <string name="delete_x_playlists"><![CDATA[<b>%1$d</b> playlists?]]></string>
-    <string name="delete_song_x"><![CDATA[Delete the song <b> %1$s </b> ?]]></string>
-    <string name="delete_x_songs"><![CDATA[Delete <b> %1$d </b> songs?]]></string>
-    <string name="remove_song_x_from_playlist"><![CDATA[Remove the song <b> %1$s </b> from the playlist?]]></string>
-    <string name="remove_x_songs_from_playlist"><![CDATA[Remove <b> %1$d </b> songs from the playlist?]]></string>
+    <string name="delete_playlist_x"><![CDATA[Delete the playlist <b>%1$s</b>?]]></string>
+    <string name="clear_playlist_x"><![CDATA[Clear the playlist <b>%1$s</b>? This can\u2019t be undone!]]></string>
+    <string name="delete_x_playlists"><![CDATA[Delete <b>%1$d</b> playlists?]]></string>
+    <string name="delete_song_x"><![CDATA[Delete the song <b>%1$s</b>?]]></string>
+    <string name="delete_x_songs"><![CDATA[Delete <b>%1$d</b> songs?]]></string>
+    <string name="remove_song_x_from_playlist"><![CDATA[Remove the song <b>%1$s</b> from the playlist?]]></string>
+    <string name="remove_x_songs_from_playlist"><![CDATA[Remove <b>%1$d</b> songs from the playlist?]]></string>
     <string name="delete_song_title">Delete song</string>
     <string name="delete_songs_title">Delete songs</string>
     <string name="remove_song_from_playlist_title">Remove song from playlist</string>
@@ -159,7 +159,7 @@
     <string name="pref_summary_audio_ducking">Notifications, navigation etc.</string>
     <string name="pref_summary_synchronized_lyrics_show">Currently only synchronized lyrics in LRC format are supported. Either embedded or as a separate file.</string>
     <string name="could_not_download_album_cover">"Couldn\u2019t download a matching album cover."</string>
-    <string name="search_hint">Search your library…</string>
+    <string name="search_hint">Search your library...</string>
     <string name="favorites">Favorites</string>
     <string name="last_added">Last added</string>
     <string name="history">History</string>
@@ -173,7 +173,7 @@
     <string name="cancel_current_timer">Cancel current timer</string>
     <string name="sleep_timer_canceled">Sleep timer canceled.</string>
     <string name="sleep_timer_set">Sleep timer set for %d minutes from now.</string>
-    <string name="action_new_playlist">New playlist…</string>
+    <string name="action_new_playlist">New playlist...</string>
     <string name="new_playlist_title">New playlist</string>
     <string name="colored_footers">Colored footers</string>
     <string name="special_thanks_to">Special thanks to</string>
@@ -222,7 +222,7 @@
     <string name="bug_report_no_description">Please enter an issue description</string>
     <string name="bug_report_no_username">Please enter your valid GitHub username</string>
     <string name="bug_report_no_password">Please enter your valid GitHub password</string>
-    <string name="bug_report_uploading">Uploading report to GitHub…</string>
+    <string name="bug_report_uploading">Uploading report to GitHub...</string>
     <string name="bug_report_failed">Unable to send report</string>
     <string name="bug_report_failed_wrong_credentials">Wrong username or password</string>
     <string name="bug_report_failed_invalid_token">Invalid access token. Please contact the app developer.</string>

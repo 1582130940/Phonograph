@@ -39,7 +39,7 @@
     <string name="year">År</string>
     <string name="track_hint">"Spår"</string>
     <string name="album_or_artist_empty">Textfältet för titel eller artist är tomt.</string>
-    <string name="saving_changes">Sparar ändringar ...</string>
+    <string name="saving_changes">Sparar ändringar...</string>
     <string name="label_details">Detaljer</string>
     <string name="label_file_name">Filnamn</string>
     <string name="label_file_path">Sökväg</string>
@@ -79,6 +79,6 @@
     <string name="no_playlists">Inga spellistor</string>
     <string name="song">Låt</string>
     <string name="pref_summary_colored_navigation_bar">I vilken vy navigeringslisten skall vara färgad</string>
-    <string name="search_hint">Sök i ditt bibliotek ...</string>
+    <string name="search_hint">Sök i ditt bibliotek...</string>
     <string name="new_playlist_title">Ny spellista</string>
 </resources>

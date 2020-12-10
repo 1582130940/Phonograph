@@ -198,7 +198,7 @@
     <string name="up_next">Urmează</string>
     <string name="pref_title_now_playing_screen_appearance">Aspect</string>
     <string name="intro_label">Introducere</string>
-    <string name="welcome_to_phonograph">"Bine ați venit la Phonograph, un player muzical frumos și ușor pentru Android. "</string>
+    <string name="welcome_to_phonograph">"Bine ați venit la Phonograph, un player muzical frumos și ușor pentru Android."</string>
     <string name="open_playing_queue_instruction">Glisați cardul în ecranul de redare acum pentru a afișa coada de redare completă.</string>
     <string name="rearrange_playing_queue_instruction">Rearanjați coada de redare prin glisarea unei melodii de la numărul piesei sale.</string>
     <string name="library">Bibliotecă</string>

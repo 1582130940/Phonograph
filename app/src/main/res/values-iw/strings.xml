@@ -102,7 +102,7 @@
     <string name="dark_theme_name">כהה</string>
     <string name="black_theme_name">שחור (AMOLED)</string>
     <string name="always">תמיד</string>
-    <string name="only_on_wifi">רק עם WI-FI</string>
+    <string name="only_on_wifi">רק עם Wi-Fi</string>
     <string name="never">אף פעם</string>
     <string name="today">היום</string>
     <string name="this_week">השבוע</string>
@@ -202,7 +202,7 @@
     <string name="up_next">הבא בתור</string>
     <string name="pref_title_now_playing_screen_appearance">מראה</string>
     <string name="intro_label">מבוא</string>
-    <string name="welcome_to_phonograph">"ברוכים הבאים ל-Phonograph, נגן מוזיקה קל ויפה ל-Android. "</string>
+    <string name="welcome_to_phonograph">"ברוכים הבאים ל-Phonograph, נגן מוזיקה קל ויפה ל-Android."</string>
     <string name="open_playing_queue_instruction">החלק את הכרטיס למעלה במסך \'מנגן כעת\' כדי לחשוף את תור ההשמעה המלא.</string>
     <string name="rearrange_playing_queue_instruction">מיין מחדש את התור על ידי גרירת השיר מהמספר שלו.</string>
     <string name="library">ספריה</string>
@@ -236,7 +236,7 @@
     <string name="bug_report_no_description">הזן את תיאור הבעיה</string>
     <string name="bug_report_no_username">הזן את שם המשתמש שלך ב-GitHub</string>
     <string name="bug_report_no_password">הזן את הסיסמה שלך ב-GitHub</string>
-    <string name="bug_report_uploading">מעלה דיווח לGitHub…</string>
+    <string name="bug_report_uploading">מעלה דיווח לGitHub...</string>
     <string name="bug_report_failed">לא ניתן לשלוח דיווח</string>
     <string name="bug_report_failed_wrong_credentials">שם משתמש או סיסמא שגויים</string>
     <string name="bug_report_failed_invalid_token">טוקן כניסה לא מאושר. בבקשה צור קשר עם מפתח האפליקציה.</string>

@@ -202,7 +202,7 @@
     <string name="up_next">Sljedeće na redu</string>
     <string name="pref_title_now_playing_screen_appearance">Izgled</string>
     <string name="intro_label">Uvod</string>
-    <string name="welcome_to_phonograph">"Dobrodošli u Phonograph, prekrasan i lagan glazbeni player za Android. "</string>
+    <string name="welcome_to_phonograph">"Dobrodošli u Phonograph, prekrasan i lagan glazbeni player za Android."</string>
     <string name="open_playing_queue_instruction">Povucite karticu na zaslonu za reprodukciju kako bi otvorili cijeli red čekanja.</string>
     <string name="rearrange_playing_queue_instruction">Preuredite red čekanja povlačenjem pjesme za njen broj.</string>
     <string name="library">Biblioteka</string>

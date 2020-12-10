@@ -170,7 +170,7 @@
     <string name="pref_summary_remember_last_tab">Go to the last opened tab on launch</string>
     <string name="pref_summary_remember_shuffle">Shuffle mode will stay on when selecting a new list of songs</string>
     <string name="could_not_download_album_cover">"Couldn\u2019t download a matching album cover."</string>
-    <string name="search_hint">Search your library…</string>
+    <string name="search_hint">Search your library...</string>
     <string name="favorites">Favourites</string>
     <string name="last_added">Last added</string>
     <string name="history">Recently played</string>
@@ -184,7 +184,7 @@
     <string name="cancel_current_timer">Cancel current timer</string>
     <string name="sleep_timer_canceled">Sleep timer canceled.</string>
     <string name="sleep_timer_set">Sleep timer set for %d minutes from now.</string>
-    <string name="action_new_playlist">New playlist…</string>
+    <string name="action_new_playlist">New playlist...</string>
     <string name="new_playlist_title">New playlist</string>
     <string name="colored_footers">Coloured footers</string>
     <string name="special_thanks_to">Special thanks to</string>
@@ -222,7 +222,7 @@
     <string name="app_widget_classic_name">Phonograph - Classic</string>
     <string name="app_widget_small_name">Phonograph - Small</string>
     <string name="app_widget_card_name">Phonograph - Card</string>
-    <string name="report_an_issue">Phonograph - Card</string>
+    <string name="report_an_issue">Report an issue</string>
     <string name="bug_report_issue">Issue</string>
     <string name="login">Login</string>
     <string name="title">Title</string>
@@ -236,7 +236,7 @@
     <string name="bug_report_no_description">Please enter an issue description</string>
     <string name="bug_report_no_username">Please enter your valid GitHub username</string>
     <string name="bug_report_no_password">Please enter your valid GitHub password</string>
-    <string name="bug_report_uploading">Uploading report to GitHub…</string>
+    <string name="bug_report_uploading">Uploading report to GitHub...</string>
     <string name="bug_report_failed">Unable to send report</string>
     <string name="bug_report_failed_wrong_credentials">Wrong username or password</string>
     <string name="bug_report_failed_invalid_token">Invalid access token. Please contact the app developer.</string>

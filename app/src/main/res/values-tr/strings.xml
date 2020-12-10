@@ -202,7 +202,7 @@
     <string name="up_next">Sırada olanlar</string>
     <string name="pref_title_now_playing_screen_appearance">Görünüm</string>
     <string name="intro_label">Tanıtım</string>
-    <string name="welcome_to_phonograph">"Phonograph'a Hoşgeldiniz, Android için muhteşem bir müzik çalar. "</string>
+    <string name="welcome_to_phonograph">"Phonograph'a Hoşgeldiniz, Android için muhteşem bir müzik çalar."</string>
     <string name="open_playing_queue_instruction">Şuan çalınıyor ekranı kartını yukarı kaydırmak çalma sırasının tamamını ortaya çıkarır.</string>
     <string name="rearrange_playing_queue_instruction">Çalma sırasını yeniden düzenlemek için şarkının parça numarasını kaydırın</string>
     <string name="library">Kitaplık</string>

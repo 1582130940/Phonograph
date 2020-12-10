@@ -202,7 +202,7 @@
     <string name="up_next">Seuraavaksi</string>
     <string name="pref_title_now_playing_screen_appearance">Ulkonäkö</string>
     <string name="intro_label">Esittely</string>
-    <string name="welcome_to_phonograph">"Tervetuloa Phonographiin, kauniiseen ja kevyeen musiikkisoittimeen Androidille. "</string>
+    <string name="welcome_to_phonograph">"Tervetuloa Phonographiin, kauniiseen ja kevyeen musiikkisoittimeen Androidille."</string>
     <string name="open_playing_queue_instruction">Vedä korttia Toistetaan parhaillaan -ikkunassa ylös, nähdäksesi koko toistojonon.</string>
     <string name="rearrange_playing_queue_instruction">Järjestä toistojonoa vetämällä kappaletta sen raitanumerosta.</string>
     <string name="library">Kirjasto</string>

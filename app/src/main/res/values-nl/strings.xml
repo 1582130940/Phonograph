@@ -20,7 +20,7 @@
     <string name="action_next">Volgende</string>
     <string name="action_add_to_playing_queue">Toevoegen aan afspeelwachtrij</string>
     <string name="action_remove_from_playing_queue">Verwijderen uit afspeelwachtrij</string>
-    <string name="action_add_to_playlist">Toevoegen aan afspeellijst…</string>
+    <string name="action_add_to_playlist">Toevoegen aan afspeellijst...</string>
     <string name="action_tag_editor">Label bewerker</string>
     <string name="action_delete_from_device">Verwijderen van apparaat</string>
     <string name="action_details">Details</string>
@@ -60,7 +60,7 @@
     <string name="action_go_to_album">Ga naar album</string>
     <string name="label_playing_queue">Afspeelwachtrij</string>
     <string name="no_results">Geen resultaten</string>
-    <string name="updating">Bijwerken…</string>
+    <string name="updating">Bijwerken...</string>
     <string name="added_title_to_playing_queue">"1 titel toegevoegd aan de afspeelwachtrij."</string>
     <string name="added_x_titles_to_playing_queue">%1$d titels toegevoegd aan de afspeelwachtrij.</string>
     <string name="action_remove_from_playlist">Verwijderen uit afspeellijst</string>
@@ -166,7 +166,7 @@
     <string name="pref_summary_synchronized_lyrics_show">Momenteel worden gesynchr. songteksten alleen ondersteund in LRC-formaat. Of ingebed, of als separaat bestand.</string>
     <string name="pref_summary_remember_last_tab">Ga naar het laatst geopende tabblad bij opstarten</string>
     <string name="could_not_download_album_cover">"Kan geen bijpassende albumhoes downloaden."</string>
-    <string name="search_hint">Zoek in je bibliotheek…</string>
+    <string name="search_hint">Zoek in je bibliotheek...</string>
     <string name="favorites">Favorieten</string>
     <string name="last_added">Laatst toegevoegd</string>
     <string name="history">Geschiedenis</string>
@@ -180,7 +180,7 @@
     <string name="cancel_current_timer">Annuleer huidige timer</string>
     <string name="sleep_timer_canceled">Slaaptimer is geannuleerd.</string>
     <string name="sleep_timer_set">Slaaptimer gezet voor %d minuten vanaf nu.</string>
-    <string name="action_new_playlist">Nieuwe afspeellijst…</string>
+    <string name="action_new_playlist">Nieuwe afspeellijst...</string>
     <string name="new_playlist_title">Nieuwe afspeellijst</string>
     <string name="colored_footers">Gekleurde voetkaders</string>
     <string name="special_thanks_to">Speciale dank aan</string>
@@ -232,7 +232,7 @@
     <string name="bug_report_no_description">Voer een probleemomschrijving in</string>
     <string name="bug_report_no_username">Voer je GitHub gebruikersnaam in</string>
     <string name="bug_report_no_password">Voer je GitHub wachtwoord in</string>
-    <string name="bug_report_uploading">Rapport uploaden naar GitHub…</string>
+    <string name="bug_report_uploading">Rapport uploaden naar GitHub...</string>
     <string name="bug_report_failed">Kan rapport niet verzenden</string>
     <string name="bug_report_failed_wrong_credentials">Foutieve gebruikersnaam of wachtwoord</string>
     <string name="bug_report_failed_invalid_token">Ongeldige toegangstoken. Neem contact op met de app ontwikkelaar.</string>

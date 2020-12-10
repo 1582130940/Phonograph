@@ -60,7 +60,7 @@
     <string name="action_go_to_album">Voir l\'album</string>
     <string name="label_playing_queue">File de lecture</string>
     <string name="no_results">Aucun résultat</string>
-    <string name="updating">Actualisation…</string>
+    <string name="updating">Actualisation...</string>
     <string name="added_title_to_playing_queue">"1 titre ajouté à la file de lecture."</string>
     <string name="added_x_titles_to_playing_queue">%1$d titres ajoutés à la file de lecture.</string>
     <string name="action_remove_from_playlist">Retirer de la liste de lecture</string>
@@ -184,7 +184,7 @@
     <string name="cancel_current_timer">Désactiver le minuteur actuel</string>
     <string name="sleep_timer_canceled">Le minuteur a été désactivé.</string>
     <string name="sleep_timer_set">Arrêt de la musique dans %d minutes.</string>
-    <string name="action_new_playlist">Nouvelle liste de lecture…</string>
+    <string name="action_new_playlist">Nouvelle liste de lecture...</string>
     <string name="new_playlist_title">Nouvelle playlist</string>
     <string name="colored_footers">Bas des albums colorés</string>
     <string name="special_thanks_to">Un grand merci à</string>
@@ -202,7 +202,7 @@
     <string name="up_next">Suivant</string>
     <string name="pref_title_now_playing_screen_appearance">Apparence</string>
     <string name="intro_label">Introduction</string>
-    <string name="welcome_to_phonograph">"Bienvenue sur Phonograph, un lecteur de musique beau et léger pour Android. "</string>
+    <string name="welcome_to_phonograph">"Bienvenue sur Phonograph, un lecteur de musique beau et léger pour Android."</string>
     <string name="open_playing_queue_instruction">Vous pouvez glisser la carte dans l\'écran de lecture en cours pour afficher la file de lecture complète.</string>
     <string name="rearrange_playing_queue_instruction">Vous pouvez réorganiser la file de lecture en faisant glisser une chanson à partir de son numéro de piste.</string>
     <string name="library">Bibliothèque</string>
@@ -236,7 +236,7 @@
     <string name="bug_report_no_description">Veuillez entrer une description</string>
     <string name="bug_report_no_username">"Veuillez entrer votre nom d'utilisateur GitHub correct "</string>
     <string name="bug_report_no_password">Veuillez entrer votre mot de passe GitHub correct</string>
-    <string name="bug_report_uploading">"Envoi du rapport sur GitHub... "</string>
+    <string name="bug_report_uploading">"Envoi du rapport sur GitHub..."</string>
     <string name="bug_report_failed">Impossible d\'envoyer le rapport</string>
     <string name="bug_report_failed_wrong_credentials">Nom d\'utilisateur ou mot de passe incorrect</string>
     <string name="bug_report_failed_invalid_token">Jeton d\'accès invalide. Veuillez contacter le développeur de l\'application.</string>

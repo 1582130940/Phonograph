@@ -202,7 +202,7 @@
     <string name="up_next">A seguire</string>
     <string name="pref_title_now_playing_screen_appearance">Aspetto</string>
     <string name="intro_label">Introduzione</string>
-    <string name="welcome_to_phonograph">"Benvenuto in Phonograph, un music player bellissimo e leggero per Android. "</string>
+    <string name="welcome_to_phonograph">"Benvenuto in Phonograph, un music player bellissimo e leggero per Android."</string>
     <string name="open_playing_queue_instruction">Fai uno swipe sulla card nella schermata In riproduzione per mostrare l\'intera coda di riproduzione.</string>
     <string name="rearrange_playing_queue_instruction">Riorganizza la coda di riproduzione trascinando una canzone dal suo numero di traccia.</string>
     <string name="library">Libreria</string>

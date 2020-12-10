@@ -202,7 +202,7 @@
     <string name="up_next">Berikutnya</string>
     <string name="pref_title_now_playing_screen_appearance">Tampilan</string>
     <string name="intro_label">Pengenalan</string>
-    <string name="welcome_to_phonograph">"Selamat datang di Phonograph, sebuah pemutar musik yang indah dan ringan untuk Android. "</string>
+    <string name="welcome_to_phonograph">"Selamat datang di Phonograph, sebuah pemutar musik yang indah dan ringan untuk Android."</string>
     <string name="open_playing_queue_instruction">Geser ke atas pada kartu di layar yang sedang memutar untuk memperlihatkan dengan lengkap antrean yang sedang diputar.</string>
     <string name="rearrange_playing_queue_instruction">Atur ulang antrean yang sedang diputar dengan menyeret lagu dari nomor urut.</string>
     <string name="library">Pustaka</string>

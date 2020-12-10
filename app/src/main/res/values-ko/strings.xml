@@ -232,7 +232,7 @@
     <string name="bug_report_no_description">이슈 설명을 입력해 주세요</string>
     <string name="bug_report_no_username">깃허브 사용자 이름을 바르게 입력해 주세요</string>
     <string name="bug_report_no_password">깃허브 비밀번호를 바르게 입력해 주세요</string>
-    <string name="bug_report_uploading">보고서를 깃허브로 업로드 하는 중…</string>
+    <string name="bug_report_uploading">보고서를 깃허브로 업로드 하는 중...</string>
     <string name="bug_report_failed">보고서 전송 실패</string>
     <string name="bug_report_failed_wrong_credentials">사용자 이름 또는 비밀번호가 옳지 않습니다.</string>
     <string name="bug_report_failed_invalid_token">사용 불가능한 접근 토큰입니다. 앱 개발자에게 연락하세요.</string>

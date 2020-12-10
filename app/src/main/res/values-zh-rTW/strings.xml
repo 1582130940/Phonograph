@@ -47,7 +47,7 @@
     <string name="track_hint">"音軌（用 2 表示第 2 首歌或 3004 表示 CD3 的第 4 首歌）"</string>
     <string name="lyrics">歌詞</string>
     <string name="album_or_artist_empty">專輯名稱或演出者欄是空的</string>
-    <string name="saving_changes">正在儲存變更…</string>
+    <string name="saving_changes">正在儲存變更...</string>
     <string name="label_details">詳細資訊</string>
     <string name="label_file_name">檔案名稱</string>
     <string name="label_file_path">檔案路徑</string>
@@ -60,7 +60,7 @@
     <string name="action_go_to_album">打開專輯</string>
     <string name="label_playing_queue">待播佇列</string>
     <string name="no_results">沒有搜尋結果</string>
-    <string name="updating">更新中…</string>
+    <string name="updating">更新中...</string>
     <string name="added_title_to_playing_queue">"已將 1 首歌加到播放佇列"</string>
     <string name="added_x_titles_to_playing_queue">已將 %1$d 首歌加到播放佇列。</string>
     <string name="action_remove_from_playlist">從播放清單中移除</string>
@@ -170,7 +170,7 @@
     <string name="pref_summary_remember_last_tab">開啟時顯示最後使用的頁面</string>
     <string name="pref_summary_remember_shuffle">當選擇新歌曲列表時維持隨機播放模式</string>
     <string name="could_not_download_album_cover">"\u7121\u6cd5\u4e0b\u8f09\u5408\u9069\u7684\u5c08\u8f2f\u5c01\u9762\u3002"</string>
-    <string name="search_hint">搜尋音樂庫…</string>
+    <string name="search_hint">搜尋音樂庫...</string>
     <string name="favorites">最愛</string>
     <string name="last_added">最後新增</string>
     <string name="history">最近播放</string>
