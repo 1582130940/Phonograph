@@ -20,7 +20,7 @@
     <string name="action_next">Další</string>
     <string name="action_add_to_playing_queue">Přidat do fronty</string>
     <string name="action_remove_from_playing_queue">Odebrat z fronty</string>
-    <string name="action_add_to_playlist">Přidat do playlistu...</string>
+    <string name="action_add_to_playlist">Přidat do playlistu…</string>
     <string name="action_tag_editor">Editor Tagů</string>
     <string name="action_delete_from_device">Smazat ze zařízení</string>
     <string name="action_details">Podrobné informace o skladbě</string>
@@ -60,7 +60,7 @@
     <string name="action_go_to_album">Přejít do alba</string>
     <string name="label_playing_queue">Fronta</string>
     <string name="no_results">Žádné výsledky</string>
-    <string name="updating">Aktualizace...</string>
+    <string name="updating">Aktualizace…</string>
     <string name="added_title_to_playing_queue">"Přidána 1 skladba do fronty."</string>
     <string name="added_x_titles_to_playing_queue">Přidáno %1$d skladeb do fronty.</string>
     <string name="action_remove_from_playlist">Odstranit z playlistu</string>
@@ -170,7 +170,7 @@
     <string name="pref_summary_remember_last_tab">Přejděte na poslední otevřenou kartu při spuštění</string>
     <string name="pref_summary_remember_shuffle">Při výběru nového seznamu skladeb zůstane režim náhodného přehrávání zapnutý</string>
     <string name="could_not_download_album_cover">"Nelze st\u00e1hnout odpov\u00eddaj\u00edc\u00ed obal alba."</string>
-    <string name="search_hint">Vyhledat zvukové soubory...</string>
+    <string name="search_hint">Vyhledat zvukové soubory…</string>
     <string name="favorites">Oblíbené</string>
     <string name="last_added">Naposledy přidáno</string>
     <string name="history">Nedávno přehrané</string>
@@ -184,7 +184,7 @@
     <string name="cancel_current_timer">Zrušit ukončení přehrávání</string>
     <string name="sleep_timer_canceled">Ukončení přehrávání zrušeno.</string>
     <string name="sleep_timer_set">Přehrávání se ukončí za %d minut.</string>
-    <string name="action_new_playlist">Nový playlist...</string>
+    <string name="action_new_playlist">Nový playlist…</string>
     <string name="new_playlist_title">Nový playlist</string>
     <string name="colored_footers">"Barevné zápatí "</string>
     <string name="special_thanks_to">Zvláštní poděkování</string>

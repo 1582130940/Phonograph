@@ -20,7 +20,7 @@
     <string name="action_next">Suivant</string>
     <string name="action_add_to_playing_queue">Ajouter à la liste de lecture</string>
     <string name="action_remove_from_playing_queue">Retirer de la liste de lecture</string>
-    <string name="action_add_to_playlist">Ajouter à la playlist ...</string>
+    <string name="action_add_to_playlist">Ajouter à la playlist …</string>
     <string name="action_tag_editor">Éditeur d\'informations</string>
     <string name="action_delete_from_device">Supprimer de l\'appareil</string>
     <string name="action_details">Détails</string>
@@ -170,7 +170,7 @@
     <string name="pref_summary_remember_last_tab">Au démarrage, aller au dernier onglet ouvert.</string>
     <string name="pref_summary_remember_shuffle">Le mode aléatoire restera activé lors de la sélection d\'une nouvelle liste de lecture</string>
     <string name="could_not_download_album_cover">"Impossible de t\u00e9l\u00e9charger la pochette correspondant \u00e0 l'album."</string>
-    <string name="search_hint">Recherche dans votre bibliothèque...</string>
+    <string name="search_hint">Recherche dans votre bibliothèque…</string>
     <string name="favorites">Favoris</string>
     <string name="last_added">Derniers ajouts</string>
     <string name="history">Joués récemment</string>
@@ -219,7 +219,7 @@
     <string name="up_next">Suivant</string>
     <string name="pref_title_now_playing_screen_appearance">Apparence</string>
     <string name="intro_label">Introduction</string>
-    <string name="welcome_to_phonograph">"Bienvenue sur Phonograph, un lecteur de musique beau et léger pour Android. "</string>
+    <string name="welcome_to_phonograph">"Bienvenue sur Phonograph, un lecteur de musique beau et léger pour Android."</string>
     <string name="open_playing_queue_instruction">Vous pouvez glisser la carte dans l\'écran de lecture en cours pour afficher la file de lecture complète.</string>
     <string name="rearrange_playing_queue_instruction">Vous pouvez réorganiser la file de lecture en faisant glisser une chanson à partir de son numéro de piste.</string>
     <string name="library">Bibliothèque</string>
