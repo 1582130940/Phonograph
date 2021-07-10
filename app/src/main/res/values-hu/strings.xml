@@ -20,7 +20,7 @@
     <string name="action_next">Következő</string>
     <string name="action_add_to_playing_queue">Hozzáadás a lejátszási sorhoz</string>
     <string name="action_remove_from_playing_queue">Eltávolítás a lejátszási sorból</string>
-    <string name="action_add_to_playlist">Hozzáadás a lejátszási listához...</string>
+    <string name="action_add_to_playlist">Hozzáadás a lejátszási listához…</string>
     <string name="action_tag_editor">Címkeszerkesztő</string>
     <string name="action_delete_from_device">Törlés az eszközről</string>
     <string name="action_details">Részletek</string>
@@ -60,7 +60,7 @@
     <string name="action_go_to_album">Ugrás az albumhoz</string>
     <string name="label_playing_queue">Lejátszási sor</string>
     <string name="no_results">Nincs találat</string>
-    <string name="updating">Frissítés...</string>
+    <string name="updating">Frissítés…</string>
     <string name="added_title_to_playing_queue">"1 dal hozzáadva a lejátszási sorhoz."</string>
     <string name="added_x_titles_to_playing_queue">%1$d dal hozzáadva a lejátszási sorhoz.</string>
     <string name="action_remove_from_playlist">Eltávolítás a lejátszási listából</string>
@@ -166,7 +166,7 @@
     <string name="pref_summary_synchronized_lyrics_show">Jelenleg csak az LRC formátumban szinkronizált szövegeket támogatják. Beágyazott vagy külön fájlként.</string>
     <string name="pref_summary_remember_last_tab">Menjen az utolsó megnyitott fülre az indításkor</string>
     <string name="could_not_download_album_cover">"Nem siker\u00fclt let\u00f6lteni a megfelel\u0151 albumbor\u00edt\u00f3t."</string>
-    <string name="search_hint">Keresés a könyvtárban...</string>
+    <string name="search_hint">Keresés a könyvtárban…</string>
     <string name="favorites">Kedvencek</string>
     <string name="last_added">Legfrissebb dalok</string>
     <string name="history">Nemrég lejátszott</string>
@@ -180,7 +180,7 @@
     <string name="cancel_current_timer">Az aktuális időzítő törlése</string>
     <string name="sleep_timer_canceled">Elalvás időzítő törölve.</string>
     <string name="sleep_timer_set">Elalvás időzítő beállítva, mostantól számított %d percre.</string>
-    <string name="action_new_playlist">Új lejátszási lista...</string>
+    <string name="action_new_playlist">Új lejátszási lista…</string>
     <string name="new_playlist_title">Új lejátszási lista</string>
     <string name="colored_footers">Színes lábjegyzetek</string>
     <string name="special_thanks_to">Külön köszönet</string>
@@ -198,7 +198,7 @@
     <string name="up_next">Lejátszási sor</string>
     <string name="pref_title_now_playing_screen_appearance">Megjelenés</string>
     <string name="intro_label">Bevezető</string>
-    <string name="welcome_to_phonograph">"Üdvözlöm! A Phonograph egy szép és kis méretű zenelejátszó Androidra. "</string>
+    <string name="welcome_to_phonograph">"Üdvözlöm! A Phonograph egy szép és kis méretű zenelejátszó Androidra."</string>
     <string name="open_playing_queue_instruction">Húzza fel a kártyát a most játszott képernyőn, hogy megnyissa a lejátszási sort.</string>
     <string name="rearrange_playing_queue_instruction">A lejátszási sort átrendezheti, ha a dalokat a sorszámuknál megfogva húzni kezdi.</string>
     <string name="library">Könyvtár</string>

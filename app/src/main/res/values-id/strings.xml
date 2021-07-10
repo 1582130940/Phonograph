@@ -20,7 +20,7 @@
     <string name="action_next">Selanjutnya</string>
     <string name="action_add_to_playing_queue">Tambahkan ke antrean putar</string>
     <string name="action_remove_from_playing_queue">Hapus dari antrian</string>
-    <string name="action_add_to_playlist">Tambahkan ke daftar putar...</string>
+    <string name="action_add_to_playlist">Tambahkan ke daftar putar…</string>
     <string name="action_tag_editor">Ubah label</string>
     <string name="action_delete_from_device">Hapus dari perangkat</string>
     <string name="action_details">Rincian</string>
@@ -170,7 +170,7 @@
     <string name="pref_summary_remember_last_tab">Pergi ke tab yang terakhir saat aplikasi dibuka</string>
     <string name="pref_summary_remember_shuffle">Mode putar acak akan tetap aktif saat memilih daftar lagu baru</string>
     <string name="could_not_download_album_cover">"Tidak dapat mengunduh sampul album yang cocok."</string>
-    <string name="search_hint">Mencari pustaka Anda...</string>
+    <string name="search_hint">Mencari pustaka Anda…</string>
     <string name="favorites">Favorit</string>
     <string name="last_added">Terakhir ditambahkan</string>
     <string name="history">Diputar baru-baru ini</string>
@@ -184,7 +184,7 @@
     <string name="cancel_current_timer">Batalkan pewaktu yang sekarang</string>
     <string name="sleep_timer_canceled">"Pewaktu tidur dibatalkan. "</string>
     <string name="sleep_timer_set">"Pewaktu tidur diatur selama %d menit dari sekarang. "</string>
-    <string name="action_new_playlist">Daftar putar baru...</string>
+    <string name="action_new_playlist">Daftar putar baru…</string>
     <string name="new_playlist_title">Daftar putar baru</string>
     <string name="colored_footers">Bawahan berwarna</string>
     <string name="special_thanks_to">Terima kasih khusus kepada</string>
@@ -202,7 +202,7 @@
     <string name="up_next">Berikutnya</string>
     <string name="pref_title_now_playing_screen_appearance">Tampilan</string>
     <string name="intro_label">Pengenalan</string>
-    <string name="welcome_to_phonograph">"Selamat datang di Phonograph, sebuah pemutar musik yang indah dan ringan untuk Android. "</string>
+    <string name="welcome_to_phonograph">"Selamat datang di Phonograph, sebuah pemutar musik yang indah dan ringan untuk Android."</string>
     <string name="open_playing_queue_instruction">Geser ke atas pada kartu di layar yang sedang memutar untuk memperlihatkan dengan lengkap antrean yang sedang diputar.</string>
     <string name="rearrange_playing_queue_instruction">Atur ulang antrean yang sedang diputar dengan menyeret lagu dari nomor urut.</string>
     <string name="library">Pustaka</string>

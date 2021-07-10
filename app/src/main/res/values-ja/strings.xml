@@ -60,7 +60,7 @@
     <string name="action_go_to_album">アルバムを表示</string>
     <string name="label_playing_queue">再生キュー</string>
     <string name="no_results">該当なし</string>
-    <string name="updating">更新中...</string>
+    <string name="updating">更新中…</string>
     <string name="added_title_to_playing_queue">"曲を再生キューに追加しました"</string>
     <string name="added_x_titles_to_playing_queue">%1$d曲を再生キューに追加しました</string>
     <string name="action_remove_from_playlist">プレイリストから除去</string>
@@ -106,7 +106,7 @@
     <string name="never">しない</string>
     <string name="today">今日</string>
     <string name="this_week">今週</string>
-    <string name="past_seven_days">過去1週間</string>
+    <string name="past_seven_days">過去７日</string>
     <string name="this_month">今月</string>
     <string name="past_three_months">過去3か月</string>
     <string name="this_year">今年</string>
@@ -202,7 +202,7 @@
     <string name="up_next">次の曲</string>
     <string name="pref_title_now_playing_screen_appearance">外観</string>
     <string name="intro_label">説明</string>
-    <string name="welcome_to_phonograph">"Phonographへようこそ、美しく軽快に動作するAndroid用の音楽プレーヤーです。 "</string>
+    <string name="welcome_to_phonograph">"Phonographへようこそ、美しく軽快に動作するAndroid用の音楽プレーヤーです。"</string>
     <string name="open_playing_queue_instruction">カードをスワイプすると再生中のスクリーンから再生キューのページに移動します。</string>
     <string name="rearrange_playing_queue_instruction">トラック番号をドラッグして再生キューの曲を並び替えることができます。</string>
     <string name="library">ライブラリ</string>

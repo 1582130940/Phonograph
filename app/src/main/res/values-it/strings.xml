@@ -20,7 +20,7 @@
     <string name="action_next">Prossima</string>
     <string name="action_add_to_playing_queue">Aggiungi alla coda di riproduzione</string>
     <string name="action_remove_from_playing_queue">Rimuovi dalla coda di riproduzione</string>
-    <string name="action_add_to_playlist">Aggiungi alla playlist...</string>
+    <string name="action_add_to_playlist">Aggiungi alla playlist…</string>
     <string name="action_tag_editor">Modifica tag</string>
     <string name="action_delete_from_device">Elimina dal dispositivo</string>
     <string name="action_details">Dettagli</string>
@@ -60,7 +60,7 @@
     <string name="action_go_to_album">Vai all\'album</string>
     <string name="label_playing_queue">Coda di riproduzione</string>
     <string name="no_results">Nessun risultato</string>
-    <string name="updating">Aggiornamento...</string>
+    <string name="updating">Aggiornamento…</string>
     <string name="added_title_to_playing_queue">"Un brano aggiunto alla coda di riproduzione."</string>
     <string name="added_x_titles_to_playing_queue">%1$d titoli aggiunti alla coda.</string>
     <string name="action_remove_from_playlist">Rimuovi dalla playlist</string>
@@ -170,7 +170,7 @@
     <string name="pref_summary_remember_last_tab">All\'avvio vai all\'ultima scheda aperta</string>
     <string name="pref_summary_remember_shuffle">La modalità casuale rimarrà attiva quando si seleziona un nuovo elenco di brani</string>
     <string name="could_not_download_album_cover">"Impossibile scaricare una copertina adatta."</string>
-    <string name="search_hint">Cercando nella tua libreria...</string>
+    <string name="search_hint">Cercando nella tua libreria…</string>
     <string name="favorites">Preferiti</string>
     <string name="last_added">Aggiunti di recente</string>
     <string name="history">Ascoltati di recente</string>
@@ -184,7 +184,7 @@
     <string name="cancel_current_timer">Annulla questo timer</string>
     <string name="sleep_timer_canceled">Il timer di spegnimento è stato annullato.</string>
     <string name="sleep_timer_set">Timer di spegnimento impostato a %d minuti da adesso</string>
-    <string name="action_new_playlist">Nuova playlist...</string>
+    <string name="action_new_playlist">Nuova playlist…</string>
     <string name="new_playlist_title">Nuova playlist</string>
     <string name="colored_footers">Riquadri colorati</string>
     <string name="special_thanks_to">Ringraziamenti speciali a</string>
@@ -202,7 +202,7 @@
     <string name="up_next">A seguire</string>
     <string name="pref_title_now_playing_screen_appearance">Aspetto</string>
     <string name="intro_label">Introduzione</string>
-    <string name="welcome_to_phonograph">"Benvenuto in Phonograph, un music player bellissimo e leggero per Android. "</string>
+    <string name="welcome_to_phonograph">"Benvenuto in Phonograph, un music player bellissimo e leggero per Android."</string>
     <string name="open_playing_queue_instruction">Fai uno swipe sulla card nella schermata In riproduzione per mostrare l\'intera coda di riproduzione.</string>
     <string name="rearrange_playing_queue_instruction">Riorganizza la coda di riproduzione trascinando una canzone dal suo numero di traccia.</string>
     <string name="library">Libreria</string>

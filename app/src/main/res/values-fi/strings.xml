@@ -20,7 +20,7 @@
     <string name="action_next">Seuraava</string>
     <string name="action_add_to_playing_queue">Lisää toistojonoon</string>
     <string name="action_remove_from_playing_queue">Poista toistojonosta</string>
-    <string name="action_add_to_playlist">Lisää soittolistaan...</string>
+    <string name="action_add_to_playlist">Lisää soittolistaan…</string>
     <string name="action_tag_editor">Tagieditori</string>
     <string name="action_delete_from_device">Poista laitteesta</string>
     <string name="action_details">Yksityiskohdat</string>
@@ -60,7 +60,7 @@
     <string name="action_go_to_album">Näytä albumi</string>
     <string name="label_playing_queue">Toistojono</string>
     <string name="no_results">Ei hakutuloksia</string>
-    <string name="updating">Päivitetään...</string>
+    <string name="updating">Päivitetään…</string>
     <string name="added_title_to_playing_queue">"Kappale lisätty toistojonoon."</string>
     <string name="added_x_titles_to_playing_queue">%1$d kappaletta lisättiin toistojonoon</string>
     <string name="action_remove_from_playlist">Poista soittolistasta</string>
@@ -170,7 +170,7 @@
     <string name="pref_summary_remember_last_tab">Palauttaa käynnistyessään viimeksi avoinna olleen välilehden.</string>
     <string name="pref_summary_remember_shuffle">Sekoitus-tila pysyy päällä, kun valitset uuden listan kappaleita</string>
     <string name="could_not_download_album_cover">"Ei voitu ladata albumia vastaavaa albumin kantta."</string>
-    <string name="search_hint">Etsi kirjastostasi...</string>
+    <string name="search_hint">Etsi kirjastostasi…</string>
     <string name="favorites">Suosikit</string>
     <string name="last_added">Viimeksi lisätyt</string>
     <string name="history">Viimeksi toistettu</string>
@@ -184,7 +184,7 @@
     <string name="cancel_current_timer">Peru tämänhetkinen ajastin</string>
     <string name="sleep_timer_canceled">Ajastin peruttu.</string>
     <string name="sleep_timer_set">Ajastin asetettu %d minuutin päähän tästä hetkestä.</string>
-    <string name="action_new_playlist">Uusi soittolista...</string>
+    <string name="action_new_playlist">Uusi soittolista…</string>
     <string name="new_playlist_title">Uusi soittolista</string>
     <string name="colored_footers">Värilliset alatunnisteet</string>
     <string name="special_thanks_to">Erikoiskiitokset</string>
@@ -202,7 +202,7 @@
     <string name="up_next">Seuraavaksi</string>
     <string name="pref_title_now_playing_screen_appearance">Ulkonäkö</string>
     <string name="intro_label">Esittely</string>
-    <string name="welcome_to_phonograph">"Tervetuloa Phonographiin, kauniiseen ja kevyeen musiikkisoittimeen Androidille. "</string>
+    <string name="welcome_to_phonograph">"Tervetuloa Phonographiin, kauniiseen ja kevyeen musiikkisoittimeen Androidille."</string>
     <string name="open_playing_queue_instruction">Vedä korttia Toistetaan parhaillaan -ikkunassa ylös, nähdäksesi koko toistojonon.</string>
     <string name="rearrange_playing_queue_instruction">Järjestä toistojonoa vetämällä kappaletta sen raitanumerosta.</string>
     <string name="library">Kirjasto</string>

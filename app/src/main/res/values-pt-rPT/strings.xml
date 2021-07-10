@@ -17,7 +17,7 @@
     <string name="action_play">Reproduzir</string>
     <string name="action_add_to_playing_queue">Adicionar à fila de reprodução</string>
     <string name="action_remove_from_playing_queue">Remover da fila de reprodução</string>
-    <string name="action_add_to_playlist">Adicionar à lista de reprodução...</string>
+    <string name="action_add_to_playlist">Adicionar à lista de reprodução…</string>
     <string name="action_tag_editor">Editor de etiquetas</string>
     <string name="action_delete_from_device">Eliminar do dispositivo</string>
     <string name="action_details">Detalhes</string>
@@ -53,7 +53,7 @@
     <string name="action_go_to_album">Ir para o álbum</string>
     <string name="label_playing_queue">Fila de reprodução</string>
     <string name="no_results">Sem resultados</string>
-    <string name="updating">A atualizar...</string>
+    <string name="updating">A atualizar…</string>
     <string name="added_title_to_playing_queue">"Adicionada uma música à fila de reprodução."</string>
     <string name="added_x_titles_to_playing_queue">Adicionadas %1$d títulos à fila de reprodução.</string>
     <string name="action_remove_from_playlist">Remover da lista de reprodução</string>
@@ -131,11 +131,11 @@
     <string name="pref_summary_blurred_album_art">Desfoca a capa do álbum no ecrã de bloqueio. Pode causar problemas com aplicações de terceiros e widgets.</string>
     <string name="pref_summary_colored_notification">"Colorir a notifica\u00e7\u00e3o na cor viva da capa de \u00e1lbum."</string>
     <string name="pref_summary_gapless_playback">"Pode causar problemas na reprodução em alguns dispositivos."</string>
-    <string name="pref_summary_ignore_media_store_artwork">Pode aumentar a qualidade da capa do album, mas aumenta o tempo de carregamento. Ative isto somente se tiver problemas com capas de baixa resolução.</string>
+    <string name="pref_summary_ignore_media_store_artwork">Pode aumentar a qualidade da capa do álbum, mas aumenta o tempo de carregamento. Ative isto somente se tiver problemas com capas de baixa resolução.</string>
     <string name="pref_summary_colored_navigation_bar">Colorir a barra de navegação na cor primária.</string>
     <string name="pref_summary_audio_ducking">Notificações, navegação etc.</string>
     <string name="could_not_download_album_cover">"N\u00e3o foi encontrada uma capa para este \u00e1lbum."</string>
-    <string name="search_hint">Procurar na biblioteca...</string>
+    <string name="search_hint">Procurar na biblioteca…</string>
     <string name="favorites">Favoritos</string>
     <string name="last_added">Últimas adições</string>
     <string name="history">Histórico</string>
@@ -149,7 +149,7 @@
     <string name="cancel_current_timer">Cancelar temporizador atual</string>
     <string name="sleep_timer_canceled">Temporizador para dormir cancelado.</string>
     <string name="sleep_timer_set">Temporizador para dormir definido para %d minutos a partir de agora.</string>
-    <string name="action_new_playlist">Nova lista de reprodução...</string>
+    <string name="action_new_playlist">Nova lista de reprodução…</string>
     <string name="new_playlist_title">Nova lista de reprodução</string>
     <string name="colored_footers">Rodapés coloridos</string>
     <string name="special_thanks_to">Agradecimentos especiais a</string>
@@ -167,7 +167,7 @@
     <string name="up_next">A seguir</string>
     <string name="pref_title_now_playing_screen_appearance">Aparência</string>
     <string name="intro_label">Introdução</string>
-    <string name="welcome_to_phonograph">"Bem vindo ao Phonograph, um belo e leve leitor de música para Android. "</string>
+    <string name="welcome_to_phonograph">"Bem-vindo ao Phonograph, um belo e leve leitor de música para Android."</string>
     <string name="open_playing_queue_instruction">Deslize o cartão no ecrã de \"a reproduzir\" para cima para mostrar a fila de reprodução completa.</string>
     <string name="rearrange_playing_queue_instruction">Reorganizar a fila de reprodução arrastando a música desde o seu número</string>
     <string name="library">Biblioteca</string>

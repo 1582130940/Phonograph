@@ -20,7 +20,7 @@
     <string name="action_next">Próxima</string>
     <string name="action_add_to_playing_queue">Adicionar à fila de reprodução</string>
     <string name="action_remove_from_playing_queue">Remover da fila de reprodução</string>
-    <string name="action_add_to_playlist">Adicionar à lista de reprodução...</string>
+    <string name="action_add_to_playlist">Adicionar à lista de reprodução…</string>
     <string name="action_tag_editor">Editor de Tag</string>
     <string name="action_delete_from_device">Excluir do dispositivo</string>
     <string name="action_details">Detalhes</string>
@@ -60,7 +60,7 @@
     <string name="action_go_to_album">Ir para o álbum</string>
     <string name="label_playing_queue">Fila de reprodução</string>
     <string name="no_results">Sem resultados</string>
-    <string name="updating">Atualizando...</string>
+    <string name="updating">Atualizando…</string>
     <string name="added_title_to_playing_queue">"Adicionado 1 título à lista de reprodução"</string>
     <string name="added_x_titles_to_playing_queue">Adicionados %1$d títulos á fila de reprodução</string>
     <string name="action_remove_from_playlist">Remover da playlist</string>
@@ -170,7 +170,7 @@
     <string name="pref_summary_remember_last_tab">Ir para a última aba aberta ao iniciar</string>
     <string name="pref_summary_remember_shuffle">O modo aleatório permanece ativado ao selecionar uma nova lista de músicas</string>
     <string name="could_not_download_album_cover">"N\u00e3o foi poss\u00edvel baixar a capa do \u00e1lbum correspondente."</string>
-    <string name="search_hint">Pesquisar na sua biblioteca...</string>
+    <string name="search_hint">Pesquisar na sua biblioteca…</string>
     <string name="favorites">Favoritos</string>
     <string name="last_added">Adicionada recentemente</string>
     <string name="history">Reproduzidas recentemente</string>
@@ -184,7 +184,7 @@
     <string name="cancel_current_timer">Cancelar cronômetro atual</string>
     <string name="sleep_timer_canceled">Cronômetro cancelado.</string>
     <string name="sleep_timer_set">Cronômetro definido para %d minutos a partir de agora.</string>
-    <string name="action_new_playlist">Nova lista de reprodução...</string>
+    <string name="action_new_playlist">Nova lista de reprodução…</string>
     <string name="new_playlist_title">Nova lista de reprodução</string>
     <string name="colored_footers">Rodapés coloridos</string>
     <string name="special_thanks_to">Agradecimentos para:</string>
@@ -202,7 +202,7 @@
     <string name="up_next">A seguir</string>
     <string name="pref_title_now_playing_screen_appearance">Aparência</string>
     <string name="intro_label">Introdução</string>
-    <string name="welcome_to_phonograph">"Seja bem-vindo ao Phonograph, um lindo e leve player de música para Android. "</string>
+    <string name="welcome_to_phonograph">"Seja bem-vindo ao Phonograph, um lindo e leve player de música para Android."</string>
     <string name="open_playing_queue_instruction">Arraste para cima o cartão da tela de reproduzindo agora para mostrar a fila de reprodução completa.</string>
     <string name="rearrange_playing_queue_instruction">Reorganizar a fila de reprodução arrastando uma música de seu número de música.</string>
     <string name="library">Biblioteca</string>
