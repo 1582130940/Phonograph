@@ -23,7 +23,6 @@
     android:orientation="horizontal">
 
     <FrameLayout
-        android:id="@+id/icon_group"
         android:layout_width="@dimen/notification_large_icon_width"
         android:layout_height="@dimen/notification_large_icon_height"
         android:layout_weight="0">
@@ -32,10 +31,10 @@
             android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="12dp"
-            android:layout_marginEnd="12dp"
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
             android:scaleType="centerInside"
             tools:ignore="ContentDescription" />
 
