@@ -162,11 +162,9 @@ public class MusicUtil {
     public static String buildInfoString(@Nullable final String string1, @Nullable final String string2) {
         // Skip empty strings
         if (TextUtils.isEmpty(string1)) {
-            //noinspection ConstantConditions
             return TextUtils.isEmpty(string2) ? "" : string2;
         }
         if (TextUtils.isEmpty(string2)) {
-            //noinspection ConstantConditions
             return TextUtils.isEmpty(string1) ? "" : string1;
         }
 

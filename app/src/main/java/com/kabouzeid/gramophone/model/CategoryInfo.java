@@ -29,7 +29,7 @@ public class CategoryInfo implements Parcelable {
         dest.writeInt(visible ? 1 : 0);
     }
 
-    public static final Parcelable.Creator<CategoryInfo> CREATOR = new Parcelable.Creator<CategoryInfo>() {
+    public static final Parcelable.Creator<CategoryInfo> CREATOR = new Parcelable.Creator<>() {
         public CategoryInfo createFromParcel(Parcel source) {
             return new CategoryInfo(source);
         }

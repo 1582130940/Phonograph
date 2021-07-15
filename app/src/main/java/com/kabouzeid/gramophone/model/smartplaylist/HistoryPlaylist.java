@@ -41,7 +41,7 @@ public class HistoryPlaylist extends AbsSmartPlaylist {
         super(in);
     }
 
-    public static final Creator<HistoryPlaylist> CREATOR = new Creator<HistoryPlaylist>() {
+    public static final Creator<HistoryPlaylist> CREATOR = new Creator<>() {
         public HistoryPlaylist createFromParcel(Parcel source) {
             return new HistoryPlaylist(source);
         }

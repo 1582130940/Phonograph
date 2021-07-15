@@ -12,7 +12,6 @@ import com.kabouzeid.gramophone.util.ImageUtil;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -49,7 +48,7 @@ public class ArtistImageFetcher implements DataFetcher<InputStream> {
         return stream = getMosaic(model.albumCovers);
     }
 
-    private InputStream getMosaic(final List<AlbumCover> albumCovers) throws FileNotFoundException {
+    private InputStream getMosaic(final List<AlbumCover> albumCovers) throws IOException {
 
         MediaMetadataRetriever retriever = new MediaMetadataRetriever();
 

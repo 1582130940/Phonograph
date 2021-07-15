@@ -37,7 +37,7 @@ public class ShuffleAllPlaylist extends AbsSmartPlaylist {
         super(in);
     }
 
-    public static final Creator<ShuffleAllPlaylist> CREATOR = new Creator<ShuffleAllPlaylist>() {
+    public static final Creator<ShuffleAllPlaylist> CREATOR = new Creator<>() {
         public ShuffleAllPlaylist createFromParcel(Parcel source) {
             return new ShuffleAllPlaylist(source);
         }

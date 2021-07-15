@@ -91,7 +91,7 @@ public class BreadCrumbLayout extends HorizontalScrollView implements View.OnCli
             this.scrollPos = in.readInt();
         }
 
-        public static final Creator<Crumb> CREATOR = new Creator<Crumb>() {
+        public static final Creator<Crumb> CREATOR = new Creator<>() {
             @Override
             public Crumb createFromParcel(Parcel source) {
                 return new Crumb(source);
@@ -389,7 +389,7 @@ public class BreadCrumbLayout extends HorizontalScrollView implements View.OnCli
             this.mVisibility = in.readInt();
         }
 
-        public static final Creator<SavedStateWrapper> CREATOR = new Creator<SavedStateWrapper>() {
+        public static final Creator<SavedStateWrapper> CREATOR = new Creator<>() {
             public SavedStateWrapper createFromParcel(Parcel source) {
                 return new SavedStateWrapper(source);
             }

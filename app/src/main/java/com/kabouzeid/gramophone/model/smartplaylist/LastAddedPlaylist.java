@@ -39,7 +39,7 @@ public class LastAddedPlaylist extends AbsSmartPlaylist {
         super(in);
     }
 
-    public static final Creator<LastAddedPlaylist> CREATOR = new Creator<LastAddedPlaylist>() {
+    public static final Creator<LastAddedPlaylist> CREATOR = new Creator<>() {
         public LastAddedPlaylist createFromParcel(Parcel source) {
             return new LastAddedPlaylist(source);
         }

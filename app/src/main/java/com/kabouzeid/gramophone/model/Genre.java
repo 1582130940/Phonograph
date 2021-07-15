@@ -64,7 +64,7 @@ public class Genre implements Parcelable {
         this.songCount = in.readInt();
     }
 
-    public static final Creator<Genre> CREATOR = new Creator<Genre>() {
+    public static final Creator<Genre> CREATOR = new Creator<>() {
         public Genre createFromParcel(Parcel source) {
             return new Genre(source);
         }

@@ -41,7 +41,7 @@ public class MyTopTracksPlaylist extends AbsSmartPlaylist {
         super(in);
     }
 
-    public static final Creator<MyTopTracksPlaylist> CREATOR = new Creator<MyTopTracksPlaylist>() {
+    public static final Creator<MyTopTracksPlaylist> CREATOR = new Creator<>() {
         public MyTopTracksPlaylist createFromParcel(Parcel source) {
             return new MyTopTracksPlaylist(source);
         }

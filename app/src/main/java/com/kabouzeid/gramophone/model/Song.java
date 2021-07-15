@@ -127,7 +127,7 @@ public class Song implements Parcelable {
         this.artistName = in.readString();
     }
 
-    public static final Creator<Song> CREATOR = new Creator<Song>() {
+    public static final Creator<Song> CREATOR = new Creator<>() {
         public Song createFromParcel(Parcel source) {
             return new Song(source);
         }

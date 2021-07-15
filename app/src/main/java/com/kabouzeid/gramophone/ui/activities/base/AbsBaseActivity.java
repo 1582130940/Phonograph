@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.AudioManager;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.KeyEvent;
@@ -54,9 +53,7 @@ public abstract class AbsBaseActivity extends AbsThemeActivity {
         final boolean hasPermissions = hasPermissions();
         if (hasPermissions != hadPermissions) {
             hadPermissions = hasPermissions;
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                onHasPermissionsChanged(hasPermissions);
-            }
+            onHasPermissionsChanged(hasPermissions);
         }
     }
 
@@ -95,13 +92,13 @@ public abstract class AbsBaseActivity extends AbsThemeActivity {
     }
 
     protected void requestPermissions() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && permissions != null) {
+        if (permissions != null) {
             requestPermissions(permissions, PERMISSION_REQUEST);
         }
     }
 
     protected boolean hasPermissions() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && permissions != null) {
+        if (permissions != null) {
             for (String permission : permissions) {
                 if (checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
                     return false;
@@ -120,14 +117,14 @@ public abstract class AbsBaseActivity extends AbsThemeActivity {
                     if (ActivityCompat.shouldShowRequestPermissionRationale(AbsBaseActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                         //User has deny from permission dialog
                         Snackbar.make(getSnackBarContainer(), getPermissionDeniedMessage(),
-                                Snackbar.LENGTH_INDEFINITE)
+                                        Snackbar.LENGTH_INDEFINITE)
                                 .setAction(R.string.action_grant, view -> requestPermissions())
                                 .setActionTextColor(ThemeStore.accentColor(this))
                                 .show();
                     } else {
                         // User has deny permission and checked never show permission dialog so you can redirect to Application settings page
                         Snackbar.make(getSnackBarContainer(), getPermissionDeniedMessage(),
-                                Snackbar.LENGTH_INDEFINITE)
+                                        Snackbar.LENGTH_INDEFINITE)
                                 .setAction(R.string.action_settings, view -> {
                                     Intent intent = new Intent();
                                     intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);

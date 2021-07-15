@@ -95,7 +95,7 @@ public class SongDetailDialog extends DialogFragment {
                     AudioHeader audioHeader = audioFile.getAudioHeader();
 
                     fileFormat.setText(makeTextWithTitle(context, R.string.label_file_format, audioHeader.getFormat()));
-                    trackLength.setText(makeTextWithTitle(context, R.string.label_track_length, MusicUtil.getReadableDurationString(audioHeader.getTrackLength() * 1000)));
+                    trackLength.setText(makeTextWithTitle(context, R.string.label_track_length, MusicUtil.getReadableDurationString(audioHeader.getTrackLength() * 1000L)));
                     bitRate.setText(makeTextWithTitle(context, R.string.label_bit_rate, audioHeader.getBitRate() + " kb/s"));
                     samplingRate.setText(makeTextWithTitle(context, R.string.label_sampling_rate, audioHeader.getSampleRate() + " Hz"));
                 } catch (@NonNull CannotReadException | IOException | TagException | ReadOnlyFileException | InvalidAudioFrameException e) {
