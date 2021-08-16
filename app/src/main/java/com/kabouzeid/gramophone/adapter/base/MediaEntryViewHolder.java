@@ -1,12 +1,12 @@
 package com.kabouzeid.gramophone.adapter.base;
 
-import android.os.Build;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.kabouzeid.gramophone.R;
 
@@ -62,7 +62,7 @@ public class MediaEntryViewHolder extends RecyclerView.ViewHolder implements Vie
     }
 
     protected void setImageTransitionName(@NonNull String transitionName) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && image != null) {
+        if (image != null) {
             image.setTransitionName(transitionName);
         }
     }

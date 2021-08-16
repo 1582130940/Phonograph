@@ -1,22 +1,23 @@
 /*
-* Copyright (C) 2014 The CyanogenMod Project
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*/
+ * Copyright (C) 2014 The CyanogenMod Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.kabouzeid.gramophone.loader;
 
 import android.database.AbstractCursor;
 import android.database.Cursor;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -33,10 +34,10 @@ import java.util.List;
 public class SortedCursor extends AbstractCursor {
     // cursor to wrap
     private final Cursor mCursor;
+    // this contains the ids that weren't found in the underlying cursor
+    private final List<String> mMissingValues;
     // the map of external indices to internal indices
     private List<Integer> mOrderedPositions;
-    // this contains the ids that weren't found in the underlying cursor
-    private List<String> mMissingValues;
     // this contains the mapped cursor positions and afterwards the extra ids that weren't found
     private HashMap<String, Integer> mMapCursorPositions;
 

@@ -1,7 +1,6 @@
 package com.kabouzeid.gramophone.views;
 
 import android.content.Context;
-import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,11 +22,9 @@ public class StatusBarView extends View {
 
     @Override
     public WindowInsets onApplyWindowInsets(WindowInsets insets) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            ViewGroup.LayoutParams lp = getLayoutParams();
-            lp.height = insets.getSystemWindowInsetTop();
-            setLayoutParams(lp);
-        }
+        ViewGroup.LayoutParams lp = getLayoutParams();
+        lp.height = insets.getSystemWindowInsetTop();
+        setLayoutParams(lp);
         return super.onApplyWindowInsets(insets);
     }
 

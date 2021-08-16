@@ -1,18 +1,18 @@
 /*
-* Copyright (C) 2014 The CyanogenMod Project
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*/
+ * Copyright (C) 2014 The CyanogenMod Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 package com.kabouzeid.gramophone.provider;
 
@@ -21,45 +21,35 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Interpolator;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 /**
  * This database tracks the number of play counts for an individual song.  This is used to drive
  * the top played tracks as well as the playlist images
  */
 public class SongPlayCountStore extends SQLiteOpenHelper {
-    @Nullable
-    private static SongPlayCountStore sInstance = null;
-
     public static final String DATABASE_NAME = "song_play_count.db";
     private static final int VERSION = 3;
-
     // interpolator curve applied for measuring the curve
     @NonNull
-    private static Interpolator sInterpolator = new AccelerateInterpolator(1.5f);
-
+    private static final Interpolator sInterpolator = new AccelerateInterpolator(1.5f);
     // how many weeks worth of playback to track
     private static final int NUM_WEEKS = 52;
-
     // how high to multiply the interpolation curve
-    @SuppressWarnings("FieldCanBeLocal")
-    private static int INTERPOLATOR_HEIGHT = 50;
-
+    private static final int INTERPOLATOR_HEIGHT = 50;
     // how high the base value is. The ratio of the Height to Base is what really matters
-    @SuppressWarnings("FieldCanBeLocal")
-    private static int INTERPOLATOR_BASE = 25;
-
-    @SuppressWarnings("FieldCanBeLocal")
-    private static int ONE_WEEK_IN_MS = 1000 * 60 * 60 * 24 * 7;
-
+    private static final int INTERPOLATOR_BASE = 25;
+    private static final int ONE_WEEK_IN_MS = 1000 * 60 * 60 * 24 * 7;
     @NonNull
-    private static String WHERE_ID_EQUALS = SongPlayCountColumns.ID + "=?";
-
+    private static final String WHERE_ID_EQUALS = SongPlayCountColumns.ID + "=?";
+    @Nullable
+    private static SongPlayCountStore sInstance = null;
     // number of weeks since epoch time
-    private int mNumberOfWeeksSinceEpoch;
+    private final int mNumberOfWeeksSinceEpoch;
 
     // used to track if we've walked through the db and updated all the rows
     private boolean mDatabaseUpdated;
@@ -199,7 +189,7 @@ public class SongPlayCountStore extends SQLiteOpenHelper {
                     for (int i = 0; i < NUM_WEEKS - weekDiff; i++) {
                         playCounts[i + weekDiff] = cursor.getInt(getColumnIndexForWeek(i));
                     }
-                } else if (weekDiff < 0) {
+                } else {
                     // time is shifted backwards (by user) - nor typical behavior but we
                     // will still handle it
 
@@ -367,7 +357,7 @@ public class SongPlayCountStore extends SQLiteOpenHelper {
      */
     @NonNull
     private static String getColumnNameForWeek(final int week) {
-        return SongPlayCountColumns.WEEK_PLAY_COUNT + String.valueOf(week);
+        return SongPlayCountColumns.WEEK_PLAY_COUNT + week;
     }
 
     /**

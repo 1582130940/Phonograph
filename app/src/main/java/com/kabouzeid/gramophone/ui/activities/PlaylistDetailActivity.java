@@ -48,11 +48,9 @@ import butterknife.ButterKnife;
 
 public class PlaylistDetailActivity extends AbsSlidingMusicPanelActivity implements CabHolder, LoaderManager.LoaderCallbacks<List<Song>> {
 
-    private static final int LOADER_ID = LoaderIds.PLAYLIST_DETAIL_ACTIVITY;
-
     @NonNull
-    public static String EXTRA_PLAYLIST = "extra_playlist";
-
+    public static final String EXTRA_PLAYLIST = "extra_playlist";
+    private static final int LOADER_ID = LoaderIds.PLAYLIST_DETAIL_ACTIVITY;
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
     @BindView(R.id.toolbar)
@@ -237,19 +235,20 @@ public class PlaylistDetailActivity extends AbsSlidingMusicPanelActivity impleme
         super.onDestroy();
     }
 
+    @NonNull
     @Override
     public Loader<List<Song>> onCreateLoader(int id, Bundle args) {
         return new AsyncPlaylistSongLoader(this, playlist);
     }
 
     @Override
-    public void onLoadFinished(Loader<List<Song>> loader, List<Song> data) {
+    public void onLoadFinished(@NonNull Loader<List<Song>> loader, List<Song> data) {
         if (adapter != null)
             adapter.swapDataSet(data);
     }
 
     @Override
-    public void onLoaderReset(Loader<List<Song>> loader) {
+    public void onLoaderReset(@NonNull Loader<List<Song>> loader) {
         if (adapter != null)
             adapter.swapDataSet(new ArrayList<>());
     }

@@ -1,10 +1,5 @@
 package com.kabouzeid.gramophone.adapter.song;
 
-import android.os.Build;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.core.util.Pair;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,6 +8,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.util.Pair;
 
 import com.afollestad.materialcab.MaterialCab;
 import com.bumptech.glide.Glide;
@@ -34,12 +34,11 @@ import java.util.List;
 public class ArtistSongAdapter extends ArrayAdapter<Song> implements MaterialCab.Callback {
     @Nullable
     private final CabHolder cabHolder;
-    private MaterialCab cab;
-    private List<Song> dataSet;
-    private List<Song> checked;
-
+    private final List<Song> checked;
     @NonNull
     private final AppCompatActivity activity;
+    private MaterialCab cab;
+    private List<Song> dataSet;
 
     public ArtistSongAdapter(@NonNull AppCompatActivity activity, @NonNull List<Song> dataSet, @Nullable CabHolder cabHolder) {
         super(activity, R.layout.item_list, dataSet);
@@ -90,9 +89,7 @@ public class ArtistSongAdapter extends ArrayAdapter<Song> implements MaterialCab
                 .checkIgnoreMediaStore(activity).build()
                 .into(albumArt);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            albumArt.setTransitionName(activity.getString(R.string.transition_album_art));
-        }
+        albumArt.setTransitionName(activity.getString(R.string.transition_album_art));
 
         final ImageView overflowButton = convertView.findViewById(R.id.menu);
         overflowButton.setOnClickListener(new SongMenuHelper.OnClickSongMenu(activity) {
@@ -144,7 +141,7 @@ public class ArtistSongAdapter extends ArrayAdapter<Song> implements MaterialCab
             final int size = checked.size();
             if (size <= 0) cab.finish();
             else if (size == 1) cab.setTitle(checked.get(0).title);
-            else if (size > 1) cab.setTitle(String.valueOf(size));
+            else cab.setTitle(String.valueOf(size));
         }
     }
 

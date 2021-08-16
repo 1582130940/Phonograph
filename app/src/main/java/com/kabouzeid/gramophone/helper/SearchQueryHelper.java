@@ -4,6 +4,7 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.provider.MediaStore;
+
 import androidx.annotation.NonNull;
 
 import com.kabouzeid.gramophone.loader.SongLoader;
@@ -71,7 +72,6 @@ public class SearchQueryHelper {
         if (!songs.isEmpty()) {
             return songs;
         }
-
 
         songs = SongLoader.getSongs(SongLoader.makeSongCursor(context, ARTIST_SELECTION, new String[]{query.toLowerCase().trim()}));
         if (!songs.isEmpty()) {

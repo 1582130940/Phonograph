@@ -6,10 +6,11 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.DialogFragment;
-import android.view.View;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.kabouzeid.gramophone.R;
@@ -25,13 +26,11 @@ import java.util.List;
  */
 public class BlacklistFolderChooserDialog extends DialogFragment implements MaterialDialog.ListCallback {
 
+    final String initialPath = Environment.getExternalStorageDirectory().getAbsolutePath();
     private File parentFolder;
     private File[] parentContents;
     private boolean canGoUp = false;
-
     private FolderCallback callback;
-
-    String initialPath = Environment.getExternalStorageDirectory().getAbsolutePath();
 
     private String[] getContentsArray() {
         if (parentContents == null) {
@@ -94,7 +93,7 @@ public class BlacklistFolderChooserDialog extends DialogFragment implements Mate
         MaterialDialog.Builder builder =
                 new MaterialDialog.Builder(getActivity())
                         .title(parentFolder.getAbsolutePath())
-                        .items((CharSequence[]) getContentsArray())
+                        .items(getContentsArray())
                         .itemsCallback(this)
                         .autoDismiss(false)
                         .onPositive((dialog, which) -> {
@@ -133,11 +132,11 @@ public class BlacklistFolderChooserDialog extends DialogFragment implements Mate
         parentContents = listFiles();
         MaterialDialog dialog = (MaterialDialog) getDialog();
         dialog.setTitle(parentFolder.getAbsolutePath());
-        dialog.setItems((CharSequence[]) getContentsArray());
+        dialog.setItems(getContentsArray());
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState) {
+    public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putString("current_path", parentFolder.getAbsolutePath());
     }

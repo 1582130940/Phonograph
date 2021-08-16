@@ -2,13 +2,14 @@ package com.kabouzeid.gramophone.adapter;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.bumptech.glide.Glide;
 import com.kabouzeid.gramophone.R;
@@ -18,7 +19,6 @@ import com.kabouzeid.gramophone.misc.CustomFragmentStatePagerAdapter;
 import com.kabouzeid.gramophone.model.Song;
 import com.kabouzeid.gramophone.util.PreferenceUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -30,7 +30,7 @@ import butterknife.Unbinder;
  */
 public class AlbumCoverPagerAdapter extends CustomFragmentStatePagerAdapter {
 
-    private List<Song> dataSet;
+    private final List<Song> dataSet;
 
     private AlbumCoverFragment.ColorReceiver currentColorReceiver;
     private int currentColorReceiverPosition = -1;
@@ -52,7 +52,7 @@ public class AlbumCoverPagerAdapter extends CustomFragmentStatePagerAdapter {
 
     @Override
     @NonNull
-    public Object instantiateItem(ViewGroup container, int position) {
+    public Object instantiateItem(@NonNull ViewGroup container, int position) {
         Object o = super.instantiateItem(container, position);
         if (currentColorReceiver != null && currentColorReceiverPosition == position) {
             receiveColor(currentColorReceiver, currentColorReceiverPosition);
@@ -77,12 +77,9 @@ public class AlbumCoverPagerAdapter extends CustomFragmentStatePagerAdapter {
 
     public static class AlbumCoverFragment extends Fragment implements SharedPreferences.OnSharedPreferenceChangeListener {
         private static final String SONG_ARG = "song";
-
-        private Unbinder unbinder;
-
         @BindView(R.id.player_image)
         ImageView albumCover;
-
+        private Unbinder unbinder;
         private boolean isColorReady;
         private int color;
         private Song song;
@@ -142,12 +139,6 @@ public class AlbumCoverPagerAdapter extends CustomFragmentStatePagerAdapter {
 
         @Override
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-            switch (key) {
-                case PreferenceUtil.FORCE_SQUARE_ALBUM_COVER:
-                    // TODO
-//                    forceSquareAlbumCover(PreferenceUtil.getInstance(getActivity()).forceSquareAlbumCover());
-                    break;
-            }
         }
 
         public void forceSquareAlbumCover(boolean forceSquareAlbumCover) {

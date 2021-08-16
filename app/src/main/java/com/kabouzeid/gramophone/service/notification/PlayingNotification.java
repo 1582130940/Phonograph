@@ -1,29 +1,27 @@
 package com.kabouzeid.gramophone.service.notification;
 
+import static android.content.Context.NOTIFICATION_SERVICE;
+
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.os.Build;
+
 import androidx.annotation.RequiresApi;
 
 import com.kabouzeid.gramophone.R;
 import com.kabouzeid.gramophone.service.MusicService;
 
-import static android.content.Context.NOTIFICATION_SERVICE;
-
 public abstract class PlayingNotification {
 
-    private static final int NOTIFICATION_ID = 1;
     static final String NOTIFICATION_CHANNEL_ID = "playing_notification";
-
+    private static final int NOTIFICATION_ID = 1;
     private static final int NOTIFY_MODE_FOREGROUND = 1;
     private static final int NOTIFY_MODE_BACKGROUND = 0;
-
-    private int notifyMode = NOTIFY_MODE_BACKGROUND;
-
-    private NotificationManager notificationManager;
     protected MusicService service;
     boolean stopped;
+    private int notifyMode = NOTIFY_MODE_BACKGROUND;
+    private NotificationManager notificationManager;
 
     public synchronized void init(MusicService service) {
         this.service = service;
@@ -55,7 +53,7 @@ public abstract class PlayingNotification {
 
         if (newNotifyMode == NOTIFY_MODE_FOREGROUND) {
             service.startForeground(NOTIFICATION_ID, notification);
-        } else if (newNotifyMode == NOTIFY_MODE_BACKGROUND) {
+        } else {
             notificationManager.notify(NOTIFICATION_ID, notification);
         }
 

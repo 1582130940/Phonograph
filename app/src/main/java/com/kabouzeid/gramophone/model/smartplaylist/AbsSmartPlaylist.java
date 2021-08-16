@@ -2,6 +2,7 @@ package com.kabouzeid.gramophone.model.smartplaylist;
 
 import android.content.Context;
 import android.os.Parcel;
+
 import androidx.annotation.DrawableRes;
 import androidx.annotation.Nullable;
 
@@ -46,7 +47,6 @@ public abstract class AbsSmartPlaylist extends AbsCustomPlaylist {
         }
         return false;
     }
-
 
     @Override
     public int describeContents() {

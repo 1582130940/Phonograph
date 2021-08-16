@@ -1,6 +1,5 @@
 package com.kabouzeid.gramophone.ui.fragments.mainactivity.folders;
 
-
 import android.app.Dialog;
 import android.content.Context;
 import android.media.MediaScannerConnection;
@@ -68,13 +67,9 @@ import butterknife.Unbinder;
 
 public class FoldersFragment extends AbsMainActivityFragment implements MainActivity.MainActivityFragmentCallbacks, CabHolder, BreadCrumbLayout.SelectionCallback, SongFileAdapter.Callbacks, AppBarLayout.OnOffsetChangedListener, LoaderManager.LoaderCallbacks<List<File>> {
 
-    private static final int LOADER_ID = LoaderIds.FOLDERS_FRAGMENT;
-
     protected static final String PATH = "path";
     protected static final String CRUMBS = "crumbs";
-
-    private Unbinder unbinder;
-
+    private static final int LOADER_ID = LoaderIds.FOLDERS_FRAGMENT;
     @BindView(R.id.coordinator_layout)
     CoordinatorLayout coordinatorLayout;
     @BindView(R.id.container)
@@ -89,7 +84,7 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
     AppBarLayout appbar;
     @BindView(R.id.recycler_view)
     FastScrollRecyclerView recyclerView;
-
+    private Unbinder unbinder;
     private SongFileAdapter adapter;
     private MaterialCab cab;
 
@@ -246,14 +241,14 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
     }
 
     @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.menu_folders, menu);
         ToolbarContentTintHelper.handleOnCreateOptionsMenu(getActivity(), toolbar, menu, ATHToolbarActivity.getToolbarBackgroundColor(toolbar));
     }
 
     @Override
-    public void onPrepareOptionsMenu(Menu menu) {
+    public void onPrepareOptionsMenu(@NonNull Menu menu) {
         super.onPrepareOptionsMenu(menu);
         ToolbarContentTintHelper.handleOnPrepareOptionsMenu(getActivity(), toolbar);
     }
@@ -354,7 +349,7 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
         return files;
     }
 
-    Comparator<File> fileComparator = (lhs, rhs) -> {
+    final Comparator<File> fileComparator = (lhs, rhs) -> {
         if (lhs.isDirectory() && !rhs.isDirectory()) {
             return -1;
         } else if (!lhs.isDirectory() && rhs.isDirectory()) {
@@ -461,6 +456,7 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
         }
     }
 
+    @NonNull
     @Override
     public Loader<List<File>> onCreateLoader(int id, Bundle args) {
         return new AsyncFileLoader(this);
@@ -477,7 +473,7 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
     }
 
     private static class AsyncFileLoader extends WrappedAsyncTaskLoader<List<File>> {
-        private WeakReference<FoldersFragment> fragmentWeakReference;
+        private final WeakReference<FoldersFragment> fragmentWeakReference;
 
         public AsyncFileLoader(FoldersFragment foldersFragment) {
             super(foldersFragment.getActivity());
@@ -505,8 +501,8 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
     }
 
     private static class ListSongsAsyncTask extends ListingFilesDialogAsyncTask<ListSongsAsyncTask.LoadingInfo, Void, List<Song>> {
-        private WeakReference<Context> contextWeakReference;
-        private WeakReference<OnSongsListedCallback> callbackWeakReference;
+        private final WeakReference<Context> contextWeakReference;
+        private final WeakReference<OnSongsListedCallback> callbackWeakReference;
         private final Object extra;
 
         public ListSongsAsyncTask(Context context, Object extra, OnSongsListedCallback callback) {
@@ -588,7 +584,7 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
     }
 
     public static class ArrayListPathsAsyncTask extends ListingFilesDialogAsyncTask<ArrayListPathsAsyncTask.LoadingInfo, String, String[]> {
-        private WeakReference<OnPathsListedCallback> onPathsListedCallbackWeakReference;
+        private final WeakReference<OnPathsListedCallback> onPathsListedCallbackWeakReference;
 
         public ArrayListPathsAsyncTask(Context context, OnPathsListedCallback callback) {
             super(context, 500);

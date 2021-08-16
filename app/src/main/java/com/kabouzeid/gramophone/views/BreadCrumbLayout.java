@@ -2,11 +2,8 @@ package com.kabouzeid.gramophone.views;
 
 import android.content.Context;
 import android.graphics.PorterDuff;
-import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
-import androidx.annotation.ColorInt;
-import androidx.annotation.NonNull;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +12,9 @@ import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
 
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.gramophone.R;
@@ -66,6 +66,7 @@ public class BreadCrumbLayout extends HorizontalScrollView implements View.OnCli
                     ((Crumb) o).getFile().equals(getFile());
         }
 
+        @NonNull
         @Override
         public String toString() {
             return "Crumb{" +
@@ -179,7 +180,7 @@ public class BreadCrumbLayout extends HorizontalScrollView implements View.OnCli
         view.setOnClickListener(this);
 
         ImageView iv = (ImageView) view.getChildAt(1);
-        if (Build.VERSION.SDK_INT >= 19 && iv.getDrawable() != null) {
+        if (iv.getDrawable() != null) {
             iv.getDrawable().setAutoMirrored(true);
         }
         iv.setVisibility(View.GONE);

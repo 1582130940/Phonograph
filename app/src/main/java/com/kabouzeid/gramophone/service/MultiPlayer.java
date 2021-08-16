@@ -7,10 +7,11 @@ import android.media.MediaPlayer;
 import android.media.audiofx.AudioEffect;
 import android.net.Uri;
 import android.os.PowerManager;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import android.util.Log;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.kabouzeid.gramophone.R;
 import com.kabouzeid.gramophone.service.playback.Playback;
@@ -21,11 +22,9 @@ import com.kabouzeid.gramophone.util.PreferenceUtil;
  */
 public class MultiPlayer implements Playback, MediaPlayer.OnErrorListener, MediaPlayer.OnCompletionListener {
     public static final String TAG = MultiPlayer.class.getSimpleName();
-
+    private final Context context;
     private MediaPlayer mCurrentMediaPlayer = new MediaPlayer();
     private MediaPlayer mNextMediaPlayer;
-
-    private Context context;
     @Nullable
     private Playback.PlaybackCallbacks callbacks;
 

@@ -17,7 +17,6 @@ import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
 import android.os.PowerManager;
@@ -40,39 +39,34 @@ public class MediaButtonIntentReceiver extends BroadcastReceiver {
     private static final int DOUBLE_CLICK = 400;
 
     private static WakeLock mWakeLock = null;
-    private static int mClickCounter = 0;
-    private static long mLastClickTime = 0;
-
     @SuppressLint("HandlerLeak") // false alarm, handler is already static
-    private static Handler mHandler = new Handler() {
+    private static final Handler mHandler = new Handler() {
 
         @Override
         public void handleMessage(final Message msg) {
-            switch (msg.what) {
-                case MSG_HEADSET_DOUBLE_CLICK_TIMEOUT:
-                    final int clickCount = msg.arg1;
-                    final String command;
+            if (msg.what == MSG_HEADSET_DOUBLE_CLICK_TIMEOUT) {
+                final int clickCount = msg.arg1;
+                final String command;
 
-                    switch (clickCount) {
-                        case 1:
-                            command = MusicService.ACTION_TOGGLE_PAUSE;
-                            break;
-                        case 2:
-                            command = MusicService.ACTION_SKIP;
-                            break;
-                        case 3:
-                            command = MusicService.ACTION_REWIND;
-                            break;
-                        default:
-                            command = null;
-                            break;
-                    }
+                switch (clickCount) {
+                    case 1:
+                        command = MusicService.ACTION_TOGGLE_PAUSE;
+                        break;
+                    case 2:
+                        command = MusicService.ACTION_SKIP;
+                        break;
+                    case 3:
+                        command = MusicService.ACTION_REWIND;
+                        break;
+                    default:
+                        command = null;
+                        break;
+                }
 
-                    if (command != null) {
-                        final Context context = (Context) msg.obj;
-                        startService(context, command);
-                    }
-                    break;
+                if (command != null) {
+                    final Context context = (Context) msg.obj;
+                    startService(context, command);
+                }
             }
             releaseWakeLockIfHandlerIdle();
         }
@@ -84,6 +78,9 @@ public class MediaButtonIntentReceiver extends BroadcastReceiver {
             abortBroadcast();
         }
     }
+
+    private static int mClickCounter = 0;
+    private static long mLastClickTime = 0;
 
     public static boolean handleIntent(final Context context, final Intent intent) {
         final String intentAction = intent.getAction();

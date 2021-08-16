@@ -2,6 +2,7 @@ package com.kabouzeid.gramophone.helper;
 
 import android.os.Handler;
 import android.os.Message;
+
 import androidx.annotation.NonNull;
 
 /**
@@ -14,9 +15,9 @@ public class MusicProgressViewUpdateHelper extends Handler {
     private static final int UPDATE_INTERVAL_PLAYING = 1000;
     private static final int UPDATE_INTERVAL_PAUSED = 500;
 
-    private Callback callback;
-    private int intervalPlaying;
-    private int intervalPaused;
+    private final Callback callback;
+    private final int intervalPlaying;
+    private final int intervalPaused;
 
     public void start() {
         queueNextRefresh(1);

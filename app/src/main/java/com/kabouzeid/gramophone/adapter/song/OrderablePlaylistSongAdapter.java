@@ -1,11 +1,12 @@
 package com.kabouzeid.gramophone.adapter.song;
 
+import android.view.MenuItem;
+import android.view.View;
+
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import android.view.MenuItem;
-import android.view.View;
 
 import com.h6ah4i.android.widget.advrecyclerview.draggable.DraggableItemAdapter;
 import com.h6ah4i.android.widget.advrecyclerview.draggable.DraggableItemViewHolder;
@@ -18,7 +19,6 @@ import com.kabouzeid.gramophone.model.PlaylistSong;
 import com.kabouzeid.gramophone.model.Song;
 import com.kabouzeid.gramophone.util.ViewUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -27,7 +27,7 @@ import java.util.List;
 @SuppressWarnings("unchecked")
 public class OrderablePlaylistSongAdapter extends PlaylistSongAdapter implements DraggableItemAdapter<OrderablePlaylistSongAdapter.ViewHolder> {
 
-    private OnMoveItemListener onMoveItemListener;
+    private final OnMoveItemListener onMoveItemListener;
 
     public OrderablePlaylistSongAdapter(@NonNull AppCompatActivity activity, @NonNull List<PlaylistSong> dataSet, @LayoutRes int itemLayoutRes, boolean usePalette, @Nullable CabHolder cabHolder, @Nullable OnMoveItemListener onMoveItemListener) {
         super(activity, (List<Song>) (List) dataSet, itemLayoutRes, usePalette, cabHolder);
@@ -49,10 +49,9 @@ public class OrderablePlaylistSongAdapter extends PlaylistSongAdapter implements
 
     @Override
     protected void onMultipleItemAction(@NonNull MenuItem menuItem, @NonNull List<Song> selection) {
-        switch (menuItem.getItemId()) {
-            case R.id.action_remove_from_playlist:
-                RemoveFromPlaylistDialog.create((List<PlaylistSong>) (List) selection).show(activity.getSupportFragmentManager(), "ADD_PLAYLIST");
-                return;
+        if (menuItem.getItemId() == R.id.action_remove_from_playlist) {
+            RemoveFromPlaylistDialog.create((List<PlaylistSong>) (List) selection).show(activity.getSupportFragmentManager(), "ADD_PLAYLIST");
+            return;
         }
         super.onMultipleItemAction(menuItem, selection);
     }
@@ -116,10 +115,9 @@ public class OrderablePlaylistSongAdapter extends PlaylistSongAdapter implements
 
         @Override
         protected boolean onSongMenuItemClick(MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.action_remove_from_playlist:
-                    RemoveFromPlaylistDialog.create((PlaylistSong) getSong()).show(activity.getSupportFragmentManager(), "REMOVE_FROM_PLAYLIST");
-                    return true;
+            if (item.getItemId() == R.id.action_remove_from_playlist) {
+                RemoveFromPlaylistDialog.create((PlaylistSong) getSong()).show(activity.getSupportFragmentManager(), "REMOVE_FROM_PLAYLIST");
+                return true;
             }
             return super.onSongMenuItemClick(item);
         }

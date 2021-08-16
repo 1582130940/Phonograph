@@ -8,13 +8,6 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import androidx.annotation.ColorInt;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -25,6 +18,14 @@ import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.h6ah4i.android.widget.advrecyclerview.animator.GeneralItemAnimator;
 import com.h6ah4i.android.widget.advrecyclerview.animator.RefactoredDefaultItemAnimator;
@@ -59,8 +60,6 @@ import butterknife.Unbinder;
 
 public class FlatPlayerFragment extends AbsPlayerFragment implements PlayerAlbumCoverFragment.Callbacks, SlidingUpPanelLayout.PanelSlideListener {
 
-    private Unbinder unbinder;
-
     @BindView(R.id.player_status_bar)
     View playerStatusBar;
     @Nullable
@@ -75,7 +74,7 @@ public class FlatPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
     RecyclerView recyclerView;
     @BindView(R.id.player_queue_sub_header)
     TextView playerQueueSubHeader;
-
+    private Unbinder unbinder;
     private int lastColor;
 
     private FlatPlayerPlaybackControlsFragment playbackControlsFragment;
@@ -216,7 +215,6 @@ public class FlatPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
         }
     }
 
-    @SuppressWarnings("ConstantConditions")
     private void updateCurrentSong() {
         impl.updateCurrentSong(MusicPlayerRemote.getCurrentSong());
     }
@@ -237,11 +235,10 @@ public class FlatPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
 
     @Override
     public boolean onMenuItemClick(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_show_lyrics:
-                if (lyrics != null)
-                    LyricsDialog.create(lyrics).show(getFragmentManager(), "LYRICS");
-                return true;
+        if (item.getItemId() == R.id.action_show_lyrics) {
+            if (lyrics != null)
+                LyricsDialog.create(lyrics).show(getFragmentManager(), "LYRICS");
+            return true;
         }
         return super.onMenuItemClick(item);
     }
@@ -447,7 +444,7 @@ public class FlatPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
     }
 
     private static abstract class BaseImpl implements Impl {
-        protected FlatPlayerFragment fragment;
+        protected final FlatPlayerFragment fragment;
 
         public BaseImpl(FlatPlayerFragment fragment) {
             this.fragment = fragment;

@@ -1,11 +1,12 @@
 package com.kabouzeid.gramophone.adapter.base;
 
 import android.content.Context;
+import android.view.Menu;
+import android.view.MenuItem;
+
 import androidx.annotation.MenuRes;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.afollestad.materialcab.MaterialCab;
 import com.kabouzeid.gramophone.R;
@@ -20,10 +21,10 @@ import java.util.List;
 public abstract class AbsMultiSelectAdapter<VH extends RecyclerView.ViewHolder, I> extends RecyclerView.Adapter<VH> implements MaterialCab.Callback {
     @Nullable
     private final CabHolder cabHolder;
-    private MaterialCab cab;
-    private List<I> checked;
-    private int menuRes;
+    private final List<I> checked;
     private final Context context;
+    private MaterialCab cab;
+    private int menuRes;
 
     public AbsMultiSelectAdapter(Context context, @Nullable CabHolder cabHolder, @MenuRes int menuRes) {
         this.cabHolder = cabHolder;

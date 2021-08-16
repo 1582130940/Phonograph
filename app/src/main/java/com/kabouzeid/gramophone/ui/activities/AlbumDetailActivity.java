@@ -4,13 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.loader.app.LoaderManager;
-import androidx.loader.content.Loader;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar;
 import android.text.Html;
 import android.text.Spanned;
 import android.view.Menu;
@@ -19,6 +12,14 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.Loader;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.afollestad.materialcab.MaterialCab;
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -53,7 +54,6 @@ import com.kabouzeid.gramophone.util.NavigationUtil;
 import com.kabouzeid.gramophone.util.PhonographColorUtil;
 import com.kabouzeid.gramophone.util.PreferenceUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -68,13 +68,9 @@ import retrofit2.Response;
  */
 public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements PaletteColorHolder, CabHolder, LoaderManager.LoaderCallbacks<Album> {
 
+    public static final String EXTRA_ALBUM_ID = "extra_album_id";
     private static final int TAG_EDITOR_REQUEST = 2001;
     private static final int LOADER_ID = LoaderIds.ALBUM_DETAIL_ACTIVITY;
-
-    public static final String EXTRA_ALBUM_ID = "extra_album_id";
-
-    private Album album;
-
     @BindView(R.id.list)
     ObservableRecyclerView recyclerView;
     @BindView(R.id.image)
@@ -85,7 +81,6 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
     View headerView;
     @BindView(R.id.header_overlay)
     View headerOverlay;
-
     @BindView(R.id.artist_icon)
     ImageView artistIconImageView;
     @BindView(R.id.duration_icon)
@@ -102,7 +97,7 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
     TextView songCountTextView;
     @BindView(R.id.album_year_text)
     TextView albumYearTextView;
-
+    private Album album;
     private AlbumSongAdapter adapter;
 
     private MaterialCab cab;
@@ -255,7 +250,7 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
 
         lastFMRestClient.getApiService()
                 .getAlbumInfo(getAlbum().getTitle(), getAlbum().getArtistName(), lang)
-                .enqueue(new Callback<LastFmAlbum>() {
+                .enqueue(new Callback<>() {
                     @Override
                     public void onResponse(@NonNull Call<LastFmAlbum> call, @NonNull Response<LastFmAlbum> response) {
                         final LastFmAlbum lastFmAlbum = response.body();
@@ -428,18 +423,19 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
         return album;
     }
 
+    @NonNull
     @Override
     public Loader<Album> onCreateLoader(int id, Bundle args) {
         return new AsyncAlbumLoader(this, args.getLong(EXTRA_ALBUM_ID));
     }
 
     @Override
-    public void onLoadFinished(Loader<Album> loader, Album data) {
+    public void onLoadFinished(@NonNull Loader<Album> loader, Album data) {
         setAlbum(data);
     }
 
     @Override
-    public void onLoaderReset(Loader<Album> loader) {
+    public void onLoaderReset(@NonNull Loader<Album> loader) {
         this.album = new Album();
         adapter.swapDataSet(album.songs);
     }

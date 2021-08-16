@@ -1,18 +1,19 @@
 package com.kabouzeid.gramophone.ui.fragments.mainactivity.library.pager;
 
 import android.os.Bundle;
-import androidx.annotation.LayoutRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import com.google.android.material.appbar.AppBarLayout;
-import com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener;
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.gramophone.R;
 import com.kabouzeid.gramophone.util.ViewUtil;
@@ -27,8 +28,6 @@ import butterknife.Unbinder;
  */
 public abstract class AbsLibraryPagerRecyclerViewFragment<A extends RecyclerView.Adapter, LM extends RecyclerView.LayoutManager> extends AbsLibraryPagerFragment implements OnOffsetChangedListener {
 
-    private Unbinder unbinder;
-
     @BindView(R.id.container)
     View container;
     @BindView(R.id.recycler_view)
@@ -36,7 +35,7 @@ public abstract class AbsLibraryPagerRecyclerViewFragment<A extends RecyclerView
     @Nullable
     @BindView(android.R.id.empty)
     TextView empty;
-
+    private Unbinder unbinder;
     private A adapter;
     private LM layoutManager;
 
@@ -48,7 +47,7 @@ public abstract class AbsLibraryPagerRecyclerViewFragment<A extends RecyclerView
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         getLibraryFragment().addOnAppBarOffsetChangedListener(this);

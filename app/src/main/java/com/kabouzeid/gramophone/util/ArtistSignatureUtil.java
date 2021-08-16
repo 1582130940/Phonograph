@@ -3,6 +3,7 @@ package com.kabouzeid.gramophone.util;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
+
 import androidx.annotation.NonNull;
 
 import com.bumptech.glide.signature.StringSignature;
@@ -30,7 +31,7 @@ public class ArtistSignatureUtil {
 
     @SuppressLint("CommitPrefEdits")
     public void updateArtistSignature(String artistName) {
-        mPreferences.edit().putLong(artistName, System.currentTimeMillis()).commit();
+        mPreferences.edit().putLong(artistName, System.currentTimeMillis()).apply();
     }
 
     public long getArtistSignatureRaw(String artistName) {

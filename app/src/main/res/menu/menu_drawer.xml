@@ -19,7 +19,6 @@
             android:title="@string/scan_media" />
     </group>
 
-
     <group android:checkableBehavior="none">
         <item
             android:id="@+id/nav_settings"

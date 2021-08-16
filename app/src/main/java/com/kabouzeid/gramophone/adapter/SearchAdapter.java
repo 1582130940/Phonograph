@@ -1,13 +1,13 @@
 package com.kabouzeid.gramophone.adapter;
 
-import android.os.Build;
-import androidx.annotation.NonNull;
-import androidx.core.util.Pair;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.util.Pair;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.kabouzeid.appthemehelper.util.ATHUtil;
@@ -107,9 +107,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
 
             if (itemViewType != HEADER) {
                 itemView.setBackgroundColor(ATHUtil.resolveColor(activity, R.attr.cardBackgroundColor));
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    itemView.setElevation(activity.getResources().getDimensionPixelSize(R.dimen.card_elevation));
-                }
+                itemView.setElevation(activity.getResources().getDimensionPixelSize(R.dimen.card_elevation));
                 if (shortSeparator != null) {
                     shortSeparator.setVisibility(View.GONE);
                 }

@@ -2,6 +2,7 @@ package com.kabouzeid.gramophone.dialogs;
 
 import android.app.Dialog;
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 
@@ -49,7 +50,6 @@ public class AddToPlaylistDialog extends DialogFragment {
                 .title(R.string.add_playlist_title)
                 .items(playlistNames)
                 .itemsCallback((materialDialog, view, i, charSequence) -> {
-                    //noinspection unchecked
                     final List<Song> songs = getArguments().getParcelableArrayList("songs");
                     if (songs == null) return;
                     if (i == 0) {

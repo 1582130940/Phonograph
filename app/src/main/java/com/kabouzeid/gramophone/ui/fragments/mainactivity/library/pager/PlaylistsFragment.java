@@ -57,18 +57,19 @@ public class PlaylistsFragment extends AbsLibraryPagerRecyclerViewFragment<Playl
         getLoaderManager().restartLoader(LOADER_ID, null, this);
     }
 
+    @NonNull
     @Override
     public Loader<List<Playlist>> onCreateLoader(int id, Bundle args) {
         return new AsyncPlaylistLoader(getActivity());
     }
 
     @Override
-    public void onLoadFinished(Loader<List<Playlist>> loader, List<Playlist> data) {
+    public void onLoadFinished(@NonNull Loader<List<Playlist>> loader, List<Playlist> data) {
         getAdapter().swapDataSet(data);
     }
 
     @Override
-    public void onLoaderReset(Loader<List<Playlist>> loader) {
+    public void onLoaderReset(@NonNull Loader<List<Playlist>> loader) {
         getAdapter().swapDataSet(new ArrayList<>());
     }
 

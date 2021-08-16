@@ -2,6 +2,7 @@ package com.kabouzeid.gramophone.ui.fragments.mainactivity.library.pager;
 
 import android.content.Context;
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
@@ -117,21 +118,19 @@ public class ArtistsFragment extends AbsLibraryPagerRecyclerViewCustomGridSizeFr
         getAdapter().notifyDataSetChanged();
     }
 
-
+    @NonNull
     @Override
     public Loader<List<Artist>> onCreateLoader(int id, Bundle args) {
         return new AsyncArtistLoader(getActivity());
     }
 
-
     @Override
-    public void onLoadFinished(Loader<List<Artist>> loader, List<Artist> data) {
+    public void onLoadFinished(@NonNull Loader<List<Artist>> loader, List<Artist> data) {
         getAdapter().swapDataSet(data);
     }
 
-
     @Override
-    public void onLoaderReset(Loader<List<Artist>> loader) {
+    public void onLoaderReset(@NonNull Loader<List<Artist>> loader) {
         getAdapter().swapDataSet(new ArrayList<>());
     }
 

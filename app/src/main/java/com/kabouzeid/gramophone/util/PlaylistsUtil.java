@@ -1,5 +1,7 @@
 package com.kabouzeid.gramophone.util;
 
+import static android.provider.MediaStore.Audio.Playlists.EXTERNAL_CONTENT_URI;
+
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -8,10 +10,10 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
-import android.widget.Toast;
 
 import com.kabouzeid.gramophone.R;
 import com.kabouzeid.gramophone.helper.M3UWriter;
@@ -23,8 +25,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import static android.provider.MediaStore.Audio.Playlists.EXTERNAL_CONTENT_URI;
 
 /**
  * @author Karim Abou Zeid (kabouzeid)
@@ -178,7 +178,7 @@ public class PlaylistsUtil {
     public static void removeFromPlaylist(@NonNull final Context context, @NonNull final List<PlaylistSong> songs) {
         final long playlistId = songs.get(0).playlistId;
         Uri uri = MediaStore.Audio.Playlists.Members.getContentUri(MediaStore.VOLUME_EXTERNAL, playlistId);
-        String selectionArgs[] = new String[songs.size()];
+        String[] selectionArgs = new String[songs.size()];
         for (int i = 0; i < selectionArgs.length; i++) {
             selectionArgs[i] = String.valueOf(songs.get(i).idInPlayList);
         }
@@ -217,12 +217,11 @@ public class PlaylistsUtil {
     }
 
     public static boolean moveItem(@NonNull final Context context, long playlistId, int from, int to) {
-        boolean res = MediaStore.Audio.Playlists.Members.moveItem(context.getContentResolver(),
-                playlistId, from, to);
         // Necessary because somehow the MediaStoreObserver doesn't work for playlists
         // NOTE: actually for now lets disable this because it messes with the animation (tested on Android 11)
-//        context.getContentResolver().notifyChange(ContentUris.withAppendedId(EXTERNAL_CONTENT_URI, playlistId), null);
-        return res;
+//      context.getContentResolver().notifyChange(ContentUris.withAppendedId(EXTERNAL_CONTENT_URI, playlistId), null);
+        return MediaStore.Audio.Playlists.Members.moveItem(context.getContentResolver(),
+                playlistId, from, to);
     }
 
     public static void renamePlaylist(@NonNull final Context context, final long id, final String newName) {

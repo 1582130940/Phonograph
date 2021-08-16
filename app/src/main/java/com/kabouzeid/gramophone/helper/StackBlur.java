@@ -25,12 +25,12 @@ import java.util.concurrent.Executors;
  * on the left side of the stack.
  *
  * @author Enrique López Mañas <eenriquelopez@gmail.com>
- *         http://www.neo-tech.es
- *         <p/>
- *         Author of the original algorithm: Mario Klingemann <mario.quasimondo.com>
- *         <p/>
- *         Based heavily on http://vitiy.info/Code/stackblur.cpp
- *         See http://vitiy.info/stackblur-algorithm-multi-threaded-blur-for-cpp/
+ * http://www.neo-tech.es
+ * <p/>
+ * Author of the original algorithm: Mario Klingemann <mario.quasimondo.com>
+ * <p/>
+ * Based heavily on http://vitiy.info/Code/stackblur.cpp
+ * See http://vitiy.info/stackblur-algorithm-multi-threaded-blur-for-cpp/
  * @copyright: Enrique López Mañas
  * @license: Apache License 2.0
  */
@@ -148,7 +148,6 @@ public class StackBlur {
                     sum_out_b += (src[src_i] & 0xff);
                 }
 
-
                 for (i = 1; i <= radius; i++) {
                     if (i <= wm) src_i += 1;
                     stack_i = i + radius;
@@ -160,7 +159,6 @@ public class StackBlur {
                     sum_in_g += ((src[src_i] >>> 8) & 0xff);
                     sum_in_b += (src[src_i] & 0xff);
                 }
-
 
                 sp = radius;
                 xp = radius;
@@ -325,7 +323,7 @@ public class StackBlur {
         }
 
         @Override
-        public Void call() throws Exception {
+        public Void call() {
             blurIteration(_src, _w, _h, _radius, _totalCores, _coreIndex, _round);
             return null;
         }

@@ -2,17 +2,17 @@ package com.kabouzeid.gramophone.adapter;
 
 import android.content.Context;
 import android.graphics.PorterDuff;
-import android.os.Build;
-import androidx.annotation.LayoutRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupMenu;
 import android.widget.Toast;
+
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.kabouzeid.gramophone.App;
@@ -48,8 +48,8 @@ public class PlaylistAdapter extends AbsMultiSelectAdapter<PlaylistAdapter.ViewH
     private static final int DEFAULT_PLAYLIST = 1;
 
     protected final AppCompatActivity activity;
+    protected final int itemLayoutRes;
     protected List<Playlist> dataSet;
-    protected int itemLayoutRes;
 
     public PlaylistAdapter(AppCompatActivity activity, List<Playlist> dataSet, @LayoutRes int itemLayoutRes, @Nullable CabHolder cabHolder) {
         super(activity, cabHolder, R.menu.menu_playlists_selection);
@@ -171,8 +171,9 @@ public class PlaylistAdapter extends AbsMultiSelectAdapter<PlaylistAdapter.ViewH
             super(context);
         }
 
+        @SafeVarargs
         @Override
-        protected String doInBackground(List<Playlist>... params) {
+        protected final String doInBackground(List<Playlist>... params) {
             int successes = 0;
             int failures = 0;
 
@@ -226,9 +227,7 @@ public class PlaylistAdapter extends AbsMultiSelectAdapter<PlaylistAdapter.ViewH
                     shortSeparator.setVisibility(View.GONE);
                 }
                 itemView.setBackgroundColor(ATHUtil.resolveColor(activity, R.attr.cardBackgroundColor));
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    itemView.setElevation(activity.getResources().getDimensionPixelSize(R.dimen.card_elevation));
-                }
+                itemView.setElevation(activity.getResources().getDimensionPixelSize(R.dimen.card_elevation));
             }
 
             if (image != null) {

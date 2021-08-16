@@ -7,16 +7,7 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
-import androidx.annotation.ColorInt;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -28,6 +19,15 @@ import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.h6ah4i.android.widget.advrecyclerview.animator.GeneralItemAnimator;
 import com.h6ah4i.android.widget.advrecyclerview.animator.RefactoredDefaultItemAnimator;
@@ -62,8 +62,6 @@ import butterknife.Unbinder;
 
 public class CardPlayerFragment extends AbsPlayerFragment implements PlayerAlbumCoverFragment.Callbacks, SlidingUpPanelLayout.PanelSlideListener {
 
-    private Unbinder unbinder;
-
     @Nullable
     @BindView(R.id.toolbar_container)
     FrameLayout toolbarContainer;
@@ -79,7 +77,7 @@ public class CardPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
     View colorBackground;
     @BindView(R.id.player_queue_sub_header)
     TextView playerQueueSubHeader;
-
+    private Unbinder unbinder;
     private int lastColor;
 
     private CardPlayerPlaybackControlsFragment playbackControlsFragment;
@@ -221,7 +219,6 @@ public class CardPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
         }
     }
 
-    @SuppressWarnings("ConstantConditions")
     private void updateCurrentSong() {
         impl.updateCurrentSong(MusicPlayerRemote.getCurrentSong());
     }
@@ -242,11 +239,10 @@ public class CardPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
 
     @Override
     public boolean onMenuItemClick(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_show_lyrics:
-                if (lyrics != null)
-                    LyricsDialog.create(lyrics).show(getFragmentManager(), "LYRICS");
-                return true;
+        if (item.getItemId() == R.id.action_show_lyrics) {
+            if (lyrics != null)
+                LyricsDialog.create(lyrics).show(getFragmentManager(), "LYRICS");
+            return true;
         }
         return super.onMenuItemClick(item);
     }
@@ -417,21 +413,20 @@ public class CardPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
 
     @Override
     public void onPanelSlide(View view, float slide) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            float density = getResources().getDisplayMetrics().density;
+        float density = getResources().getDisplayMetrics().density;
 
-            float cardElevation = (6 * slide + 2) * density;
-            if (!isValidElevation(cardElevation)) return; // we have received some crash reports in setCardElevation()
-            playingQueueCard.setCardElevation(cardElevation);
+        float cardElevation = (6 * slide + 2) * density;
+        if (isValidElevation(cardElevation))
+            return; // we have received some crash reports in setCardElevation()
+        playingQueueCard.setCardElevation(cardElevation);
 
-            float buttonElevation = (2 * Math.max(0, (1 - (slide * 16))) + 2) * density;
-            if (!isValidElevation(buttonElevation)) return;
-            playbackControlsFragment.playPauseFab.setElevation(buttonElevation);
-        }
+        float buttonElevation = (2 * Math.max(0, (1 - (slide * 16))) + 2) * density;
+        if (isValidElevation(buttonElevation)) return;
+        playbackControlsFragment.playPauseFab.setElevation(buttonElevation);
     }
 
     private boolean isValidElevation(float elevation) {
-        return elevation >= -Float.MAX_VALUE && elevation <= Float.MAX_VALUE;
+        return !(elevation >= -Float.MAX_VALUE) || !(elevation <= Float.MAX_VALUE);
     }
 
     @Override
@@ -466,7 +461,7 @@ public class CardPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
     }
 
     private static abstract class BaseImpl implements Impl {
-        protected CardPlayerFragment fragment;
+        protected final CardPlayerFragment fragment;
 
         public BaseImpl(CardPlayerFragment fragment) {
             this.fragment = fragment;
@@ -474,17 +469,13 @@ public class CardPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
 
         public AnimatorSet createDefaultColorChangeAnimatorSet(int newColor) {
             Animator backgroundAnimator;
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                //noinspection ConstantConditions
-                int x = (int) (fragment.playbackControlsFragment.playPauseFab.getX() + fragment.playbackControlsFragment.playPauseFab.getWidth() / 2 + fragment.playbackControlsFragment.getView().getX());
-                int y = (int) (fragment.playbackControlsFragment.playPauseFab.getY() + fragment.playbackControlsFragment.playPauseFab.getHeight() / 2 + fragment.playbackControlsFragment.getView().getY() + fragment.playbackControlsFragment.progressSlider.getHeight());
-                float startRadius = Math.max(fragment.playbackControlsFragment.playPauseFab.getWidth() / 2, fragment.playbackControlsFragment.playPauseFab.getHeight() / 2);
-                float endRadius = Math.max(fragment.colorBackground.getWidth(), fragment.colorBackground.getHeight());
-                fragment.colorBackground.setBackgroundColor(newColor);
-                backgroundAnimator = ViewAnimationUtils.createCircularReveal(fragment.colorBackground, x, y, startRadius, endRadius);
-            } else {
-                backgroundAnimator = ViewUtil.createBackgroundColorTransition(fragment.colorBackground, fragment.lastColor, newColor);
-            }
+            //noinspection ConstantConditions
+            int x = (int) (fragment.playbackControlsFragment.playPauseFab.getX() + fragment.playbackControlsFragment.playPauseFab.getWidth() / 2 + fragment.playbackControlsFragment.getView().getX());
+            int y = (int) (fragment.playbackControlsFragment.playPauseFab.getY() + fragment.playbackControlsFragment.playPauseFab.getHeight() / 2 + fragment.playbackControlsFragment.getView().getY() + fragment.playbackControlsFragment.progressSlider.getHeight());
+            float startRadius = Math.max(fragment.playbackControlsFragment.playPauseFab.getWidth() / 2, fragment.playbackControlsFragment.playPauseFab.getHeight() / 2);
+            float endRadius = Math.max(fragment.colorBackground.getWidth(), fragment.colorBackground.getHeight());
+            fragment.colorBackground.setBackgroundColor(newColor);
+            backgroundAnimator = ViewAnimationUtils.createCircularReveal(fragment.colorBackground, x, y, startRadius, endRadius);
 
             AnimatorSet animatorSet = new AnimatorSet();
 

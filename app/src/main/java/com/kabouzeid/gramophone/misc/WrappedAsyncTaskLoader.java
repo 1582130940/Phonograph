@@ -1,7 +1,7 @@
-
 package com.kabouzeid.gramophone.misc;
 
 import android.content.Context;
+
 import androidx.loader.content.AsyncTaskLoader;
 
 /**
@@ -31,9 +31,7 @@ public abstract class WrappedAsyncTaskLoader<D> extends AsyncTaskLoader<D> {
         if (!isReset()) {
             this.mData = data;
             super.deliverResult(data);
-        } else {
-            // An asynchronous query came in while the loader is stopped
-        }
+        }  // An asynchronous query came in while the loader is stopped
     }
 
     /**

@@ -4,8 +4,6 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -13,6 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.appthemehelper.util.ATHUtil;
@@ -33,15 +34,13 @@ import me.zhanghai.android.materialprogressbar.MaterialProgressBar;
  */
 public class MiniPlayerFragment extends AbsMusicServiceFragment implements MusicProgressViewUpdateHelper.Callback {
 
-    private Unbinder unbinder;
-
     @BindView(R.id.mini_player_title)
     TextView miniPlayerTitle;
     @BindView(R.id.mini_player_play_pause_button)
     ImageView miniPlayerPlayPauseButton;
     @BindView(R.id.progress_bar)
     MaterialProgressBar progressBar;
-
+    private Unbinder unbinder;
     private PlayPauseDrawable miniPlayerPlayPauseDrawable;
 
     private MusicProgressViewUpdateHelper progressViewUpdateHelper;
@@ -59,7 +58,7 @@ public class MiniPlayerFragment extends AbsMusicServiceFragment implements Music
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         unbinder = ButterKnife.bind(this, view);
 
@@ -125,7 +124,7 @@ public class MiniPlayerFragment extends AbsMusicServiceFragment implements Music
 
     private static class FlingPlayBackController implements View.OnTouchListener {
 
-        GestureDetector flingPlayBackController;
+        final GestureDetector flingPlayBackController;
 
         public FlingPlayBackController(Context context) {
             flingPlayBackController = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {

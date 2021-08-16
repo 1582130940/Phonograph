@@ -2,6 +2,7 @@ package com.kabouzeid.gramophone.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+
 import androidx.annotation.NonNull;
 
 import com.kabouzeid.gramophone.util.MusicUtil;
@@ -78,13 +79,13 @@ public class Artist implements Parcelable {
         return albums != null ? albums.hashCode() : 0;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "Artist{" +
                 "albums=" + albums +
                 '}';
     }
-
 
     @Override
     public int describeContents() {

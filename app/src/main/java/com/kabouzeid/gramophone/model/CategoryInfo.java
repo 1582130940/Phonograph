@@ -6,7 +6,7 @@ import android.os.Parcelable;
 import com.kabouzeid.gramophone.R;
 
 public class CategoryInfo implements Parcelable {
-    public Category category;
+    public final Category category;
     public boolean visible;
 
     public CategoryInfo(Category category, boolean visible) {
@@ -18,7 +18,6 @@ public class CategoryInfo implements Parcelable {
         category = (Category) source.readSerializable();
         visible = source.readInt() == 1;
     }
-
 
     @Override
     public int describeContents() {

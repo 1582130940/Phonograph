@@ -2,10 +2,11 @@ package com.kabouzeid.gramophone.helper.menu;
 
 import android.app.Activity;
 import android.content.Context;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.kabouzeid.gramophone.App;
 import com.kabouzeid.gramophone.R;
@@ -61,7 +62,6 @@ public class PlaylistMenuHelper {
                 ((AbsCustomPlaylist) playlist).getSongs(activity) :
                 PlaylistSongLoader.getPlaylistSongList(activity, playlist.id);
     }
-
 
     private static class SavePlaylistAsyncTask extends WeakContextAsyncTask<Playlist, String, String> {
         public SavePlaylistAsyncTask(Context context) {

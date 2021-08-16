@@ -2,10 +2,8 @@ package com.kabouzeid.gramophone.glide;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import androidx.annotation.NonNull;
 
-import java.util.ArrayList;
-import java.util.List;
+import androidx.annotation.NonNull;
 
 import com.bumptech.glide.BitmapRequestBuilder;
 import com.bumptech.glide.DrawableRequestBuilder;
@@ -28,14 +26,17 @@ import com.kabouzeid.gramophone.model.Song;
 import com.kabouzeid.gramophone.util.ArtistSignatureUtil;
 import com.kabouzeid.gramophone.util.CustomArtistImageUtil;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author Karim Abou Zeid (kabouzeid)
  */
 public class ArtistGlideRequest {
 
+    public static final int DEFAULT_ANIMATION = android.R.anim.fade_in;
     private static final DiskCacheStrategy DEFAULT_DISK_CACHE_STRATEGY = DiskCacheStrategy.ALL;
     private static final int DEFAULT_ERROR_IMAGE = R.drawable.default_artist_image;
-    public static final int DEFAULT_ANIMATION = android.R.anim.fade_in;
 
     public static class Builder {
         final RequestManager requestManager;

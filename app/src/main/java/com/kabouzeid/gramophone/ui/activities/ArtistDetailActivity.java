@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
@@ -20,14 +21,6 @@ import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
-import java.util.List;
-import java.util.Locale;
 
 import com.afollestad.materialcab.MaterialCab;
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -61,16 +54,23 @@ import com.kabouzeid.gramophone.util.NavigationUtil;
 import com.kabouzeid.gramophone.util.PhonographColorUtil;
 import com.kabouzeid.gramophone.util.PreferenceUtil;
 
+import java.util.List;
+import java.util.Locale;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 /**
  * Be careful when changing things in this Activity!
  */
 public class ArtistDetailActivity extends AbsSlidingMusicPanelActivity implements PaletteColorHolder, CabHolder, LoaderManager.LoaderCallbacks<Artist> {
 
+    public static final String EXTRA_ARTIST_ID = "extra_artist_id";
     private static final int LOADER_ID = LoaderIds.ARTIST_DETAIL_ACTIVITY;
     private static final int REQUEST_CODE_SELECT_IMAGE = 1000;
-
-    public static final String EXTRA_ARTIST_ID = "extra_artist_id";
-
     @BindView(R.id.list)
     ObservableListView songListView;
     @BindView(R.id.image)
@@ -214,7 +214,7 @@ public class ArtistDetailActivity extends AbsSlidingMusicPanelActivity implement
 
         lastFMRestClient.getApiService()
                 .getArtistInfo(getArtist().getName(), lang, null)
-                .enqueue(new Callback<LastFmArtist>() {
+                .enqueue(new Callback<>() {
                     @Override
                     public void onResponse(@NonNull Call<LastFmArtist> call, @NonNull Response<LastFmArtist> response) {
                         final LastFmArtist lastFmArtist = response.body();
@@ -264,17 +264,14 @@ public class ArtistDetailActivity extends AbsSlidingMusicPanelActivity implement
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        switch (requestCode) {
-            case REQUEST_CODE_SELECT_IMAGE:
-                if (resultCode == RESULT_OK) {
-                    CustomArtistImageUtil.getInstance(this).setCustomArtistImage(artist, data.getData());
-                }
-                break;
-            default:
-                if (resultCode == RESULT_OK) {
-                    reload();
-                }
-                break;
+        if (requestCode == REQUEST_CODE_SELECT_IMAGE) {
+            if (resultCode == RESULT_OK) {
+                CustomArtistImageUtil.getInstance(this).setCustomArtistImage(artist, data.getData());
+            }
+        } else {
+            if (resultCode == RESULT_OK) {
+                reload();
+            }
         }
     }
 
@@ -449,18 +446,19 @@ public class ArtistDetailActivity extends AbsSlidingMusicPanelActivity implement
         return artist;
     }
 
+    @NonNull
     @Override
     public Loader<Artist> onCreateLoader(int id, Bundle args) {
         return new AsyncArtistDataLoader(this, args.getLong(EXTRA_ARTIST_ID));
     }
 
     @Override
-    public void onLoadFinished(Loader<Artist> loader, Artist data) {
+    public void onLoadFinished(@NonNull Loader<Artist> loader, Artist data) {
         setArtist(data);
     }
 
     @Override
-    public void onLoaderReset(Loader<Artist> loader) {
+    public void onLoaderReset(@NonNull Loader<Artist> loader) {
         this.artist = new Artist();
         songAdapter.swapDataSet(artist.getSongs());
         albumAdapter.swapDataSet(artist.albums);

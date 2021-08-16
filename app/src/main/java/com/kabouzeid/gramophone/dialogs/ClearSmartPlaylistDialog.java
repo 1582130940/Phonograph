@@ -2,9 +2,10 @@ package com.kabouzeid.gramophone.dialogs;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.text.Html;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
-import android.text.Html;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.kabouzeid.gramophone.R;
@@ -27,10 +28,8 @@ public class ClearSmartPlaylistDialog extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        //noinspection unchecked
         final AbsSmartPlaylist playlist = getArguments().getParcelable("playlist");
         int title = R.string.clear_playlist_title;
-        //noinspection ConstantConditions
         CharSequence content = Html.fromHtml(getString(R.string.clear_playlist_x, playlist.name));
 
         return new MaterialDialog.Builder(getActivity())

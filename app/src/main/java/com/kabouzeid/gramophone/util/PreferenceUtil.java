@@ -6,13 +6,13 @@ import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.preference.PreferenceManager;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.StyleRes;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
-
 import com.kabouzeid.gramophone.R;
 import com.kabouzeid.gramophone.helper.SortOrder;
 import com.kabouzeid.gramophone.model.CategoryInfo;
@@ -134,7 +134,7 @@ public final class PreferenceUtil {
     public void setGeneralTheme(String theme) {
         final SharedPreferences.Editor editor = mPreferences.edit();
         editor.putString(GENERAL_THEME, theme);
-        editor.commit();
+        editor.apply();
     }
 
     @StyleRes
@@ -186,7 +186,7 @@ public final class PreferenceUtil {
     public void setNowPlayingScreen(NowPlayingScreen nowPlayingScreen) {
         final SharedPreferences.Editor editor = mPreferences.edit();
         editor.putInt(NOW_PLAYING_SCREEN_ID, nowPlayingScreen.id);
-        editor.commit();
+        editor.apply();
     }
 
     public final boolean coloredNotification() {
@@ -246,7 +246,7 @@ public final class PreferenceUtil {
     public void setArtistSortOrder(final String sortOrder) {
         final SharedPreferences.Editor editor = mPreferences.edit();
         editor.putString(ARTIST_SORT_ORDER, sortOrder);
-        editor.commit();
+        editor.apply();
     }
 
     public final String getArtistSongSortOrder() {
@@ -264,7 +264,7 @@ public final class PreferenceUtil {
     public void setAlbumSortOrder(final String sortOrder) {
         final SharedPreferences.Editor editor = mPreferences.edit();
         editor.putString(ALBUM_SORT_ORDER, sortOrder);
-        editor.commit();
+        editor.apply();
     }
 
     public final String getAlbumSongSortOrder() {
@@ -278,7 +278,7 @@ public final class PreferenceUtil {
     public void setSongSortOrder(final String sortOrder) {
         final SharedPreferences.Editor editor = mPreferences.edit();
         editor.putString(SONG_SORT_ORDER, sortOrder);
-        editor.commit();
+        editor.apply();
     }
 
     public final String getGenreSortOrder() {
@@ -298,7 +298,7 @@ public final class PreferenceUtil {
                 interval = calendarUtil.getElapsedWeek();
                 break;
 
-             case "past_seven_days":
+            case "past_seven_days":
                 interval = calendarUtil.getElapsedDays(7);
                 break;
 
@@ -460,7 +460,7 @@ public final class PreferenceUtil {
     @SuppressLint("CommitPrefEdits")
     public void setIntroShown() {
         // don't use apply here
-        mPreferences.edit().putBoolean(INTRO_SHOWN, true).commit();
+        mPreferences.edit().putBoolean(INTRO_SHOWN, true).apply();
     }
 
     public final boolean introShown() {
