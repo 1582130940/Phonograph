@@ -115,7 +115,6 @@
     <string name="pref_header_now_playing_screen">Sedang diputar</string>
     <string name="pref_title_general_theme">Tema umum</string>
     <string name="pref_header_audio">Suara</string>
-    <string name="pref_header_library">Pustaka</string>
     <string name="pref_header_images">Gambar</string>
     <string name="pref_header_lockscreen">Layar kunci</string>
     <string name="pref_header_playlists">Daftar putar</string>
@@ -132,7 +131,6 @@
     <string name="pref_title_audio_ducking">Kurangi suara saat ada pemberitahuan</string>
     <string name="pref_title_last_added_interval">Sela daftar putar yang terakhir ditambahkan</string>
     <string name="pref_title_synchronized_lyrics_show">Tampilkan lirik yang tersinkronisasi</string>
-    <string name="pref_title_remember_last_tab">Ingat tab terakhir</string>
     <string name="pref_title_remember_shuffle">Ingat putar acak</string>
     <string name="no_equalizer">Tidak ada ekualiser yang ditemukan.</string>
     <string name="no_audio_ID">"Silahkan mainkan sebuah lagu dan coba lagi. "</string>
@@ -167,7 +165,6 @@
     <string name="pref_summary_colored_app_shortcuts">Mewarnai pintasan-pintasan dengan warna utama.</string>
     <string name="pref_summary_audio_ducking">Pemberitahuan, navigasi dll.</string>
     <string name="pref_summary_synchronized_lyrics_show">Saat ini hanya mendukung lirik dalam format LRC yang disinkronkan. Antara tertanam atau sebagai file terpisah.</string>
-    <string name="pref_summary_remember_last_tab">Pergi ke tab yang terakhir saat aplikasi dibuka</string>
     <string name="pref_summary_remember_shuffle">Mode putar acak akan tetap aktif saat memilih daftar lagu baru</string>
     <string name="could_not_download_album_cover">"Tidak dapat mengunduh sampul album yang cocok."</string>
     <string name="search_hint">Mencari pustaka Anda…</string>
@@ -240,7 +237,6 @@
     <string name="reset_artist_image">Atur ulang gambar artist</string>
     <string name="set_artist_image">Pasang gambar artis</string>
     <string name="library_categories">Kategori perpustakaan</string>
-    <string name="pref_summary_library_categories">Konfigurasi visibilitas dan urutan kategori perpustakaan.</string>
     <string name="you_have_to_select_at_least_one_category">Anda harus memilih setidaknya satu kategori</string>
     <string name="action_scan_directory">Pindai direktori</string>
     <string name="scan_media">Pindai media</string>

@@ -113,7 +113,6 @@
     <string name="pref_header_now_playing_screen">Most játszott lista</string>
     <string name="pref_title_general_theme">Téma</string>
     <string name="pref_header_audio">Hang</string>
-    <string name="pref_header_library">Könyvtár</string>
     <string name="pref_header_images">Képek</string>
     <string name="pref_header_lockscreen">Zárképernyő</string>
     <string name="pref_header_playlists">Lejátszási listák</string>
@@ -130,7 +129,6 @@
     <string name="pref_title_audio_ducking">Hangerő csökkentése</string>
     <string name="pref_title_last_added_interval">Utoljára hozzáadott lejátszási lista intervallum</string>
     <string name="pref_title_synchronized_lyrics_show">Szinkronizált dalszöveg</string>
-    <string name="pref_title_remember_last_tab">Emlékezz az utolsó fülre</string>
     <string name="no_equalizer">Nem található hangszínszabályzó.</string>
     <string name="no_audio_ID">"Először játsszon le egy dalt, majd próbálja újra."</string>
     <string name="delete_action">Törlés</string>
@@ -164,7 +162,6 @@
     <string name="pref_summary_colored_app_shortcuts">Az alkalmazás hivatkozások színezése az elsődleges szín szerint.</string>
     <string name="pref_summary_audio_ducking">Beérkező értesítéskor a lejátszás hangereje lecsökken, majd az értesítés végén visszaáll az eredeti hangerőre.</string>
     <string name="pref_summary_synchronized_lyrics_show">Jelenleg csak az LRC formátumban szinkronizált szövegeket támogatják. Beágyazott vagy külön fájlként.</string>
-    <string name="pref_summary_remember_last_tab">Menjen az utolsó megnyitott fülre az indításkor</string>
     <string name="could_not_download_album_cover">"Nem siker\u00fclt let\u00f6lteni a megfelel\u0151 albumbor\u00edt\u00f3t."</string>
     <string name="search_hint">Keresés a könyvtárban…</string>
     <string name="favorites">Kedvencek</string>
@@ -236,7 +233,6 @@
     <string name="reset_artist_image">Előadó képének visszaállítása</string>
     <string name="set_artist_image">Előadó képének beállítása</string>
     <string name="library_categories">Könyvtár kategóriák</string>
-    <string name="pref_summary_library_categories">Könyvtár kategóriák láthatóságának és sorrendjének beállítása.</string>
     <string name="you_have_to_select_at_least_one_category">Legalább egy kategóriát ki kell választania.</string>
     <string name="action_scan_directory">Szkennelési könyvtár</string>
     <string name="scan_media">Szkennelési média</string>

@@ -115,7 +115,6 @@
     <string name="pref_header_now_playing_screen">Právě hraje</string>
     <string name="pref_title_general_theme">Motiv</string>
     <string name="pref_header_audio">Zvuk</string>
-    <string name="pref_header_library">Knihovna</string>
     <string name="pref_header_images">Obrázky</string>
     <string name="pref_header_lockscreen">Odemykací obrazovka</string>
     <string name="pref_header_playlists">Seznamy skladeb</string>
@@ -132,7 +131,6 @@
     <string name="pref_title_audio_ducking">Snížit hlasitost při ztrátě priority zvuku</string>
     <string name="pref_title_last_added_interval">Poslední přidaný interval playlistu</string>
     <string name="pref_title_synchronized_lyrics_show">Zobrazit synchronizovaný text</string>
-    <string name="pref_title_remember_last_tab">Pamatovat poslední kartu</string>
     <string name="pref_title_remember_shuffle">Pamatovat náhodné přehrávání</string>
     <string name="no_equalizer">"Nenalezen žádný ekvalizér. "</string>
     <string name="no_audio_ID">"Nejdříve přehrajte píseň, poté zkuste znovu. "</string>
@@ -167,7 +165,6 @@
     <string name="pref_summary_colored_app_shortcuts">Zbarví zkratky aplikace primární barvou</string>
     <string name="pref_summary_audio_ducking">Oznámení, navigace atd.</string>
     <string name="pref_summary_synchronized_lyrics_show">V současné době jsou podporovány pouze synchronizované texty ve formátu LRC. Buď vestavěný nebo jako samostatný soubor.</string>
-    <string name="pref_summary_remember_last_tab">Přejděte na poslední otevřenou kartu při spuštění</string>
     <string name="pref_summary_remember_shuffle">Při výběru nového seznamu skladeb zůstane režim náhodného přehrávání zapnutý</string>
     <string name="could_not_download_album_cover">"Nelze st\u00e1hnout odpov\u00eddaj\u00edc\u00ed obal alba."</string>
     <string name="search_hint">Vyhledat zvukové soubory…</string>
@@ -240,7 +237,6 @@
     <string name="reset_artist_image">Obnovit obrázek interpreta</string>
     <string name="set_artist_image">Nastavit obrázek interpreta</string>
     <string name="library_categories">Kategorie knihovny</string>
-    <string name="pref_summary_library_categories">Nastavit viditelnost a pořadí kategorií knihoven.</string>
     <string name="you_have_to_select_at_least_one_category">Musíte zvolit alespoň jednu kategorii.</string>
     <string name="action_scan_directory">Skenování adresáře</string>
     <string name="scan_media">Skenování médií</string>

@@ -115,7 +115,6 @@
     <string name="pref_header_now_playing_screen">Şuan çalınan</string>
     <string name="pref_title_general_theme">Genel tema</string>
     <string name="pref_header_audio">Ses</string>
-    <string name="pref_header_library">Kitaplık</string>
     <string name="pref_header_images">Görüntüler</string>
     <string name="pref_header_lockscreen">Kilit ekranı</string>
     <string name="pref_header_playlists">Çalma listeleri</string>
@@ -132,7 +131,6 @@
     <string name="pref_title_audio_ducking">Odak kaybına neden olacak sesi azalt</string>
     <string name="pref_title_last_added_interval">Son eklenen çalma listesi süresi</string>
     <string name="pref_title_synchronized_lyrics_show">Senkronize şarkı sözlerini göster</string>
-    <string name="pref_title_remember_last_tab">Son sekmeyi hatırla</string>
     <string name="pref_title_remember_shuffle">Karıştırmayı hatırla</string>
     <string name="no_equalizer">Ekolayzer bulunamadı.</string>
     <string name="no_audio_ID">"ilk şarkıyı çalın, daha sonra tekrar deneyin."</string>
@@ -167,7 +165,6 @@
     <string name="pref_summary_colored_app_shortcuts">Uygulama kısayollarını ana renk ile renklendir.</string>
     <string name="pref_summary_audio_ducking">Bildirimler, gezinme vb.</string>
     <string name="pref_summary_synchronized_lyrics_show">Şu anda yalnızca LRC formatında senkronize edilmiş sözler desteklenmektedir. Gömülü veya ayrı bir dosya olarak.</string>
-    <string name="pref_summary_remember_last_tab">Başlatıldığında son açılan sekmeye git</string>
     <string name="pref_summary_remember_shuffle">Yeni bir şarkı listesi seçerken Karışık mod açık kalır</string>
     <string name="could_not_download_album_cover">"E\u015fle\u015fen bir alb\u00fcm kapa\u011f\u0131 indirilemedi."</string>
     <string name="search_hint">Kitaplığınız taranıyor…</string>
@@ -240,7 +237,6 @@
     <string name="reset_artist_image">Sanatçı resmini sıfırla</string>
     <string name="set_artist_image">Sanatçı resmi ayarla</string>
     <string name="library_categories">Kitaplık kategorileri</string>
-    <string name="pref_summary_library_categories">Kitaplık kategorilerinin görünürlüğünü ve sırasını yapılandırma.</string>
     <string name="you_have_to_select_at_least_one_category">En az bir kategori seçmeniz gerekiyor.</string>
     <string name="action_scan_directory">Tarama dizini</string>
     <string name="scan_media">Medyayı tara</string>

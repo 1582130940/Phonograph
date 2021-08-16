@@ -115,7 +115,6 @@
     <string name="pref_header_now_playing_screen">Đang phát</string>
     <string name="pref_title_general_theme">Chủ đề chung</string>
     <string name="pref_header_audio">Âm thanh</string>
-    <string name="pref_header_library">Thư viện</string>
     <string name="pref_header_images">Hình ảnh</string>
     <string name="pref_header_lockscreen">Màn hình khóa</string>
     <string name="pref_header_playlists">Danh sách nhạc</string>
@@ -132,7 +131,6 @@
     <string name="pref_title_audio_ducking">Giảm âm lượng khi mất tập trung</string>
     <string name="pref_title_last_added_interval">Thời gian danh sách nhạc được thêm vào sau cùng</string>
     <string name="pref_title_synchronized_lyrics_show">Hiển thị lời bài hát được đồng bộ</string>
-    <string name="pref_title_remember_last_tab">Nhớ thẻ cuối cùng</string>
     <string name="pref_title_remember_shuffle">Nhớ phát ngẫu nhiên</string>
     <string name="no_equalizer">Không có bộ lọc âm thanh nào.</string>
     <string name="no_audio_ID">"Phát một bài hát đầu tiên, sau đó thử lại."</string>
@@ -167,7 +165,6 @@
     <string name="pref_summary_colored_app_shortcuts">Màu sắc chủ đạo của biểu tượng ứng dụng.</string>
     <string name="pref_summary_audio_ducking">Thông báo, điều hướng, vv.</string>
     <string name="pref_summary_synchronized_lyrics_show">Hiện tại chỉ được đồng bộ lời bài hát ở định dạng LRC. Nhúng hoặc là một tập tin riêng biệt.</string>
-    <string name="pref_summary_remember_last_tab">Mở thẻ đã phát cuối cùng khi mở ứng dụng</string>
     <string name="pref_summary_remember_shuffle">Giữ chế độ phát ngẫu nhiên khi chọn một danh sách mới</string>
     <string name="could_not_download_album_cover">"Kh\u00f4ng th\u1ec3 t\u1ea3i v\u1ec1 b\u00eca album ph\u00f9 h\u1ee3p."</string>
     <string name="search_hint">Tìm kiếm thư viện của bạn…</string>
@@ -240,7 +237,6 @@
     <string name="reset_artist_image">Cài lại hình nghệ sĩ</string>
     <string name="set_artist_image">Đặt hình nghệ sĩ</string>
     <string name="library_categories">Danh mục thư viện</string>
-    <string name="pref_summary_library_categories">Cấu hình khả năng hiển thị và thứ tự của các danh mục thư viện.</string>
     <string name="you_have_to_select_at_least_one_category">Bạn phải chọn ít nhất một danh mục.</string>
     <string name="action_scan_directory">Quét thư mục</string>
     <string name="scan_media">Quét tìm nhạc</string>

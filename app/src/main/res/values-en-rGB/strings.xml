@@ -115,7 +115,6 @@
     <string name="pref_header_now_playing_screen">Now playing</string>
     <string name="pref_title_general_theme">General theme</string>
     <string name="pref_header_audio">Audio</string>
-    <string name="pref_header_library">Library</string>
     <string name="pref_header_images">Images</string>
     <string name="pref_header_lockscreen">Lockscreen</string>
     <string name="pref_header_playlists">Playlists</string>
@@ -132,7 +131,6 @@
     <string name="pref_title_audio_ducking">Reduce volume on focus loss</string>
     <string name="pref_title_last_added_interval">Last added playlist interval</string>
     <string name="pref_title_synchronized_lyrics_show">Show synchronised lyrics</string>
-    <string name="pref_title_remember_last_tab">Remember last tab</string>
     <string name="pref_title_remember_shuffle">Remember shuffle</string>
     <string name="no_equalizer">No equaliser found.</string>
     <string name="no_audio_ID">"Play a song first, then try again."</string>
@@ -167,7 +165,6 @@
     <string name="pref_summary_colored_app_shortcuts">Colours the app shortcuts in the primary colour.</string>
     <string name="pref_summary_audio_ducking">Notifications, navigation etc.</string>
     <string name="pref_summary_synchronized_lyrics_show">Currently only synchronised lyrics in LRC format are supported. Either embedded or as a separate file.</string>
-    <string name="pref_summary_remember_last_tab">Go to the last opened tab on launch</string>
     <string name="pref_summary_remember_shuffle">Shuffle mode will stay on when selecting a new list of songs</string>
     <string name="could_not_download_album_cover">"Couldn\u2019t download a matching album cover."</string>
     <string name="search_hint">Search your library…</string>
@@ -240,7 +237,6 @@
     <string name="reset_artist_image">Reset artist image</string>
     <string name="set_artist_image">Set artist image</string>
     <string name="library_categories">Library categories</string>
-    <string name="pref_summary_library_categories">Configure visibility and order of library categories.</string>
     <string name="you_have_to_select_at_least_one_category">You have to select at least one category.</string>
     <string name="action_scan_directory">Scan directory</string>
     <string name="scan_media">Scan media</string>

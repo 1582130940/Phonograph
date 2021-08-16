@@ -115,7 +115,6 @@
     <string name="pref_header_now_playing_screen">Aktuelle Wiedergabe</string>
     <string name="pref_title_general_theme">Generelles Design</string>
     <string name="pref_header_audio">Audio</string>
-    <string name="pref_header_library">Bibliothek</string>
     <string name="pref_header_images">Bilder</string>
     <string name="pref_header_lockscreen">Sperrbildschirm</string>
     <string name="pref_header_playlists">Wiedergabelisten</string>
@@ -132,7 +131,6 @@
     <string name="pref_title_audio_ducking">Lautstärke bei Fokusverlust verringern</string>
     <string name="pref_title_last_added_interval">Intervall der \"Zuletzt hinzugefügt\"-Wiedergabeliste</string>
     <string name="pref_title_synchronized_lyrics_show">Synchronisierten Songtext anzeigen</string>
-    <string name="pref_title_remember_last_tab">Letzten Tab merken</string>
     <string name="pref_title_remember_shuffle">Zufallswiedergabe merken</string>
     <string name="no_equalizer">Kein Equalizer gefunden.</string>
     <string name="no_audio_ID">"Keine Audio ID, spiele etwas ab und versuche es erneut."</string>
@@ -167,7 +165,6 @@
     <string name="pref_summary_colored_app_shortcuts">Färbt die App-Shortcuts in der Hauptfarbe.</string>
     <string name="pref_summary_audio_ducking">Benachrichtigungen, Navigation etc.</string>
     <string name="pref_summary_synchronized_lyrics_show">Aktuell werden nur synchronisierte Songtexte im LRC-Format unterstützt, entweder eingebettet oder als separate Datei.</string>
-    <string name="pref_summary_remember_last_tab">Zuletzt geöffneten Tab beim Start anzeigen</string>
     <string name="pref_summary_remember_shuffle">Die Art der zufälligen Wiedergabe bleibt erhalten, wenn neue Songs ausgewählt werden</string>
     <string name="could_not_download_album_cover">"Es konnte kein passendes Album-Cover heruntergeladen werden."</string>
     <string name="search_hint">Durchsuche deine Mediathek</string>
@@ -240,7 +237,6 @@
     <string name="reset_artist_image">Künstler-Bild zurücksetzen</string>
     <string name="set_artist_image">Künstler-Bild festlegen</string>
     <string name="library_categories">Bibliothekskategorien</string>
-    <string name="pref_summary_library_categories">Anzeige und Anordnung der einzelnen Kategorien festlegen.</string>
     <string name="you_have_to_select_at_least_one_category">Mindestens eine Kategorie muss ausgewählt sein.</string>
     <string name="action_scan_directory">Verzeichnis scannen</string>
     <string name="scan_media">Medien scannen</string>
