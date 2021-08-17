@@ -15,7 +15,7 @@
         android:layout_marginStart="-8dp"
         android:layout_marginLeft="-8dp"
         android:visibility="gone"
-        app:srcCompat="@drawable/ic_drag_vertical_white_24dp"
+        app:srcCompat="@drawable/ic_drag_indicator_white_24dp"
         tools:ignore="ContentDescription" />
 
     <LinearLayout
