@@ -1,12 +1,10 @@
 package com.kabouzeid.gramophone.appshortcuts;
 
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ShortcutInfo;
 import android.content.pm.ShortcutManager;
 import android.graphics.drawable.Icon;
-import android.os.Build;
 
 import com.kabouzeid.gramophone.appshortcuts.shortcuttype.LastAddedShortcutType;
 import com.kabouzeid.gramophone.appshortcuts.shortcuttype.ShuffleAllShortcutType;
@@ -19,7 +17,6 @@ import java.util.List;
  * @author Adrian Campos
  */
 
-@TargetApi(Build.VERSION_CODES.N_MR1)
 public class DynamicShortcutManager {
 
     private final Context context;

@@ -1,7 +1,6 @@
 package com.kabouzeid.gramophone.views;
 
 import android.content.Context;
-import android.os.Build;
 import android.util.AttributeSet;
 import android.view.WindowInsets;
 import android.widget.FrameLayout;
@@ -23,11 +22,9 @@ public class StatusBarMarginFrameLayout extends FrameLayout {
 
     @Override
     public WindowInsets onApplyWindowInsets(WindowInsets insets) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            MarginLayoutParams lp = (MarginLayoutParams) getLayoutParams();
-            lp.topMargin = insets.getSystemWindowInsetTop();
-            setLayoutParams(lp);
-        }
+        MarginLayoutParams lp = (MarginLayoutParams) getLayoutParams();
+        lp.topMargin = insets.getSystemWindowInsetTop();
+        setLayoutParams(lp);
         return super.onApplyWindowInsets(insets);
     }
 }

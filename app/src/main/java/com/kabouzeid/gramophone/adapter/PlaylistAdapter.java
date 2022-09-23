@@ -2,7 +2,6 @@ package com.kabouzeid.gramophone.adapter;
 
 import android.content.Context;
 import android.graphics.PorterDuff;
-import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -227,9 +226,7 @@ public class PlaylistAdapter extends AbsMultiSelectAdapter<PlaylistAdapter.ViewH
                     shortSeparator.setVisibility(View.GONE);
                 }
                 itemView.setBackgroundColor(ATHUtil.resolveColor(activity, R.attr.cardBackgroundColor));
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    itemView.setElevation(activity.getResources().getDimensionPixelSize(R.dimen.card_elevation));
-                }
+                itemView.setElevation(activity.getResources().getDimensionPixelSize(R.dimen.card_elevation));
             }
 
             if (image != null) {

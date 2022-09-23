@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.kabouzeid.gramophone">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
@@ -25,7 +26,8 @@
         android:theme="@style/Theme.Phonograph.Light"
         android:requestLegacyExternalStorage="true"
         tools:ignore="UnusedAttribute">
-        <activity android:name=".ui.activities.MainActivity">
+        <activity android:name=".ui.activities.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.MUSIC_PLAYER" />
@@ -74,15 +76,6 @@
                 <data android:mimeType="application/itunes" />
             </intent-filter>
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data android:mimeType="vnd.android.cursor.dir/playlist" />
-                <data android:mimeType="vnd.android.cursor.dir/albums" />
-                <data android:mimeType="vnd.android.cursor.dir/artists" />
-            </intent-filter>
-            <intent-filter>
                 <action android:name="com.cyanogenmod.eleven.AUDIO_PLAYER" />
 
                 <category android:name="android.intent.category.DEFAULT" />
@@ -126,7 +119,8 @@
             android:name=".service.MusicService"
             android:enabled="true" />
 
-        <receiver android:name=".service.MediaButtonIntentReceiver">
+        <receiver android:name=".service.MediaButtonIntentReceiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
             </intent-filter>
@@ -146,7 +140,8 @@
             android:value="GlideModule" />
 
         <!-- Widgets -->
-        <receiver android:name=".appwidgets.BootReceiver">
+        <receiver android:name=".appwidgets.BootReceiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />

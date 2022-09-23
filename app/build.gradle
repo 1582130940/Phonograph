@@ -16,11 +16,10 @@ static def getProperty(@Nullable Properties properties, String name) {
 }
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion '29.0.3'
+    compileSdk 33
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 29
+        minSdk 29
+        targetSdk 33
 
         renderscriptTargetApi 29
         vectorDrawables.useSupportLibrary = true
@@ -54,33 +53,34 @@ android {
         }
     }
     packagingOptions {
-        exclude 'META-INF/LICENSE'
-        exclude 'META-INF/NOTICE'
-    }
-    lintOptions {
-        disable 'MissingTranslation'
-        disable 'InvalidPackage'
-        abortOnError false
+        resources {
+            excludes += ['META-INF/LICENSE', 'META-INF/NOTICE']
+        }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    namespace 'com.kabouzeid.gramophone'
+    lint {
+        abortOnError false
+        disable 'MissingTranslation', 'InvalidPackage'
     }
 }
 
 dependencies {
-    implementation 'androidx.annotation:annotation:1.1.0'
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'androidx.core:core:1.3.0'
-    implementation 'androidx.fragment:fragment:1.2.5'
-    implementation 'androidx.media:media:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.core:core:1.7.0'
+    implementation 'androidx.fragment:fragment:1.4.1'
+    implementation 'androidx.media:media:1.5.0'
     implementation 'androidx.palette:palette:1.0.0'
     implementation 'androidx.percentlayout:percentlayout:1.0.0'
-    implementation 'androidx.preference:preference:1.1.1'
-    implementation 'androidx.recyclerview:recyclerview:1.1.0'
-    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.preference:preference:1.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.google.android.material:material:1.5.0'
 
     implementation 'com.github.kabouzeid:app-theme-helper:1.3.10'
     implementation 'com.github.kabouzeid:RecyclerView-FastScroll:1.0.16-kmod'
@@ -96,14 +96,14 @@ dependencies {
         transitive = true
     }
 
-    implementation 'com.jakewharton:butterknife:10.2.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
 
-    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
-    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.google.code.gson:gson:2.9.1'
 
-    implementation 'de.psdev.licensesdialog:licensesdialog:2.1.0'
+    implementation 'de.psdev.licensesdialog:licensesdialog:2.2.0'
 
     implementation 'com.github.bumptech.glide:glide:3.8.0'
     implementation 'com.github.bumptech.glide:okhttp3-integration:1.5.0'

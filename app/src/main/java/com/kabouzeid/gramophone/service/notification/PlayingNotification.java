@@ -5,9 +5,6 @@ import static android.content.Context.NOTIFICATION_SERVICE;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.os.Build;
-
-import androidx.annotation.RequiresApi;
 
 import com.kabouzeid.gramophone.R;
 import com.kabouzeid.gramophone.service.MusicService;
@@ -29,9 +26,7 @@ public abstract class PlayingNotification {
     public synchronized void init(MusicService service) {
         this.service = service;
         notificationManager = (NotificationManager) service.getSystemService(NOTIFICATION_SERVICE);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            createNotificationChannel();
-        }
+        createNotificationChannel();
     }
 
     public abstract void update();
@@ -63,7 +58,6 @@ public abstract class PlayingNotification {
         notifyMode = newNotifyMode;
     }
 
-    @RequiresApi(26)
     private void createNotificationChannel() {
         NotificationChannel notificationChannel = notificationManager.getNotificationChannel(NOTIFICATION_CHANNEL_ID);
         if (notificationChannel == null) {

@@ -1,6 +1,5 @@
 package com.kabouzeid.gramophone.helper;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.ContentResolver;
@@ -10,7 +9,6 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.database.Cursor;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Environment;
 import android.os.IBinder;
 import android.provider.DocumentsContract;
@@ -468,7 +466,6 @@ public class MusicPlayerRemote {
         return null;
     }
 
-    @TargetApi(Build.VERSION_CODES.KITKAT)
     private static String getSongIdFromMediaProvider(Uri uri) {
         return DocumentsContract.getDocumentId(uri).split(":")[1];
     }

@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
-import android.os.Build;
 import android.provider.BaseColumns;
 import android.provider.MediaStore;
 import android.provider.Settings;
@@ -21,10 +20,7 @@ public class RingtoneManager {
 
 
     public static boolean requiresDialog(@NonNull Context context) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            return !Settings.System.canWrite(context);
-        }
-        return false;
+        return !Settings.System.canWrite(context);
     }
 
     public static MaterialDialog showDialog(Context context) {

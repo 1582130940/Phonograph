@@ -17,7 +17,6 @@ import android.media.AudioManager;
 import android.media.audiofx.AudioEffect;
 import android.media.session.MediaSession;
 import android.os.Binder;
-import android.os.Build;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.IBinder;
@@ -244,7 +243,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         Intent mediaButtonIntent = new Intent(Intent.ACTION_MEDIA_BUTTON);
         mediaButtonIntent.setComponent(mediaButtonReceiverComponentName);
 
-        PendingIntent mediaButtonReceiverPendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, mediaButtonIntent, 0);
+        PendingIntent mediaButtonReceiverPendingIntent = PendingIntent.getBroadcast(getApplicationContext(), PendingIntent.FLAG_IMMUTABLE, mediaButtonIntent, PendingIntent.FLAG_IMMUTABLE);
 
         mediaSession = new MediaSessionCompat(this, "Phonograph", mediaButtonReceiverComponentName, mediaButtonReceiverPendingIntent);
         mediaSession.setCallback(new MediaSessionCompat.Callback() {
@@ -467,17 +466,9 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
 
     private void releaseResources() {
         playerHandler.removeCallbacksAndMessages(null);
-        if (Build.VERSION.SDK_INT >= 18) {
-            musicPlayerHandlerThread.quitSafely();
-        } else {
-            musicPlayerHandlerThread.quit();
-        }
+        musicPlayerHandlerThread.quitSafely();
         queueSaveHandler.removeCallbacksAndMessages(null);
-        if (Build.VERSION.SDK_INT >= 18) {
-            queueSaveHandlerThread.quitSafely();
-        } else {
-            queueSaveHandlerThread.quit();
-        }
+        queueSaveHandlerThread.quitSafely();
         playback.release();
         playback = null;
         mediaSession.release();
@@ -546,7 +537,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     }
 
     public void initNotification() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N && !PreferenceUtil.getInstance(this).classicNotification()) {
+        if (!PreferenceUtil.getInstance(this).classicNotification()) {
             playingNotification = new PlayingNotificationImpl24();
         } else {
             playingNotification = new PlayingNotificationImpl();
@@ -587,9 +578,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
                 .putLong(MediaMetadataCompat.METADATA_KEY_YEAR, song.year)
                 .putBitmap(MediaMetadataCompat.METADATA_KEY_ALBUM_ART, null);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            metaData.putLong(MediaMetadataCompat.METADATA_KEY_NUM_TRACKS, getPlayingQueue().size());
-        }
+        metaData.putLong(MediaMetadataCompat.METADATA_KEY_NUM_TRACKS, getPlayingQueue().size());
 
         if (PreferenceUtil.getInstance(this).albumArtOnLockscreen()) {
             final Point screenSize = Util.getScreenSize(MusicService.this);

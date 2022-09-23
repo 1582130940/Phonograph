@@ -4,11 +4,8 @@ import android.content.Context;
 import android.graphics.drawable.AdaptiveIconDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
-import android.graphics.drawable.LayerDrawable;
-import android.os.Build;
 import android.util.TypedValue;
 
-import androidx.annotation.RequiresApi;
 import androidx.core.graphics.drawable.IconCompat;
 
 import com.kabouzeid.appthemehelper.ThemeStore;
@@ -19,7 +16,6 @@ import com.kabouzeid.gramophone.util.PreferenceUtil;
 /**
  * @author Adrian Campos
  */
-@RequiresApi(Build.VERSION_CODES.N_MR1)
 public final class AppShortcutIconGenerator {
 
     public static Icon generateThemedIcon(Context context, int iconId) {
@@ -55,16 +51,8 @@ public final class AppShortcutIconGenerator {
         Drawable vectorDrawable = ImageUtil.getTintedVectorDrawable(context, iconId, foregroundColor);
         Drawable backgroundDrawable = ImageUtil.getTintedVectorDrawable(context, R.drawable.ic_app_shortcut_background, backgroundColor);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            AdaptiveIconDrawable adaptiveIconDrawable = new AdaptiveIconDrawable(backgroundDrawable, vectorDrawable);
-            return IconCompat.createWithAdaptiveBitmap(ImageUtil.createBitmap(adaptiveIconDrawable));
-        } else {
-            // Squash the two drawables together
-            LayerDrawable layerDrawable = new LayerDrawable(new Drawable[]{backgroundDrawable, vectorDrawable});
-
-            // Return as an Icon
-            return IconCompat.createWithBitmap(ImageUtil.createBitmap(layerDrawable));
-        }
+        AdaptiveIconDrawable adaptiveIconDrawable = new AdaptiveIconDrawable(backgroundDrawable, vectorDrawable);
+        return IconCompat.createWithAdaptiveBitmap(ImageUtil.createBitmap(adaptiveIconDrawable));
     }
 
 }

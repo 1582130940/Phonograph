@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.media.audiofx.AudioEffect;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -84,9 +83,7 @@ public class SettingsActivity extends AbsBaseActivity implements ColorChooserDia
                 break;
         }
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
-            new DynamicShortcutManager(this).updateDynamicShortcuts();
-        }
+        new DynamicShortcutManager(this).updateDynamicShortcuts();
         recreate();
     }
 
@@ -175,11 +172,9 @@ public class SettingsActivity extends AbsBaseActivity implements ColorChooserDia
 
                 ThemeStore.markChanged(getActivity());
 
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
-                    // Set the new theme so that updateAppShortcuts can pull it
-                    getActivity().setTheme(PreferenceUtil.getThemeResFromPrefValue(themeName));
-                    new DynamicShortcutManager(getActivity()).updateDynamicShortcuts();
-                }
+                // Set the new theme so that updateAppShortcuts can pull it
+                getActivity().setTheme(PreferenceUtil.getThemeResFromPrefValue(themeName));
+                new DynamicShortcutManager(getActivity()).updateDynamicShortcuts();
 
                 getActivity().recreate();
                 return true;
@@ -219,58 +214,37 @@ public class SettingsActivity extends AbsBaseActivity implements ColorChooserDia
             });
 
             TwoStatePreference colorNavBar = findPreference("should_color_navigation_bar");
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-                colorNavBar.setVisible(false);
-            } else {
-                colorNavBar.setChecked(ThemeStore.coloredNavigationBar(getActivity()));
-                colorNavBar.setOnPreferenceChangeListener((preference, newValue) -> {
-                    ThemeStore.editTheme(getActivity())
-                            .coloredNavigationBar((Boolean) newValue)
-                            .commit();
-                    getActivity().recreate();
-                    return true;
-                });
-            }
+            colorNavBar.setChecked(ThemeStore.coloredNavigationBar(getActivity()));
+            colorNavBar.setOnPreferenceChangeListener((preference, newValue) -> {
+                ThemeStore.editTheme(getActivity())
+                        .coloredNavigationBar((Boolean) newValue)
+                        .commit();
+                getActivity().recreate();
+                return true;
+            });
 
             final TwoStatePreference classicNotification = findPreference("classic_notification");
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) {
-                classicNotification.setVisible(false);
-            } else {
-                classicNotification.setChecked(PreferenceUtil.getInstance(getActivity()).classicNotification());
-                classicNotification.setOnPreferenceChangeListener((preference, newValue) -> {
-                    // Save preference
-                    PreferenceUtil.getInstance(getActivity()).setClassicNotification((Boolean) newValue);
-                    return true;
-                });
-            }
+            classicNotification.setChecked(PreferenceUtil.getInstance(getActivity()).classicNotification());
+            classicNotification.setOnPreferenceChangeListener((preference, newValue) -> {
+                // Save preference
+                PreferenceUtil.getInstance(getActivity()).setClassicNotification((Boolean) newValue);
+                return true;
+            });
 
             final TwoStatePreference coloredNotification = findPreference("colored_notification");
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                coloredNotification.setEnabled(PreferenceUtil.getInstance(getActivity()).classicNotification());
-            } else {
-                coloredNotification.setChecked(PreferenceUtil.getInstance(getActivity()).coloredNotification());
-                coloredNotification.setOnPreferenceChangeListener((preference, newValue) -> {
-                    // Save preference
-                    PreferenceUtil.getInstance(getActivity()).setColoredNotification((Boolean) newValue);
-                    return true;
-                });
-            }
+            coloredNotification.setEnabled(PreferenceUtil.getInstance(getActivity()).classicNotification());
 
             final TwoStatePreference colorAppShortcuts = findPreference("should_color_app_shortcuts");
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N_MR1) {
-                colorAppShortcuts.setVisible(false);
-            } else {
-                colorAppShortcuts.setChecked(PreferenceUtil.getInstance(getActivity()).coloredAppShortcuts());
-                colorAppShortcuts.setOnPreferenceChangeListener((preference, newValue) -> {
-                    // Save preference
-                    PreferenceUtil.getInstance(getActivity()).setColoredAppShortcuts((Boolean) newValue);
+            colorAppShortcuts.setChecked(PreferenceUtil.getInstance(getActivity()).coloredAppShortcuts());
+            colorAppShortcuts.setOnPreferenceChangeListener((preference, newValue) -> {
+                // Save preference
+                PreferenceUtil.getInstance(getActivity()).setColoredAppShortcuts((Boolean) newValue);
 
-                    // Update app shortcuts
-                    new DynamicShortcutManager(getActivity()).updateDynamicShortcuts();
+                // Update app shortcuts
+                new DynamicShortcutManager(getActivity()).updateDynamicShortcuts();
 
-                    return true;
-                });
-            }
+                return true;
+            });
 
             final Preference equalizer = findPreference("equalizer");
             if (!hasEqualizer()) {
@@ -299,9 +273,7 @@ public class SettingsActivity extends AbsBaseActivity implements ColorChooserDia
                     updateNowPlayingScreenSummary();
                     break;
                 case PreferenceUtil.CLASSIC_NOTIFICATION:
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                        findPreference("colored_notification").setEnabled(sharedPreferences.getBoolean(key, false));
-                    }
+                    findPreference("colored_notification").setEnabled(sharedPreferences.getBoolean(key, false));
                     break;
             }
         }

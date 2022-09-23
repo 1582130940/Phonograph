@@ -15,7 +15,6 @@ import android.graphics.Path;
 import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.widget.RemoteViews;
 
 import com.kabouzeid.gramophone.R;
@@ -75,11 +74,7 @@ public abstract class BaseAppWidget extends AppWidgetProvider {
     protected PendingIntent buildPendingIntent(Context context, final String action, final ComponentName serviceName) {
         Intent intent = new Intent(action);
         intent.setComponent(serviceName);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            return PendingIntent.getForegroundService(context, 0, intent, 0);
-        } else {
-            return PendingIntent.getService(context, 0, intent, 0);
-        }
+        return PendingIntent.getForegroundService(context, PendingIntent.FLAG_IMMUTABLE, intent, PendingIntent.FLAG_IMMUTABLE);
     }
 
     protected static Bitmap createRoundedBitmap(Drawable drawable, int width, int height, float tl, float tr, float bl, float br) {

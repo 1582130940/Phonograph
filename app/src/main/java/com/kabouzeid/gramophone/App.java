@@ -1,7 +1,6 @@
 package com.kabouzeid.gramophone;
 
 import android.app.Application;
-import android.os.Build;
 
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.gramophone.appshortcuts.DynamicShortcutManager;
@@ -27,9 +26,7 @@ public class App extends Application {
         }
 
         // Set up dynamic shortcuts
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
-            new DynamicShortcutManager(this).initDynamicShortcuts();
-        }
+        new DynamicShortcutManager(this).initDynamicShortcuts();
     }
 
     public static App getInstance() {

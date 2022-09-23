@@ -1,6 +1,5 @@
 package com.kabouzeid.gramophone.adapter.song;
 
-import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -91,9 +90,7 @@ public class ArtistSongAdapter extends ArrayAdapter<Song> implements MaterialCab
                 .checkIgnoreMediaStore(activity).build()
                 .into(albumArt);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            albumArt.setTransitionName(activity.getString(R.string.transition_album_art));
-        }
+        albumArt.setTransitionName(activity.getString(R.string.transition_album_art));
 
         final ImageView overflowButton = convertView.findViewById(R.id.menu);
         overflowButton.setOnClickListener(new SongMenuHelper.OnClickSongMenu(activity) {

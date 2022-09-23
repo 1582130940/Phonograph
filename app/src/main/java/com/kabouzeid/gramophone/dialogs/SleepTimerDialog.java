@@ -158,7 +158,7 @@ public class SleepTimerDialog extends DialogFragment {
     }
 
     private PendingIntent makeTimerPendingIntent(int flag) {
-        return PendingIntent.getService(getActivity(), 0, makeTimerIntent(), flag);
+        return PendingIntent.getService(getActivity(), PendingIntent.FLAG_IMMUTABLE, makeTimerIntent(), flag);
     }
 
     private Intent makeTimerIntent() {

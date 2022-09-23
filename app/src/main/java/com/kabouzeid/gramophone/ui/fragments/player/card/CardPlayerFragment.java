@@ -7,7 +7,6 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -417,18 +416,16 @@ public class CardPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
 
     @Override
     public void onPanelSlide(View view, float slide) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            float density = getResources().getDisplayMetrics().density;
+        float density = getResources().getDisplayMetrics().density;
 
-            float cardElevation = (6 * slide + 2) * density;
-            if (!isValidElevation(cardElevation))
-                return; // we have received some crash reports in setCardElevation()
-            playingQueueCard.setCardElevation(cardElevation);
+        float cardElevation = (6 * slide + 2) * density;
+        if (!isValidElevation(cardElevation))
+            return; // we have received some crash reports in setCardElevation()
+        playingQueueCard.setCardElevation(cardElevation);
 
-            float buttonElevation = (2 * Math.max(0, (1 - (slide * 16))) + 2) * density;
-            if (!isValidElevation(buttonElevation)) return;
-            playbackControlsFragment.playPauseFab.setElevation(buttonElevation);
-        }
+        float buttonElevation = (2 * Math.max(0, (1 - (slide * 16))) + 2) * density;
+        if (!isValidElevation(buttonElevation)) return;
+        playbackControlsFragment.playPauseFab.setElevation(buttonElevation);
     }
 
     private boolean isValidElevation(float elevation) {
@@ -475,17 +472,13 @@ public class CardPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
 
         public AnimatorSet createDefaultColorChangeAnimatorSet(int newColor) {
             Animator backgroundAnimator;
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                //noinspection ConstantConditions
-                int x = (int) (fragment.playbackControlsFragment.playPauseFab.getX() + fragment.playbackControlsFragment.playPauseFab.getWidth() / 2 + fragment.playbackControlsFragment.getView().getX());
-                int y = (int) (fragment.playbackControlsFragment.playPauseFab.getY() + fragment.playbackControlsFragment.playPauseFab.getHeight() / 2 + fragment.playbackControlsFragment.getView().getY() + fragment.playbackControlsFragment.progressSlider.getHeight());
-                float startRadius = Math.max(fragment.playbackControlsFragment.playPauseFab.getWidth() / 2, fragment.playbackControlsFragment.playPauseFab.getHeight() / 2);
-                float endRadius = Math.max(fragment.colorBackground.getWidth(), fragment.colorBackground.getHeight());
-                fragment.colorBackground.setBackgroundColor(newColor);
-                backgroundAnimator = ViewAnimationUtils.createCircularReveal(fragment.colorBackground, x, y, startRadius, endRadius);
-            } else {
-                backgroundAnimator = ViewUtil.createBackgroundColorTransition(fragment.colorBackground, fragment.lastColor, newColor);
-            }
+            //noinspection ConstantConditions
+            int x = (int) (fragment.playbackControlsFragment.playPauseFab.getX() + fragment.playbackControlsFragment.playPauseFab.getWidth() / 2 + fragment.playbackControlsFragment.getView().getX());
+            int y = (int) (fragment.playbackControlsFragment.playPauseFab.getY() + fragment.playbackControlsFragment.playPauseFab.getHeight() / 2 + fragment.playbackControlsFragment.getView().getY() + fragment.playbackControlsFragment.progressSlider.getHeight());
+            float startRadius = Math.max(fragment.playbackControlsFragment.playPauseFab.getWidth() / 2, fragment.playbackControlsFragment.playPauseFab.getHeight() / 2);
+            float endRadius = Math.max(fragment.colorBackground.getWidth(), fragment.colorBackground.getHeight());
+            fragment.colorBackground.setBackgroundColor(newColor);
+            backgroundAnimator = ViewAnimationUtils.createCircularReveal(fragment.colorBackground, x, y, startRadius, endRadius);
 
             AnimatorSet animatorSet = new AnimatorSet();
 

@@ -3,7 +3,6 @@ package com.kabouzeid.gramophone.ui.activities.base;
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -259,15 +258,13 @@ public abstract class AbsSlidingMusicPanelActivity extends AbsMusicServiceActivi
     }
 
     private void animateNavigationBarColor(int color) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            if (navigationBarColorAnimator != null) navigationBarColorAnimator.cancel();
-            navigationBarColorAnimator = ValueAnimator
-                    .ofArgb(getWindow().getNavigationBarColor(), color)
-                    .setDuration(ViewUtil.PHONOGRAPH_ANIM_TIME);
-            navigationBarColorAnimator.setInterpolator(new PathInterpolator(0.4f, 0f, 1f, 1f));
-            navigationBarColorAnimator.addUpdateListener(animation -> AbsSlidingMusicPanelActivity.super.setNavigationbarColor((Integer) animation.getAnimatedValue()));
-            navigationBarColorAnimator.start();
-        }
+        if (navigationBarColorAnimator != null) navigationBarColorAnimator.cancel();
+        navigationBarColorAnimator = ValueAnimator
+                .ofArgb(getWindow().getNavigationBarColor(), color)
+                .setDuration(ViewUtil.PHONOGRAPH_ANIM_TIME);
+        navigationBarColorAnimator.setInterpolator(new PathInterpolator(0.4f, 0f, 1f, 1f));
+        navigationBarColorAnimator.addUpdateListener(animation -> AbsSlidingMusicPanelActivity.super.setNavigationbarColor((Integer) animation.getAnimatedValue()));
+        navigationBarColorAnimator.start();
     }
 
     @Override
