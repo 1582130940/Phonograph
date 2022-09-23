@@ -115,7 +115,6 @@
     <string name="pref_header_now_playing_screen">Schermata di riproduzione</string>
     <string name="pref_title_general_theme">Tema generale</string>
     <string name="pref_header_audio">Audio</string>
-    <string name="pref_header_library">Libreria</string>
     <string name="pref_header_images">Immagini</string>
     <string name="pref_header_lockscreen">Schermata di blocco</string>
     <string name="pref_header_playlists">Playlist</string>
@@ -132,7 +131,6 @@
     <string name="pref_title_audio_ducking">Riduci volume in caso di perdita di focus audio</string>
     <string name="pref_title_last_added_interval">Ultimo intervallo di playlist aggiunto</string>
     <string name="pref_title_synchronized_lyrics_show">Mostra testi sincronizzati</string>
-    <string name="pref_title_remember_last_tab">Ricorda ultima scheda</string>
     <string name="pref_title_remember_shuffle">Ricorda casuale</string>
     <string name="no_equalizer">Nessun equalizzatore trovato</string>
     <string name="no_audio_ID">"Riproduci un brano e prova di nuovo."</string>
@@ -167,7 +165,6 @@
     <string name="pref_summary_colored_app_shortcuts">Colora le scorciatoie dell\'app con il colore principale.</string>
     <string name="pref_summary_audio_ducking">Notifiche, navigazione ecc.</string>
     <string name="pref_summary_synchronized_lyrics_show">Attualmente solo i testi sincronizzati in formato LRC sono supportati. Sia integrati o come file separati.</string>
-    <string name="pref_summary_remember_last_tab">All\'avvio vai all\'ultima scheda aperta</string>
     <string name="pref_summary_remember_shuffle">La modalità casuale rimarrà attiva quando si seleziona un nuovo elenco di brani</string>
     <string name="could_not_download_album_cover">"Impossibile scaricare una copertina adatta."</string>
     <string name="search_hint">Cercando nella tua libreria…</string>
@@ -275,7 +272,6 @@
     <string name="reset_artist_image">Reimposta immagine artista</string>
     <string name="set_artist_image">Imposta immagine artista</string>
     <string name="library_categories">Categorie libreria</string>
-    <string name="pref_summary_library_categories">Configura visibilità e ordine delle categorie della libreria.</string>
     <string name="you_have_to_select_at_least_one_category">Devi scegliere almeno una categoria.</string>
     <string name="action_scan_directory">Scansiona cartella</string>
     <string name="scan_media">Scansiona media</string>

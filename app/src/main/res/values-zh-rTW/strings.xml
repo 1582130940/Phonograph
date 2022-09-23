@@ -115,7 +115,6 @@
     <string name="pref_header_now_playing_screen">播放面板</string>
     <string name="pref_title_general_theme">主題</string>
     <string name="pref_header_audio">音訊</string>
-    <string name="pref_header_library">音樂庫</string>
     <string name="pref_header_images">圖片</string>
     <string name="pref_header_lockscreen">鎖定畫面</string>
     <string name="pref_header_playlists">播放清單</string>
@@ -132,7 +131,6 @@
     <string name="pref_title_audio_ducking">在焦點音訊響起時降低音量</string>
     <string name="pref_title_last_added_interval">最後新增列表的時間範圍</string>
     <string name="pref_title_synchronized_lyrics_show">同步顯示歌詞</string>
-    <string name="pref_title_remember_last_tab">記住最後開啟的頁面</string>
     <string name="pref_title_remember_shuffle">記住隨機播放</string>
     <string name="no_equalizer">找不到等化器</string>
     <string name="no_audio_ID">"請先播放一首歌後再重試一遍。"</string>
@@ -167,7 +165,6 @@
     <string name="pref_summary_colored_app_shortcuts">將主色調設為應用程式捷徑的顏色</string>
     <string name="pref_summary_audio_ducking">通知鈴聲、導航語音等。</string>
     <string name="pref_summary_synchronized_lyrics_show">目前僅支援 LRC 格式歌詞。內嵌或外掛皆可。</string>
-    <string name="pref_summary_remember_last_tab">開啟時顯示最後使用的頁面</string>
     <string name="pref_summary_remember_shuffle">當選擇新歌曲列表時維持隨機播放模式</string>
     <string name="could_not_download_album_cover">"\u7121\u6cd5\u4e0b\u8f09\u5408\u9069\u7684\u5c08\u8f2f\u5c01\u9762\u3002"</string>
     <string name="search_hint">搜尋音樂庫…</string>
@@ -274,7 +271,6 @@
     <string name="reset_artist_image">重設歌手圖片</string>
     <string name="set_artist_image">設定歌手圖片</string>
     <string name="library_categories">音樂庫類別</string>
-    <string name="pref_summary_library_categories">調整音樂庫類別的顯示與排序</string>
     <string name="you_have_to_select_at_least_one_category">你至少要選擇 1 個類別</string>
     <string name="action_scan_directory">掃描檔案</string>
     <string name="scan_media">掃描音樂</string>

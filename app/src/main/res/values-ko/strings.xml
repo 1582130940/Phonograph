@@ -113,7 +113,6 @@
     <string name="pref_header_now_playing_screen">지금 재생 중</string>
     <string name="pref_title_general_theme">전체 테마</string>
     <string name="pref_header_audio">오디오</string>
-    <string name="pref_header_library">보관함</string>
     <string name="pref_header_images">이미지</string>
     <string name="pref_header_lockscreen">잠금 화면</string>
     <string name="pref_header_playlists">재생목록</string>
@@ -130,7 +129,6 @@
     <string name="pref_title_audio_ducking">포커스 상실 시 볼륨 감소하기</string>
     <string name="pref_title_last_added_interval">최근 추가된 재생 목록 간격</string>
     <string name="pref_title_synchronized_lyrics_show">동기화된 가사 보기</string>
-    <string name="pref_title_remember_last_tab">마지막 탭 기억</string>
     <string name="no_equalizer">설치된 이퀄라이저가 없습니다.</string>
     <string name="no_audio_ID">"먼저 노래를 재생한 후 다시 시도해 주세요."</string>
     <string name="delete_action">삭제</string>
@@ -164,7 +162,6 @@
     <string name="pref_summary_colored_app_shortcuts">주 색상으로 앱 바로가기 색칠</string>
     <string name="pref_summary_audio_ducking">알림 소리, 버튼음 등</string>
     <string name="pref_summary_synchronized_lyrics_show">현재는 임베딩 또는 별개로 저장된 LRC 형식의 동기화된 자막 파일만 지원합니다.</string>
-    <string name="pref_summary_remember_last_tab">마지막으로 연 탭으로 시작</string>
     <string name="could_not_download_album_cover">"\uc77c\uce58\ud558\ub294 \uc568\ubc94 \ucee4\ubc84\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4."</string>
     <string name="search_hint">저장소 검색…</string>
     <string name="favorites">즐겨찾기</string>
@@ -270,7 +267,6 @@
     <string name="reset_artist_image">아티스트 이미지 초기화</string>
     <string name="set_artist_image">아티스트 이미지 설정</string>
     <string name="library_categories">라이브러리 카테고리</string>
-    <string name="pref_summary_library_categories">라이브러리 카테고리의 표시 여부 및 배열 순서를 조정합니다.</string>
     <string name="you_have_to_select_at_least_one_category">적어도 하나의 카테고리는 선택해야 합니다.</string>
     <string name="action_scan_directory">디렉토리 스캔하기</string>
     <string name="scan_media">미디어 스캔</string>

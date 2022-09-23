@@ -115,7 +115,6 @@
     <string name="pref_header_now_playing_screen">يتم تشغيله الآن</string>
     <string name="pref_title_general_theme">التنسيق العام</string>
     <string name="pref_header_audio">الصوت</string>
-    <string name="pref_header_library">المكتبة</string>
     <string name="pref_header_images">الصور</string>
     <string name="pref_header_lockscreen">شاشة القفل</string>
     <string name="pref_header_playlists">قوائم التشغيل</string>
@@ -132,7 +131,6 @@
     <string name="pref_title_audio_ducking">خفض الصوت عند فقدان التركيز</string>
     <string name="pref_title_last_added_interval">فترة قائمة تشغيل المضافة مؤخراً</string>
     <string name="pref_title_synchronized_lyrics_show">عرض كلمات الأغاني المتزامنة</string>
-    <string name="pref_title_remember_last_tab">تذكر آخر لسان</string>
     <string name="pref_title_remember_shuffle">تذكر الخلط</string>
     <string name="no_equalizer">لا يوجد معدل صوت</string>
     <string name="no_audio_ID">"شغل أغنية أولاً، ثم حاول مرة أخرى."</string>
@@ -167,7 +165,6 @@
     <string name="pref_summary_colored_app_shortcuts">تلوين اختصارات التطبيق باللون الأساسي.</string>
     <string name="pref_summary_audio_ducking">الإشعارات، التنقل، إلخ.</string>
     <string name="pref_summary_synchronized_lyrics_show">حالياً كلمات الأغاني المتزامنة بصيغة LRC هي المدعومة فقط. سواء كانت مدمجة أو كملف منفصل.</string>
-    <string name="pref_summary_remember_last_tab">الذهاب إلى آخر لسان مفتوح عند التشغيل</string>
     <string name="pref_summary_remember_shuffle">سيبقى وضع الخلط مفعلاً عند اختيار قائمة أغاني جديدة</string>
     <string name="could_not_download_album_cover">"\u0644\u0645 \u064a\u062a\u0645 \u0627\u0644\u062a\u0645\u0643\u0646 \u0645\u0646 \u062a\u062d\u0645\u064a\u0644 \u063a\u0644\u0627\u0641 \u0623\u0644\u0628\u0648\u0645 \u0645\u0637\u0627\u0628\u0642."</string>
     <string name="search_hint">البحث في مكتبتك…</string>
@@ -274,7 +271,6 @@
     <string name="reset_artist_image">إعادة تعيين صورة الفنان</string>
     <string name="set_artist_image">تعيين صورة الفنان</string>
     <string name="library_categories">أقسام المكتبة</string>
-    <string name="pref_summary_library_categories">تخصيص رؤية وترتيب أقسام المكتبة.</string>
     <string name="you_have_to_select_at_least_one_category">عليك أن تختار قسماً واحداً على الأقل.</string>
     <string name="action_scan_directory">فحص المسار</string>
     <string name="scan_media">فحص الوسائط</string>

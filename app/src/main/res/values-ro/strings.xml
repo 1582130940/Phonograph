@@ -113,7 +113,6 @@
     <string name="pref_header_now_playing_screen">Redare acum</string>
     <string name="pref_title_general_theme">Temă generală</string>
     <string name="pref_header_audio">Audio</string>
-    <string name="pref_header_library">Bibliotecă</string>
     <string name="pref_header_images">Imagini</string>
     <string name="pref_header_lockscreen">Ecran blocat</string>
     <string name="pref_header_playlists">Liste de redare</string>
@@ -130,7 +129,6 @@
     <string name="pref_title_audio_ducking">Se reduce volumul la pierderea focalizării</string>
     <string name="pref_title_last_added_interval">Ultimul interval al listei de redare adăugate</string>
     <string name="pref_title_synchronized_lyrics_show">Afişare versuri sincronizate</string>
-    <string name="pref_title_remember_last_tab">Rețineți ultima filă</string>
     <string name="no_equalizer">Niciun egalizator găsit</string>
     <string name="no_audio_ID">"Redă o melodie mai întâi, apoi încearcă din nou."</string>
     <string name="delete_action">Șterge</string>
@@ -164,7 +162,6 @@
     <string name="pref_summary_colored_app_shortcuts">Colorarea comenzilor rapide ale aplicației în culoarea primară.</string>
     <string name="pref_summary_audio_ducking">Notificări, navigație etc.</string>
     <string name="pref_summary_synchronized_lyrics_show">În prezent sunt acceptate numai versurile sincronizate în format LRC. Fie încorporate, fie ca fişier separat.</string>
-    <string name="pref_summary_remember_last_tab">Accesați ultima filă deschisă la lansare</string>
     <string name="could_not_download_album_cover">"Nu s-a putut desc\u0103rca o copert\u0103 de album corespunz\u0103toare."</string>
     <string name="search_hint">Căutați în bibliotecă.</string>
     <string name="favorites">Favorite</string>
@@ -270,7 +267,6 @@
     <string name="reset_artist_image">Resetați imaginea artistului</string>
     <string name="set_artist_image">Setați imaginea artistului</string>
     <string name="library_categories">Categorii</string>
-    <string name="pref_summary_library_categories">Configurați vizibilitatea și ordinea categoriilor din bibliotecă.</string>
     <string name="you_have_to_select_at_least_one_category">Trebuie să selectați cel puțin o categorie.</string>
     <string name="action_scan_directory">Scaneaza locatia</string>
     <string name="scan_media">scanare media</string>
