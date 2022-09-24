@@ -2,10 +2,12 @@ package com.kabouzeid.gramophone.ui.fragments.player;
 
 import android.content.Context;
 import android.content.Intent;
-import androidx.annotation.Nullable;
-import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 
 import com.kabouzeid.gramophone.R;
 import com.kabouzeid.gramophone.dialogs.AddToPlaylistDialog;
@@ -28,7 +30,7 @@ public abstract class AbsPlayerFragment extends AbsMusicServiceFragment implemen
     private static boolean isToolbarShown = true;
 
     @Override
-    public void onAttach(Context context) {
+    public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         try {
             callbacks = (Callbacks) context;
@@ -135,8 +137,8 @@ public abstract class AbsPlayerFragment extends AbsMusicServiceFragment implemen
         final long duration = MusicPlayerRemote.getQueueDurationMillis(MusicPlayerRemote.getPosition());
 
         return MusicUtil.buildInfoString(
-            getResources().getString(R.string.up_next),
-            MusicUtil.getReadableDurationString(duration)
+                getResources().getString(R.string.up_next),
+                MusicUtil.getReadableDurationString(duration)
         );
     }
 

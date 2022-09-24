@@ -10,7 +10,7 @@ public class CalendarUtil {
     private static final long MS_PER_MINUTE = 60 * 1000;
     private static final long MS_PER_DAY = 24 * 60 * MS_PER_MINUTE;
 
-    private Calendar calendar;
+    private final Calendar calendar;
 
     public CalendarUtil() {
         this.calendar = Calendar.getInstance();
@@ -40,7 +40,7 @@ public class CalendarUtil {
         return elapsed;
     }
 
-     /**
+    /**
      * Returns the time elapsed so far this week in milliseconds.
      *
      * @return Time elapsed this week in milliseconds.

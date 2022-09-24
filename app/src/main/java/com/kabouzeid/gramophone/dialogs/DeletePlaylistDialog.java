@@ -2,9 +2,10 @@ package com.kabouzeid.gramophone.dialogs;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.text.Html;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
-import android.text.Html;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.kabouzeid.gramophone.R;
@@ -38,11 +39,9 @@ public class DeletePlaylistDialog extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        //noinspection unchecked
         final List<Playlist> playlists = getArguments().getParcelableArrayList("playlists");
         int title;
         CharSequence content;
-        //noinspection ConstantConditions
         if (playlists.size() > 1) {
             title = R.string.delete_playlists_title;
             content = Html.fromHtml(getString(R.string.delete_x_playlists, playlists.size()));

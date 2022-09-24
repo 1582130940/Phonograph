@@ -237,19 +237,20 @@ public class PlaylistDetailActivity extends AbsSlidingMusicPanelActivity impleme
         super.onDestroy();
     }
 
+    @NonNull
     @Override
     public Loader<List<Song>> onCreateLoader(int id, Bundle args) {
         return new AsyncPlaylistSongLoader(this, playlist);
     }
 
     @Override
-    public void onLoadFinished(Loader<List<Song>> loader, List<Song> data) {
+    public void onLoadFinished(@NonNull Loader<List<Song>> loader, List<Song> data) {
         if (adapter != null)
             adapter.swapDataSet(data);
     }
 
     @Override
-    public void onLoaderReset(Loader<List<Song>> loader) {
+    public void onLoaderReset(@NonNull Loader<List<Song>> loader) {
         if (adapter != null)
             adapter.swapDataSet(new ArrayList<>());
     }

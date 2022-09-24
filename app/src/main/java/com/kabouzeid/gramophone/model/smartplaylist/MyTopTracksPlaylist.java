@@ -2,6 +2,7 @@ package com.kabouzeid.gramophone.model.smartplaylist;
 
 import android.content.Context;
 import android.os.Parcel;
+
 import androidx.annotation.NonNull;
 
 import com.kabouzeid.gramophone.R;
@@ -9,7 +10,6 @@ import com.kabouzeid.gramophone.loader.TopAndRecentlyPlayedTracksLoader;
 import com.kabouzeid.gramophone.model.Song;
 import com.kabouzeid.gramophone.provider.SongPlayCountStore;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -42,7 +42,7 @@ public class MyTopTracksPlaylist extends AbsSmartPlaylist {
         super(in);
     }
 
-    public static final Creator<MyTopTracksPlaylist> CREATOR = new Creator<MyTopTracksPlaylist>() {
+    public static final Creator<MyTopTracksPlaylist> CREATOR = new Creator<>() {
         public MyTopTracksPlaylist createFromParcel(Parcel source) {
             return new MyTopTracksPlaylist(source);
         }

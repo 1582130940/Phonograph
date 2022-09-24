@@ -9,14 +9,6 @@ import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import androidx.annotation.ColorInt;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -28,6 +20,15 @@ import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.h6ah4i.android.widget.advrecyclerview.animator.GeneralItemAnimator;
 import com.h6ah4i.android.widget.advrecyclerview.animator.RefactoredDefaultItemAnimator;
@@ -92,8 +93,8 @@ public class CardPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
     private RecyclerView.Adapter wrappedAdapter;
     private RecyclerViewDragDropManager recyclerViewDragDropManager;
 
-    private AsyncTask updateIsFavoriteTask;
-    private AsyncTask updateLyricsAsyncTask;
+    private AsyncTask<Song, Void, Boolean> updateIsFavoriteTask;
+    private AsyncTask<Void, Void, Lyrics> updateLyricsAsyncTask;
 
     private Lyrics lyrics;
 
@@ -221,7 +222,6 @@ public class CardPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
         }
     }
 
-    @SuppressWarnings("ConstantConditions")
     private void updateCurrentSong() {
         impl.updateCurrentSong(MusicPlayerRemote.getCurrentSong());
     }
@@ -421,7 +421,8 @@ public class CardPlayerFragment extends AbsPlayerFragment implements PlayerAlbum
             float density = getResources().getDisplayMetrics().density;
 
             float cardElevation = (6 * slide + 2) * density;
-            if (!isValidElevation(cardElevation)) return; // we have received some crash reports in setCardElevation()
+            if (!isValidElevation(cardElevation))
+                return; // we have received some crash reports in setCardElevation()
             playingQueueCard.setCardElevation(cardElevation);
 
             float buttonElevation = (2 * Math.max(0, (1 - (slide * 16))) + 2) * density;

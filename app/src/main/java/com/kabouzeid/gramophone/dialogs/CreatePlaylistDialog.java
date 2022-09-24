@@ -2,11 +2,12 @@ package com.kabouzeid.gramophone.dialogs;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.text.InputType;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
-import android.text.InputType;
-import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.kabouzeid.gramophone.R;
@@ -63,7 +64,6 @@ public class CreatePlaylistDialog extends DialogFragment {
                         if (!PlaylistsUtil.doesPlaylistExist(getActivity(), name)) {
                             final long playlistId = PlaylistsUtil.createPlaylist(getActivity(), name);
                             if (getActivity() != null) {
-                                //noinspection unchecked
                                 List<Song> songs = getArguments().getParcelableArrayList(SONGS);
                                 if (songs != null && !songs.isEmpty()) {
                                     PlaylistsUtil.addToPlaylist(getActivity(), songs, playlistId, true);

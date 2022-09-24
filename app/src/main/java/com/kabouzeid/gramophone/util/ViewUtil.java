@@ -12,11 +12,12 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.RippleDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Build;
-import androidx.annotation.ColorInt;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.animation.PathInterpolator;
 import android.widget.TextView;
+
+import androidx.annotation.ColorInt;
 
 import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.kabouzeid.appthemehelper.util.ColorUtil;
@@ -39,7 +40,7 @@ public class ViewUtil {
         return createColorAnimator(v, "textColor", startColor, endColor);
     }
 
-    private static Animator createColorAnimator(Object target, String propertyName, @ColorInt int startColor, @ColorInt int endColor) {
+    private static Animator createColorAnimator(View target, String propertyName, @ColorInt int startColor, @ColorInt int endColor) {
         ObjectAnimator animator;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             animator = ObjectAnimator.ofArgb(target, propertyName, startColor, endColor);

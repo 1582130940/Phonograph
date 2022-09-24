@@ -6,10 +6,11 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.DialogFragment;
-import android.view.View;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.kabouzeid.gramophone.R;
@@ -94,7 +95,7 @@ public class BlacklistFolderChooserDialog extends DialogFragment implements Mate
         MaterialDialog.Builder builder =
                 new MaterialDialog.Builder(getActivity())
                         .title(parentFolder.getAbsolutePath())
-                        .items((CharSequence[]) getContentsArray())
+                        .items(getContentsArray())
                         .itemsCallback(this)
                         .autoDismiss(false)
                         .onPositive((dialog, which) -> {
@@ -133,7 +134,7 @@ public class BlacklistFolderChooserDialog extends DialogFragment implements Mate
         parentContents = listFiles();
         MaterialDialog dialog = (MaterialDialog) getDialog();
         dialog.setTitle(parentFolder.getAbsolutePath());
-        dialog.setItems((CharSequence[]) getContentsArray());
+        dialog.setItems(getContentsArray());
     }
 
     @Override

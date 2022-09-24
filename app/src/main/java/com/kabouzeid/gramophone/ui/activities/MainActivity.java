@@ -9,11 +9,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.MediaStore;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import com.google.android.material.navigation.NavigationView;
-import androidx.fragment.app.Fragment;
-import androidx.drawerlayout.widget.DrawerLayout;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,8 +16,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
+import com.bumptech.glide.Glide;
+import com.google.android.material.navigation.NavigationView;
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.kabouzeid.appthemehelper.util.NavigationViewUtil;
@@ -42,7 +42,6 @@ import com.kabouzeid.gramophone.ui.fragments.mainactivity.folders.FoldersFragmen
 import com.kabouzeid.gramophone.ui.fragments.mainactivity.library.LibraryFragment;
 import com.kabouzeid.gramophone.util.MusicUtil;
 import com.kabouzeid.gramophone.util.PreferenceUtil;
-
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
 import java.util.ArrayList;
@@ -107,7 +106,7 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
         }
     }
 
-    private void setCurrentFragment(@SuppressWarnings("NullableProblems") Fragment fragment) {
+    private void setCurrentFragment(Fragment fragment) {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment, null).commit();
         currentFragment = (MainActivityFragmentCallbacks) fragment;
     }
@@ -181,7 +180,6 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
             Song song = MusicPlayerRemote.getCurrentSong();
             if (navigationDrawerHeader == null) {
                 navigationDrawerHeader = navigationView.inflateHeaderView(R.layout.navigation_drawer_header);
-                //noinspection ConstantConditions
                 navigationDrawerHeader.setOnClickListener(v -> {
                     drawerLayout.closeDrawers();
                     if (getPanelState() == SlidingUpPanelLayout.PanelState.COLLAPSED) {
@@ -329,8 +327,7 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
         try {
             PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
             int currentVersion = pInfo.versionCode;
-            if (currentVersion != PreferenceUtil.getInstance(this).getLastChangelogVersion()) {
-            }
+            PreferenceUtil.getInstance(this).getLastChangelogVersion();
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }

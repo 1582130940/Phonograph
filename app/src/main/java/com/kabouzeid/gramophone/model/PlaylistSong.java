@@ -2,6 +2,8 @@ package com.kabouzeid.gramophone.model;
 
 import android.os.Parcel;
 
+import androidx.annotation.NonNull;
+
 public class PlaylistSong extends Song {
     public static final PlaylistSong EMPTY_PLAYLIST_SONG = new PlaylistSong(-1, "", -1, -1, -1, "", -1, -1, "", -1, "", -1, -1);
 
@@ -30,11 +32,12 @@ public class PlaylistSong extends Song {
     @Override
     public int hashCode() {
         int result = super.hashCode();
-        result = 31 * result + (int)playlistId;
-        result = 31 * result + (int)idInPlayList;
+        result = 31 * result + (int) playlistId;
+        result = 31 * result + (int) idInPlayList;
         return result;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return super.toString() +
@@ -63,7 +66,7 @@ public class PlaylistSong extends Song {
         this.idInPlayList = in.readLong();
     }
 
-    public static final Creator<PlaylistSong> CREATOR = new Creator<PlaylistSong>() {
+    public static final Creator<PlaylistSong> CREATOR = new Creator<>() {
         public PlaylistSong createFromParcel(Parcel source) {
             return new PlaylistSong(source);
         }

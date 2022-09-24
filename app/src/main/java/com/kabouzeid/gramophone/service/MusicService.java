@@ -129,10 +129,10 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
 
     public boolean pendingQuit = false;
 
-    private AppWidgetBig appWidgetBig = AppWidgetBig.getInstance();
-    private AppWidgetClassic appWidgetClassic = AppWidgetClassic.getInstance();
-    private AppWidgetSmall appWidgetSmall = AppWidgetSmall.getInstance();
-    private AppWidgetCard appWidgetCard = AppWidgetCard.getInstance();
+    private final AppWidgetBig appWidgetBig = AppWidgetBig.getInstance();
+    private final AppWidgetClassic appWidgetClassic = AppWidgetClassic.getInstance();
+    private final AppWidgetSmall appWidgetSmall = AppWidgetSmall.getInstance();
+    private final AppWidgetCard appWidgetCard = AppWidgetCard.getInstance();
 
     private Playback playback;
     private List<Song> playingQueue = new ArrayList<>();
@@ -145,7 +145,6 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     private boolean pausedByTransientLossOfFocus;
     private PlayingNotification playingNotification;
     private AudioManager audioManager;
-    @SuppressWarnings("deprecation")
     private MediaSessionCompat mediaSession;
     private PowerManager.WakeLock wakeLock;
     private PlaybackHandler playerHandler;
@@ -158,10 +157,10 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     private QueueSaveHandler queueSaveHandler;
     private HandlerThread musicPlayerHandlerThread;
     private HandlerThread queueSaveHandlerThread;
-    private SongPlayCountHelper songPlayCountHelper = new SongPlayCountHelper();
+    private final SongPlayCountHelper songPlayCountHelper = new SongPlayCountHelper();
     private ThrottledSeekHandler throttledSeekHandler;
     private boolean becomingNoisyReceiverRegistered;
-    private IntentFilter becomingNoisyReceiverIntentFilter = new IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY);
+    private final IntentFilter becomingNoisyReceiverIntentFilter = new IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY);
     private final BroadcastReceiver becomingNoisyReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, @NonNull Intent intent) {
@@ -324,10 +323,8 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
                             }
                             if (!playlistSongs.isEmpty()) {
                                 if (shuffleMode == SHUFFLE_MODE_SHUFFLE) {
-                                    int startPosition = 0;
-                                    if (!playlistSongs.isEmpty()) {
-                                        startPosition = new Random().nextInt(playlistSongs.size());
-                                    }
+                                    int startPosition;
+                                    startPosition = new Random().nextInt(playlistSongs.size());
                                     openQueue(playlistSongs, startPosition, true);
                                     setShuffleMode(shuffleMode);
                                 } else {
@@ -395,10 +392,8 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         @Override
         public void handleMessage(@NonNull Message msg) {
             final MusicService service = mService.get();
-            switch (msg.what) {
-                case SAVE_QUEUES:
-                    service.saveQueuesImpl();
-                    break;
+            if (msg.what == SAVE_QUEUES) {
+                service.saveQueuesImpl();
             }
         }
     }
@@ -882,10 +877,8 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     public void playSongs(List<Song> songs, int shuffleMode) {
         if (songs != null && !songs.isEmpty()) {
             if (shuffleMode == SHUFFLE_MODE_SHUFFLE) {
-                int startPosition = 0;
-                if (!songs.isEmpty()) {
-                    startPosition = new Random().nextInt(songs.size());
-                }
+                int startPosition;
+                startPosition = new Random().nextInt(songs.size());
                 openQueue(songs, startPosition, false);
                 setShuffleMode(shuffleMode);
             } else {
@@ -1326,7 +1319,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     private class MediaStoreObserver extends ContentObserver implements Runnable {
         // milliseconds to delay before calling refresh to aggregate events
         private static final long REFRESH_DELAY = 500;
-        private Handler mHandler;
+        private final Handler mHandler;
 
         public MediaStoreObserver(Handler handler) {
             super(handler);
@@ -1353,7 +1346,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     private class ThrottledSeekHandler implements Runnable {
         // milliseconds to throttle before calling run() to aggregate events
         private static final long THROTTLE = 500;
-        private Handler mHandler;
+        private final Handler mHandler;
 
         public ThrottledSeekHandler(Handler handler) {
             mHandler = handler;
@@ -1376,7 +1369,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     private static class SongPlayCountHelper {
         public static final String TAG = SongPlayCountHelper.class.getSimpleName();
 
-        private StopWatch stopWatch = new StopWatch();
+        private final StopWatch stopWatch = new StopWatch();
         private Song song = Song.EMPTY_SONG;
 
         public Song getSong() {

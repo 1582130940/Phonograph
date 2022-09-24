@@ -5,8 +5,6 @@ import android.graphics.PorterDuff;
 import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
-import androidx.annotation.ColorInt;
-import androidx.annotation.NonNull;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +13,9 @@ import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
 
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.gramophone.R;
@@ -90,7 +91,7 @@ public class BreadCrumbLayout extends HorizontalScrollView implements View.OnCli
             this.scrollPos = in.readInt();
         }
 
-        public static final Creator<Crumb> CREATOR = new Creator<Crumb>() {
+        public static final Creator<Crumb> CREATOR = new Creator<>() {
             @Override
             public Crumb createFromParcel(Parcel source) {
                 return new Crumb(source);
@@ -388,7 +389,7 @@ public class BreadCrumbLayout extends HorizontalScrollView implements View.OnCli
             this.mVisibility = in.readInt();
         }
 
-        public static final Creator<SavedStateWrapper> CREATOR = new Creator<SavedStateWrapper>() {
+        public static final Creator<SavedStateWrapper> CREATOR = new Creator<>() {
             public SavedStateWrapper createFromParcel(Parcel source) {
                 return new SavedStateWrapper(source);
             }

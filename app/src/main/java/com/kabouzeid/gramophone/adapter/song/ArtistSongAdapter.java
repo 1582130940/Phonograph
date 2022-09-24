@@ -1,10 +1,6 @@
 package com.kabouzeid.gramophone.adapter.song;
 
 import android.os.Build;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.core.util.Pair;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,6 +9,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.util.Pair;
 
 import com.afollestad.materialcab.MaterialCab;
 import com.bumptech.glide.Glide;
@@ -36,7 +37,7 @@ public class ArtistSongAdapter extends ArrayAdapter<Song> implements MaterialCab
     private final CabHolder cabHolder;
     private MaterialCab cab;
     private List<Song> dataSet;
-    private List<Song> checked;
+    private final List<Song> checked;
 
     @NonNull
     private final AppCompatActivity activity;
@@ -144,7 +145,7 @@ public class ArtistSongAdapter extends ArrayAdapter<Song> implements MaterialCab
             final int size = checked.size();
             if (size <= 0) cab.finish();
             else if (size == 1) cab.setTitle(checked.get(0).title);
-            else if (size > 1) cab.setTitle(String.valueOf(size));
+            else cab.setTitle(String.valueOf(size));
         }
     }
 

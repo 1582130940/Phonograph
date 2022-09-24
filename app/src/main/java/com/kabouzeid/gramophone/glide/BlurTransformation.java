@@ -10,6 +10,7 @@ import android.renderscript.Element;
 import android.renderscript.RSRuntimeException;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
+
 import androidx.annotation.FloatRange;
 import androidx.annotation.NonNull;
 
@@ -45,7 +46,7 @@ public class BlurTransformation extends BitmapTransformation {
     }
 
     public static class Builder {
-        private Context context;
+        private final Context context;
         private BitmapPool bitmapPool;
         private float blurRadius = DEFAULT_BLUR_RADIUS;
         private int sampling;

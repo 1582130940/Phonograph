@@ -2,8 +2,9 @@ package com.kabouzeid.gramophone.views;
 
 import android.content.Context;
 import android.graphics.PorterDuff;
-import androidx.appcompat.widget.AppCompatImageView;
 import android.util.AttributeSet;
+
+import androidx.appcompat.widget.AppCompatImageView;
 
 import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.kabouzeid.gramophone.R;

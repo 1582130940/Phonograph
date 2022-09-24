@@ -13,9 +13,10 @@ import android.graphics.Path;
 import android.graphics.PixelFormat;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import androidx.annotation.NonNull;
 import android.util.Property;
 import android.view.animation.DecelerateInterpolator;
+
+import androidx.annotation.NonNull;
 
 import com.kabouzeid.gramophone.R;
 
@@ -23,7 +24,7 @@ public class PlayPauseDrawable extends Drawable {
     private static final long PLAY_PAUSE_ANIMATION_DURATION = 250;
 
     private static final Property<PlayPauseDrawable, Float> PROGRESS =
-            new Property<PlayPauseDrawable, Float>(Float.class, "progress") {
+            new Property<>(Float.class, "progress") {
                 @Override
                 public Float get(@NonNull PlayPauseDrawable d) {
                     return d.getProgress();

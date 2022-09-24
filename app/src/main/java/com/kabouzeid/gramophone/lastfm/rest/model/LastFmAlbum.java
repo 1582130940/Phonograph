@@ -32,13 +32,15 @@ public class LastFmAlbum {
             this.image = image;
         }
 
-        public Wiki getWiki() { return wiki; }
+        public Wiki getWiki() {
+            return wiki;
+        }
 
         public void setWiki(Wiki wiki) {
             this.wiki = wiki;
         }
 
-        public class Wiki {
+        public static class Wiki {
             @Expose
             private String content;
 

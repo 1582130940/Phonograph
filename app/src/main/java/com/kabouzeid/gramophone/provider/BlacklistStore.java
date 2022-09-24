@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Environment;
+
 import androidx.annotation.NonNull;
 
 import com.kabouzeid.gramophone.service.MusicService;
@@ -21,7 +22,7 @@ public class BlacklistStore extends SQLiteOpenHelper {
     private static BlacklistStore sInstance = null;
     public static final String DATABASE_NAME = "blacklist.db";
     private static final int VERSION = 1;
-    private Context context;
+    private final Context context;
 
     public BlacklistStore(final Context context) {
         super(context, DATABASE_NAME, null, VERSION);

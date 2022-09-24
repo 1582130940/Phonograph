@@ -10,13 +10,13 @@ import android.net.Uri;
 import android.os.Environment;
 import android.provider.BaseColumns;
 import android.provider.MediaStore;
+import android.text.TextUtils;
+import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.FileProvider;
-import android.text.TextUtils;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.kabouzeid.gramophone.R;
 import com.kabouzeid.gramophone.helper.MusicPlayerRemote;
@@ -71,15 +71,14 @@ public class MusicUtil {
     }
 
 
-
     @NonNull
     public static String getArtistInfoString(@NonNull final Context context, @NonNull final Artist artist) {
         int albumCount = artist.getAlbumCount();
         int songCount = artist.getSongCount();
 
         return MusicUtil.buildInfoString(
-            MusicUtil.getAlbumCountString(context, albumCount),
-            MusicUtil.getSongCountString(context, songCount)
+                MusicUtil.getAlbumCountString(context, albumCount),
+                MusicUtil.getSongCountString(context, songCount)
         );
     }
 
@@ -88,16 +87,16 @@ public class MusicUtil {
         int songCount = album.getSongCount();
 
         return MusicUtil.buildInfoString(
-            album.getArtistName(),
-            MusicUtil.getSongCountString(context, songCount)
+                album.getArtistName(),
+                MusicUtil.getSongCountString(context, songCount)
         );
     }
 
     @NonNull
     public static String getSongInfoString(@NonNull final Song song) {
         return MusicUtil.buildInfoString(
-            song.artistName,
-            song.albumName
+                song.artistName,
+                song.albumName
         );
     }
 
@@ -112,8 +111,8 @@ public class MusicUtil {
         final long duration = getTotalDuration(context, songs);
 
         return MusicUtil.buildInfoString(
-            MusicUtil.getSongCountString(context, songs.size()),
-            MusicUtil.getReadableDurationString(duration)
+                MusicUtil.getSongCountString(context, songs.size()),
+                MusicUtil.getReadableDurationString(duration)
         );
     }
 
@@ -154,22 +153,19 @@ public class MusicUtil {
         }
     }
 
-    /** 
+    /**
      * Build a concatenated string from the provided arguments
      * The intended purpose is to show extra annotations
      * to a music library item.
      * Ex: for a given album --> buildInfoString(album.artist, album.songCount)
      */
     @NonNull
-    public static String buildInfoString(@Nullable final String string1, @Nullable final String string2)
-    {
+    public static String buildInfoString(@Nullable final String string1, @Nullable final String string2) {
         // Skip empty strings
         if (TextUtils.isEmpty(string1)) {
-            //noinspection ConstantConditions
             return TextUtils.isEmpty(string2) ? "" : string2;
         }
         if (TextUtils.isEmpty(string2)) {
-            //noinspection ConstantConditions
             return TextUtils.isEmpty(string1) ? "" : string1;
         }
 
@@ -264,7 +260,7 @@ public class MusicUtil {
                         final File f = new File(name);
                         if (f.delete()) {
                             // Step 3: Remove selected track from the database
-                            context.getContentResolver().delete(ContentUris.withAppendedId(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, id),null, null);
+                            context.getContentResolver().delete(ContentUris.withAppendedId(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, id), null, null);
                             deletedCount++;
                         } else {
                             // I'm not sure if we'd ever get here (deletion would
@@ -365,7 +361,7 @@ public class MusicUtil {
                     for (File f : files) {
                         try {
                             String newLyrics = FileUtil.read(f);
-                            if (newLyrics != null && !newLyrics.trim().isEmpty()) {
+                            if (!newLyrics.trim().isEmpty()) {
                                 if (AbsSynchronizedLyrics.isSynchronized(newLyrics)) {
                                     return newLyrics;
                                 }

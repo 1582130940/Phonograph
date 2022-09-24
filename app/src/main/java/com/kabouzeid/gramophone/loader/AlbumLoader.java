@@ -2,6 +2,7 @@ package com.kabouzeid.gramophone.loader;
 
 import android.content.Context;
 import android.provider.MediaStore.Audio.AudioColumns;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -10,7 +11,6 @@ import com.kabouzeid.gramophone.model.Song;
 import com.kabouzeid.gramophone.util.PreferenceUtil;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -78,6 +78,6 @@ public class AlbumLoader {
     }
 
     private static void sortSongsByTrackNumber(Album album) {
-        Collections.sort(album.songs, (o1, o2) -> o1.trackNumber - o2.trackNumber);
+        album.songs.sort((o1, o2) -> o1.trackNumber - o2.trackNumber);
     }
 }

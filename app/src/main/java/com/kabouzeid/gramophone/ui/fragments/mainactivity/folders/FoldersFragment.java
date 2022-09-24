@@ -477,7 +477,7 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
     }
 
     private static class AsyncFileLoader extends WrappedAsyncTaskLoader<List<File>> {
-        private WeakReference<FoldersFragment> fragmentWeakReference;
+        private final WeakReference<FoldersFragment> fragmentWeakReference;
 
         public AsyncFileLoader(FoldersFragment foldersFragment) {
             super(foldersFragment.getActivity());
@@ -505,8 +505,8 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
     }
 
     private static class ListSongsAsyncTask extends ListingFilesDialogAsyncTask<ListSongsAsyncTask.LoadingInfo, Void, List<Song>> {
-        private WeakReference<Context> contextWeakReference;
-        private WeakReference<OnSongsListedCallback> callbackWeakReference;
+        private final WeakReference<Context> contextWeakReference;
+        private final WeakReference<OnSongsListedCallback> callbackWeakReference;
         private final Object extra;
 
         public ListSongsAsyncTask(Context context, Object extra, OnSongsListedCallback callback) {
@@ -588,7 +588,7 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
     }
 
     public static class ArrayListPathsAsyncTask extends ListingFilesDialogAsyncTask<ArrayListPathsAsyncTask.LoadingInfo, String, String[]> {
-        private WeakReference<OnPathsListedCallback> onPathsListedCallbackWeakReference;
+        private final WeakReference<OnPathsListedCallback> onPathsListedCallbackWeakReference;
 
         public ArrayListPathsAsyncTask(Context context, OnPathsListedCallback callback) {
             super(context, 500);

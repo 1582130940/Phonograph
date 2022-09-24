@@ -8,13 +8,14 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import com.google.android.material.snackbar.Snackbar;
-import androidx.core.app.ActivityCompat;
 import android.view.KeyEvent;
 import android.view.View;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+
+import com.google.android.material.snackbar.Snackbar;
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.gramophone.R;
 
@@ -119,14 +120,14 @@ public abstract class AbsBaseActivity extends AbsThemeActivity {
                     if (ActivityCompat.shouldShowRequestPermissionRationale(AbsBaseActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                         //User has deny from permission dialog
                         Snackbar.make(getSnackBarContainer(), getPermissionDeniedMessage(),
-                                Snackbar.LENGTH_INDEFINITE)
+                                        Snackbar.LENGTH_INDEFINITE)
                                 .setAction(R.string.action_grant, view -> requestPermissions())
                                 .setActionTextColor(ThemeStore.accentColor(this))
                                 .show();
                     } else {
                         // User has deny permission and checked never show permission dialog so you can redirect to Application settings page
                         Snackbar.make(getSnackBarContainer(), getPermissionDeniedMessage(),
-                                Snackbar.LENGTH_INDEFINITE)
+                                        Snackbar.LENGTH_INDEFINITE)
                                 .setAction(R.string.action_settings, view -> {
                                     Intent intent = new Intent();
                                     intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);

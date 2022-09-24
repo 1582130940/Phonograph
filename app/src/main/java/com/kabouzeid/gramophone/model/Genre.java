@@ -3,6 +3,8 @@ package com.kabouzeid.gramophone.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.annotation.NonNull;
+
 public class Genre implements Parcelable {
     public final long id;
     public final String name;
@@ -31,9 +33,10 @@ public class Genre implements Parcelable {
         long result = id;
         result = 31 * result + name.hashCode();
         result = 31 * result + songCount;
-        return (int)result;
+        return (int) result;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "Genre{" +
@@ -61,7 +64,7 @@ public class Genre implements Parcelable {
         this.songCount = in.readInt();
     }
 
-    public static final Creator<Genre> CREATOR = new Creator<Genre>() {
+    public static final Creator<Genre> CREATOR = new Creator<>() {
         public Genre createFromParcel(Parcel source) {
             return new Genre(source);
         }

@@ -1,11 +1,12 @@
 package com.kabouzeid.gramophone.adapter.song;
 
+import android.view.MenuItem;
+import android.view.View;
+
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import android.view.MenuItem;
-import android.view.View;
 
 import com.h6ah4i.android.widget.advrecyclerview.draggable.DraggableItemAdapter;
 import com.h6ah4i.android.widget.advrecyclerview.draggable.DraggableItemViewHolder;
@@ -17,7 +18,6 @@ import com.kabouzeid.gramophone.interfaces.CabHolder;
 import com.kabouzeid.gramophone.model.Song;
 import com.kabouzeid.gramophone.util.ViewUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -48,7 +48,7 @@ public class PlayingQueueAdapter extends SongAdapter implements DraggableItemAda
             holder.imageText.setText(String.valueOf(position - current));
         }
         if (holder.getItemViewType() == HISTORY || holder.getItemViewType() == CURRENT) {
-            setAlpha(holder, 0.5f);
+            setAlpha(holder);
         }
     }
 
@@ -78,21 +78,21 @@ public class PlayingQueueAdapter extends SongAdapter implements DraggableItemAda
         notifyDataSetChanged();
     }
 
-    protected void setAlpha(SongAdapter.ViewHolder holder, float alpha) {
+    protected void setAlpha(SongAdapter.ViewHolder holder) {
         if (holder.image != null) {
-            holder.image.setAlpha(alpha);
+            holder.image.setAlpha((float) 0.5);
         }
         if (holder.title != null) {
-            holder.title.setAlpha(alpha);
+            holder.title.setAlpha((float) 0.5);
         }
         if (holder.text != null) {
-            holder.text.setAlpha(alpha);
+            holder.text.setAlpha((float) 0.5);
         }
         if (holder.imageText != null) {
-            holder.imageText.setAlpha(alpha);
+            holder.imageText.setAlpha((float) 0.5);
         }
         if (holder.paletteColorContainer != null) {
-            holder.paletteColorContainer.setAlpha(alpha);
+            holder.paletteColorContainer.setAlpha((float) 0.5);
         }
     }
 
@@ -147,10 +147,9 @@ public class PlayingQueueAdapter extends SongAdapter implements DraggableItemAda
 
         @Override
         protected boolean onSongMenuItemClick(MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.action_remove_from_playing_queue:
-                    MusicPlayerRemote.removeFromQueue(getAdapterPosition());
-                    return true;
+            if (item.getItemId() == R.id.action_remove_from_playing_queue) {
+                MusicPlayerRemote.removeFromQueue(getAdapterPosition());
+                return true;
             }
             return super.onSongMenuItemClick(item);
         }

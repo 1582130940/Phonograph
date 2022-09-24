@@ -1,15 +1,16 @@
 package com.kabouzeid.gramophone.adapter.song;
 
 import android.graphics.drawable.Drawable;
-import androidx.annotation.LayoutRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.core.util.Pair;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.util.Pair;
 
 import com.afollestad.materialcab.MaterialCab;
 import com.bumptech.glide.Glide;
@@ -31,7 +32,6 @@ import com.kabouzeid.gramophone.util.NavigationUtil;
 import com.kabouzeid.gramophone.util.PreferenceUtil;
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -44,8 +44,8 @@ public class SongAdapter extends AbsMultiSelectAdapter<SongAdapter.ViewHolder, S
 
     protected int itemLayoutRes;
 
-    protected boolean usePalette = false;
-    protected boolean showSectionName = true;
+    protected boolean usePalette;
+    protected boolean showSectionName;
 
     public SongAdapter(AppCompatActivity activity, List<Song> dataSet, @LayoutRes int itemLayoutRes, boolean usePalette, @Nullable CabHolder cabHolder) {
         this(activity, dataSet, itemLayoutRes, usePalette, cabHolder, true);
@@ -246,13 +246,12 @@ public class SongAdapter extends AbsMultiSelectAdapter<SongAdapter.ViewHolder, S
 
         protected boolean onSongMenuItemClick(MenuItem item) {
             if (image != null && image.getVisibility() == View.VISIBLE) {
-                switch (item.getItemId()) {
-                    case R.id.action_go_to_album:
-                        Pair[] albumPairs = new Pair[]{
-                                Pair.create(image, activity.getResources().getString(R.string.transition_album_art))
-                        };
-                        NavigationUtil.goToAlbum(activity, getSong().albumId, albumPairs);
-                        return true;
+                if (item.getItemId() == R.id.action_go_to_album) {
+                    Pair[] albumPairs = new Pair[]{
+                            Pair.create(image, activity.getResources().getString(R.string.transition_album_art))
+                    };
+                    NavigationUtil.goToAlbum(activity, getSong().albumId, albumPairs);
+                    return true;
                 }
             }
             return false;

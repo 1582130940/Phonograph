@@ -2,8 +2,6 @@ package com.kabouzeid.gramophone.glide.artistimage;
 
 import android.content.Context;
 
-import java.io.InputStream;
-
 import com.bumptech.glide.load.data.DataFetcher;
 import com.bumptech.glide.load.model.GenericLoaderFactory;
 import com.bumptech.glide.load.model.ModelLoader;
@@ -11,12 +9,14 @@ import com.bumptech.glide.load.model.ModelLoaderFactory;
 import com.bumptech.glide.load.model.stream.StreamModelLoader;
 import com.kabouzeid.gramophone.util.PreferenceUtil;
 
+import java.io.InputStream;
+
 /**
  * @author Karim Abou Zeid (kabouzeid)
  */
 
 public class ArtistImageLoader implements StreamModelLoader<ArtistImage> {
-    private Context context;
+    private final Context context;
 
     public ArtistImageLoader(Context context) {
         this.context = context;

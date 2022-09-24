@@ -2,11 +2,12 @@ package com.kabouzeid.gramophone.preferences;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.view.View;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.kabouzeid.gramophone.R;
@@ -61,7 +62,7 @@ public class LibraryPreferenceDialog extends DialogFragment {
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState) {
+    public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putParcelableArrayList(PreferenceUtil.LIBRARY_CATEGORIES, new ArrayList<>(adapter.getCategoryInfos()));
     }

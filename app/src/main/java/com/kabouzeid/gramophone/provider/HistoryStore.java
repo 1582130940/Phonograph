@@ -1,18 +1,18 @@
 /*
-* Copyright (C) 2014 The CyanogenMod Project
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*/
+ * Copyright (C) 2014 The CyanogenMod Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 package com.kabouzeid.gramophone.provider;
 
@@ -21,6 +21,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -82,11 +83,9 @@ public class HistoryStore extends SQLiteOpenHelper {
             database.insert(RecentStoreColumns.NAME, null, values);
 
             // if our db is too large, delete the extra items
-            Cursor oldest = null;
-            try {
-                oldest = database.query(RecentStoreColumns.NAME,
-                        new String[]{RecentStoreColumns.TIME_PLAYED}, null, null, null, null,
-                        RecentStoreColumns.TIME_PLAYED + " ASC");
+            try (Cursor oldest = database.query(RecentStoreColumns.NAME,
+                    new String[]{RecentStoreColumns.TIME_PLAYED}, null, null, null, null,
+                    RecentStoreColumns.TIME_PLAYED + " ASC")) {
 
                 if (oldest != null && oldest.getCount() > MAX_ITEMS_IN_DB) {
                     oldest.moveToPosition(oldest.getCount() - MAX_ITEMS_IN_DB);
@@ -96,10 +95,6 @@ public class HistoryStore extends SQLiteOpenHelper {
                             RecentStoreColumns.TIME_PLAYED + " < ?",
                             new String[]{String.valueOf(timeOfRecordToKeep)});
 
-                }
-            } finally {
-                if (oldest != null) {
-                    oldest.close();
                 }
             }
         } finally {

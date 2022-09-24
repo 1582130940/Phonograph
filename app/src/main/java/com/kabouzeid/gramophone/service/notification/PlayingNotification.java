@@ -1,15 +1,16 @@
 package com.kabouzeid.gramophone.service.notification;
 
+import static android.content.Context.NOTIFICATION_SERVICE;
+
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.os.Build;
+
 import androidx.annotation.RequiresApi;
 
 import com.kabouzeid.gramophone.R;
 import com.kabouzeid.gramophone.service.MusicService;
-
-import static android.content.Context.NOTIFICATION_SERVICE;
 
 public abstract class PlayingNotification {
 
@@ -55,7 +56,7 @@ public abstract class PlayingNotification {
 
         if (newNotifyMode == NOTIFY_MODE_FOREGROUND) {
             service.startForeground(NOTIFICATION_ID, notification);
-        } else if (newNotifyMode == NOTIFY_MODE_BACKGROUND) {
+        } else {
             notificationManager.notify(NOTIFICATION_ID, notification);
         }
 

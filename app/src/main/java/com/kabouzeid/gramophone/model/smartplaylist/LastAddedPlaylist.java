@@ -2,14 +2,13 @@ package com.kabouzeid.gramophone.model.smartplaylist;
 
 import android.content.Context;
 import android.os.Parcel;
+
 import androidx.annotation.NonNull;
 
+import com.kabouzeid.gramophone.R;
 import com.kabouzeid.gramophone.loader.LastAddedLoader;
 import com.kabouzeid.gramophone.model.Song;
-import com.kabouzeid.gramophone.R;
-import com.kabouzeid.gramophone.util.PreferenceUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -41,7 +40,7 @@ public class LastAddedPlaylist extends AbsSmartPlaylist {
         super(in);
     }
 
-    public static final Creator<LastAddedPlaylist> CREATOR = new Creator<LastAddedPlaylist>() {
+    public static final Creator<LastAddedPlaylist> CREATOR = new Creator<>() {
         public LastAddedPlaylist createFromParcel(Parcel source) {
             return new LastAddedPlaylist(source);
         }
