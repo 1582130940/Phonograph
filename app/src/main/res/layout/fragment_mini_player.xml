@@ -16,7 +16,6 @@
         android:orientation="horizontal">
 
         <com.kabouzeid.gramophone.views.IconImageView
-            android:id="@+id/mini_player_image"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_gravity="center_vertical"
@@ -29,10 +28,10 @@
             android:id="@+id/mini_player_title"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginEnd="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
             android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:singleLine="true"
